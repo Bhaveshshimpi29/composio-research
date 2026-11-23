@@ -1,0 +1,620 @@
+{
+ "pass1": {
+  "n_apps": 20,
+  "fields": {
+   "auth_methods": {
+    "correct": 7,
+    "total": 20
+   },
+   "access": {
+    "correct": 10,
+    "total": 20
+   },
+   "main_blocker": {
+    "correct": 12,
+    "total": 20
+   },
+   "existing_mcp": {
+    "correct": 15,
+    "total": 20
+   },
+   "buildable_today": {
+    "correct": 14,
+    "total": 20
+   }
+  },
+  "correct": 58,
+  "total": 100,
+  "overall": 0.58,
+  "misses": [
+   {
+    "app": "Salesforce",
+    "field": "auth_methods",
+    "agent": "bearer_token|oauth2",
+    "truth": "oauth2"
+   },
+   {
+    "app": "DealCloud",
+    "field": "auth_methods",
+    "agent": "other",
+    "truth": "api_key|oauth2"
+   },
+   {
+    "app": "DealCloud",
+    "field": "existing_mcp",
+    "agent": "unknown",
+    "truth": "official"
+   },
+   {
+    "app": "Zendesk",
+    "field": "auth_methods",
+    "agent": "api_key|basic|oauth2",
+    "truth": "api_key|oauth2"
+   },
+   {
+    "app": "Zendesk",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "free_trial"
+   },
+   {
+    "app": "Zendesk",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "none"
+   },
+   {
+    "app": "Zendesk",
+    "field": "buildable_today",
+    "agent": "partial",
+    "truth": "yes"
+   },
+   {
+    "app": "Gladly",
+    "field": "auth_methods",
+    "agent": "basic|bearer_token",
+    "truth": "api_key|basic"
+   },
+   {
+    "app": "WhatsApp Business",
+    "field": "auth_methods",
+    "agent": "bearer_token|oauth2",
+    "truth": "bearer_token"
+   },
+   {
+    "app": "WhatsApp Business",
+    "field": "access",
+    "agent": "admin_approval",
+    "truth": "self_serve_free"
+   },
+   {
+    "app": "WhatsApp Business",
+    "field": "main_blocker",
+    "agent": "admin_approval",
+    "truth": "none"
+   },
+   {
+    "app": "WhatsApp Business",
+    "field": "buildable_today",
+    "agent": "partial",
+    "truth": "yes"
+   },
+   {
+    "app": "Google Ads",
+    "field": "auth_methods",
+    "agent": "api_key|oauth2",
+    "truth": "oauth2"
+   },
+   {
+    "app": "Google Ads",
+    "field": "access",
+    "agent": "self_serve_free",
+    "truth": "admin_approval"
+   },
+   {
+    "app": "Google Ads",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "admin_approval"
+   },
+   {
+    "app": "Mailchimp",
+    "field": "existing_mcp",
+    "agent": "unknown",
+    "truth": "community"
+   },
+   {
+    "app": "Amazon Selling Partner",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "admin_approval"
+   },
+   {
+    "app": "Shopify",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "self_serve_free"
+   },
+   {
+    "app": "Firecrawl",
+    "field": "auth_methods",
+    "agent": "unknown",
+    "truth": "api_key|bearer_token"
+   },
+   {
+    "app": "Firecrawl",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "self_serve_free"
+   },
+   {
+    "app": "Firecrawl",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "none"
+   },
+   {
+    "app": "Firecrawl",
+    "field": "existing_mcp",
+    "agent": "unknown",
+    "truth": "official"
+   },
+   {
+    "app": "Firecrawl",
+    "field": "buildable_today",
+    "agent": "unknown",
+    "truth": "yes"
+   },
+   {
+    "app": "GitHub",
+    "field": "auth_methods",
+    "agent": "bearer_token|oauth2|other",
+    "truth": "bearer_token|oauth2"
+   },
+   {
+    "app": "Snowflake",
+    "field": "auth_methods",
+    "agent": "other|other",
+    "truth": "oauth2|other"
+   },
+   {
+    "app": "Snowflake",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "free_trial"
+   },
+   {
+    "app": "Snowflake",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "admin_approval"
+   },
+   {
+    "app": "Snowflake",
+    "field": "existing_mcp",
+    "agent": "unknown",
+    "truth": "official"
+   },
+   {
+    "app": "Notion",
+    "field": "auth_methods",
+    "agent": "api_key|bearer_token|oauth2",
+    "truth": "bearer_token|oauth2"
+   },
+   {
+    "app": "Smartsheet",
+    "field": "auth_methods",
+    "agent": "unknown",
+    "truth": "bearer_token|oauth2"
+   },
+   {
+    "app": "Smartsheet",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "paid_plan"
+   },
+   {
+    "app": "Smartsheet",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "paid_plan"
+   },
+   {
+    "app": "Smartsheet",
+    "field": "existing_mcp",
+    "agent": "unknown",
+    "truth": "official"
+   },
+   {
+    "app": "Smartsheet",
+    "field": "buildable_today",
+    "agent": "unknown",
+    "truth": "partial"
+   },
+   {
+    "app": "PitchBook",
+    "field": "auth_methods",
+    "agent": "unknown",
+    "truth": "api_key|bearer_token"
+   },
+   {
+    "app": "PitchBook",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "partner_or_sales"
+   },
+   {
+    "app": "PitchBook",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "partner_gate"
+   },
+   {
+    "app": "PitchBook",
+    "field": "buildable_today",
+    "agent": "unknown",
+    "truth": "partial"
+   },
+   {
+    "app": "Otter AI",
+    "field": "auth_methods",
+    "agent": "unknown",
+    "truth": "bearer_token"
+   },
+   {
+    "app": "Otter AI",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "paid_plan"
+   },
+   {
+    "app": "Otter AI",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "paid_plan"
+   },
+   {
+    "app": "Otter AI",
+    "field": "buildable_today",
+    "agent": "unknown",
+    "truth": "partial"
+   }
+  ]
+ },
+ "pass2": {
+  "n_apps": 20,
+  "fields": {
+   "auth_methods": {
+    "correct": 6,
+    "total": 20
+   },
+   "access": {
+    "correct": 7,
+    "total": 20
+   },
+   "main_blocker": {
+    "correct": 10,
+    "total": 20
+   },
+   "existing_mcp": {
+    "correct": 15,
+    "total": 20
+   },
+   "buildable_today": {
+    "correct": 11,
+    "total": 20
+   }
+  },
+  "correct": 49,
+  "total": 100,
+  "overall": 0.49,
+  "misses": [
+   {
+    "app": "Salesforce",
+    "field": "auth_methods",
+    "agent": "bearer_token|oauth2",
+    "truth": "oauth2"
+   },
+   {
+    "app": "DealCloud",
+    "field": "auth_methods",
+    "agent": "other",
+    "truth": "api_key|oauth2"
+   },
+   {
+    "app": "DealCloud",
+    "field": "existing_mcp",
+    "agent": "unknown",
+    "truth": "official"
+   },
+   {
+    "app": "Zendesk",
+    "field": "auth_methods",
+    "agent": "api_key|basic|oauth2",
+    "truth": "api_key|oauth2"
+   },
+   {
+    "app": "Zendesk",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "free_trial"
+   },
+   {
+    "app": "Zendesk",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "none"
+   },
+   {
+    "app": "Zendesk",
+    "field": "buildable_today",
+    "agent": "partial",
+    "truth": "yes"
+   },
+   {
+    "app": "Gladly",
+    "field": "auth_methods",
+    "agent": "unknown",
+    "truth": "api_key|basic"
+   },
+   {
+    "app": "Telegram",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "none"
+   },
+   {
+    "app": "Telegram",
+    "field": "buildable_today",
+    "agent": "unknown",
+    "truth": "yes"
+   },
+   {
+    "app": "WhatsApp Business",
+    "field": "auth_methods",
+    "agent": "unknown",
+    "truth": "bearer_token"
+   },
+   {
+    "app": "WhatsApp Business",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "self_serve_free"
+   },
+   {
+    "app": "WhatsApp Business",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "none"
+   },
+   {
+    "app": "WhatsApp Business",
+    "field": "buildable_today",
+    "agent": "partial",
+    "truth": "yes"
+   },
+   {
+    "app": "Google Ads",
+    "field": "auth_methods",
+    "agent": "api_key|oauth2",
+    "truth": "oauth2"
+   },
+   {
+    "app": "Google Ads",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "admin_approval"
+   },
+   {
+    "app": "Google Ads",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "admin_approval"
+   },
+   {
+    "app": "Mailchimp",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "self_serve_free"
+   },
+   {
+    "app": "Mailchimp",
+    "field": "existing_mcp",
+    "agent": "unknown",
+    "truth": "community"
+   },
+   {
+    "app": "Amazon Selling Partner",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "admin_approval"
+   },
+   {
+    "app": "Amazon Selling Partner",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "admin_approval"
+   },
+   {
+    "app": "Shopify",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "self_serve_free"
+   },
+   {
+    "app": "Firecrawl",
+    "field": "auth_methods",
+    "agent": "unknown",
+    "truth": "api_key|bearer_token"
+   },
+   {
+    "app": "Firecrawl",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "self_serve_free"
+   },
+   {
+    "app": "Firecrawl",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "none"
+   },
+   {
+    "app": "Firecrawl",
+    "field": "existing_mcp",
+    "agent": "unknown",
+    "truth": "official"
+   },
+   {
+    "app": "Firecrawl",
+    "field": "buildable_today",
+    "agent": "unknown",
+    "truth": "yes"
+   },
+   {
+    "app": "GitHub",
+    "field": "auth_methods",
+    "agent": "bearer_token|oauth2|other",
+    "truth": "bearer_token|oauth2"
+   },
+   {
+    "app": "GitHub",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "self_serve_free"
+   },
+   {
+    "app": "Snowflake",
+    "field": "auth_methods",
+    "agent": "other|other",
+    "truth": "oauth2|other"
+   },
+   {
+    "app": "Snowflake",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "free_trial"
+   },
+   {
+    "app": "Snowflake",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "admin_approval"
+   },
+   {
+    "app": "Snowflake",
+    "field": "existing_mcp",
+    "agent": "unknown",
+    "truth": "official"
+   },
+   {
+    "app": "Snowflake",
+    "field": "buildable_today",
+    "agent": "unknown",
+    "truth": "partial"
+   },
+   {
+    "app": "Notion",
+    "field": "auth_methods",
+    "agent": "api_key|bearer_token|oauth2",
+    "truth": "bearer_token|oauth2"
+   },
+   {
+    "app": "Smartsheet",
+    "field": "auth_methods",
+    "agent": "unknown",
+    "truth": "bearer_token|oauth2"
+   },
+   {
+    "app": "Smartsheet",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "paid_plan"
+   },
+   {
+    "app": "Smartsheet",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "paid_plan"
+   },
+   {
+    "app": "Smartsheet",
+    "field": "existing_mcp",
+    "agent": "unknown",
+    "truth": "official"
+   },
+   {
+    "app": "Smartsheet",
+    "field": "buildable_today",
+    "agent": "unknown",
+    "truth": "partial"
+   },
+   {
+    "app": "PitchBook",
+    "field": "auth_methods",
+    "agent": "unknown",
+    "truth": "api_key|bearer_token"
+   },
+   {
+    "app": "PitchBook",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "partner_or_sales"
+   },
+   {
+    "app": "PitchBook",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "partner_gate"
+   },
+   {
+    "app": "PitchBook",
+    "field": "buildable_today",
+    "agent": "unknown",
+    "truth": "partial"
+   },
+   {
+    "app": "Otter AI",
+    "field": "auth_methods",
+    "agent": "unknown",
+    "truth": "bearer_token"
+   },
+   {
+    "app": "Otter AI",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "paid_plan"
+   },
+   {
+    "app": "Otter AI",
+    "field": "main_blocker",
+    "agent": "unknown",
+    "truth": "paid_plan"
+   },
+   {
+    "app": "Otter AI",
+    "field": "buildable_today",
+    "agent": "unknown",
+    "truth": "partial"
+   },
+   {
+    "app": "Mermaid CLI",
+    "field": "auth_methods",
+    "agent": "unknown",
+    "truth": "none_found"
+   },
+   {
+    "app": "Mermaid CLI",
+    "field": "access",
+    "agent": "unknown",
+    "truth": "self_serve_free"
+   },
+   {
+    "app": "Mermaid CLI",
+    "field": "buildable_today",
+    "agent": "unknown",
+    "truth": "partial"
+   }
+  ]
+ }
+}

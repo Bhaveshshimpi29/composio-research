@@ -1,0 +1,15 @@
+{
+ "app": "Fathom",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://developers.fathom.ai/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://fathom.video/pricing",
+   "kind": "seed"
+  }
+ ]
+}

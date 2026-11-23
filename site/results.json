@@ -1,0 +1,5270 @@
+{
+ "stage": "pass2",
+ "models": [
+  "claude-in-session",
+  "claude-opus-5-5"
+ ],
+ "prompt_version": "v1",
+ "aggregate": {
+  "n": 100,
+  "auth_counts": {
+   "oauth2": 35,
+   "api_key": 28,
+   "bearer_token": 24,
+   "basic": 9,
+   "other": 6
+  },
+  "dominant_auth": "oauth2",
+  "access_counts": {
+   "unknown": 73,
+   "self_serve_free": 11,
+   "admin_approval": 8,
+   "free_trial": 4,
+   "paid_plan": 3,
+   "partner_or_sales": 1
+  },
+  "blocker_counts": {
+   "admin_approval": 8,
+   "paid_plan": 3,
+   "no_public_api": 2,
+   "partner_gate": 1,
+   "auth_complexity": 1
+  },
+  "top_blocker": "admin_approval",
+  "category_access": {
+   "Data, SEO and Scraping": {
+    "paid_plan": 1,
+    "self_serve_free": 1,
+    "unknown": 6,
+    "free_trial": 2
+   },
+   "Communications and Messaging": {
+    "partner_or_sales": 1,
+    "unknown": 6,
+    "self_serve_free": 2,
+    "free_trial": 1
+   },
+   "Productivity and Project Management": {
+    "unknown": 8,
+    "free_trial": 1,
+    "self_serve_free": 1
+   },
+   "Ecommerce": {
+    "unknown": 9,
+    "self_serve_free": 1
+   },
+   "CRM and Sales": {
+    "unknown": 7,
+    "self_serve_free": 3
+   },
+   "Finance and Fintech": {
+    "unknown": 7,
+    "admin_approval": 2,
+    "self_serve_free": 1
+   },
+   "Developer, Infra and Data platforms": {
+    "unknown": 9,
+    "self_serve_free": 1
+   },
+   "AI, Research and Media-native": {
+    "paid_plan": 2,
+    "unknown": 8
+   },
+   "Support and Helpdesk": {
+    "unknown": 6,
+    "admin_approval": 3,
+    "self_serve_free": 1
+   },
+   "Marketing, Ads, Email and Social": {
+    "unknown": 7,
+    "admin_approval": 3
+   }
+  },
+  "gated_share_by_category": {
+   "Data, SEO and Scraping": 0.1,
+   "Communications and Messaging": 0.1,
+   "Productivity and Project Management": 0.0,
+   "Ecommerce": 0.0,
+   "CRM and Sales": 0.0,
+   "Finance and Fintech": 0.2,
+   "Developer, Infra and Data platforms": 0.0,
+   "AI, Research and Media-native": 0.2,
+   "Support and Helpdesk": 0.3,
+   "Marketing, Ads, Email and Social": 0.3
+  },
+  "easy_wins": [
+   "Apify",
+   "DataForSEO",
+   "Intercom",
+   "Netlify",
+   "Notion",
+   "Podio",
+   "Salesforce",
+   "SE Ranking",
+   "Stripe",
+   "Vonage",
+   "WooCommerce",
+   "Zoho CRM"
+  ],
+  "needs_outreach": [
+   "Aircall",
+   "Brex",
+   "Gladly",
+   "Gorgias",
+   "LinkedIn Ads",
+   "Meta Ads",
+   "Plaid",
+   "Pylon",
+   "Threads (Meta)"
+  ],
+  "paid_only": [
+   "Ahrefs",
+   "Consensus",
+   "NotebookLM"
+  ],
+  "buildable_counts": {
+   "partial": 22,
+   "unknown": 40,
+   "yes": 38
+  },
+  "n_needs_human": 0,
+  "n_existing_mcp": 20,
+  "n_unknown_access": 73
+ },
+ "scores": {
+  "pass1": {
+   "n_apps": 20,
+   "fields": {
+    "auth_methods": {
+     "correct": 7,
+     "total": 20
+    },
+    "access": {
+     "correct": 10,
+     "total": 20
+    },
+    "main_blocker": {
+     "correct": 12,
+     "total": 20
+    },
+    "existing_mcp": {
+     "correct": 15,
+     "total": 20
+    },
+    "buildable_today": {
+     "correct": 14,
+     "total": 20
+    }
+   },
+   "correct": 58,
+   "total": 100,
+   "overall": 0.58,
+   "misses": [
+    {
+     "app": "Salesforce",
+     "field": "auth_methods",
+     "agent": "bearer_token|oauth2",
+     "truth": "oauth2"
+    },
+    {
+     "app": "DealCloud",
+     "field": "auth_methods",
+     "agent": "other",
+     "truth": "api_key|oauth2"
+    },
+    {
+     "app": "DealCloud",
+     "field": "existing_mcp",
+     "agent": "unknown",
+     "truth": "official"
+    },
+    {
+     "app": "Zendesk",
+     "field": "auth_methods",
+     "agent": "api_key|basic|oauth2",
+     "truth": "api_key|oauth2"
+    },
+    {
+     "app": "Zendesk",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "free_trial"
+    },
+    {
+     "app": "Zendesk",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "none"
+    },
+    {
+     "app": "Zendesk",
+     "field": "buildable_today",
+     "agent": "partial",
+     "truth": "yes"
+    },
+    {
+     "app": "Gladly",
+     "field": "auth_methods",
+     "agent": "basic|bearer_token",
+     "truth": "api_key|basic"
+    },
+    {
+     "app": "WhatsApp Business",
+     "field": "auth_methods",
+     "agent": "bearer_token|oauth2",
+     "truth": "bearer_token"
+    },
+    {
+     "app": "WhatsApp Business",
+     "field": "access",
+     "agent": "admin_approval",
+     "truth": "self_serve_free"
+    },
+    {
+     "app": "WhatsApp Business",
+     "field": "main_blocker",
+     "agent": "admin_approval",
+     "truth": "none"
+    },
+    {
+     "app": "WhatsApp Business",
+     "field": "buildable_today",
+     "agent": "partial",
+     "truth": "yes"
+    },
+    {
+     "app": "Google Ads",
+     "field": "auth_methods",
+     "agent": "api_key|oauth2",
+     "truth": "oauth2"
+    },
+    {
+     "app": "Google Ads",
+     "field": "access",
+     "agent": "self_serve_free",
+     "truth": "admin_approval"
+    },
+    {
+     "app": "Google Ads",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "admin_approval"
+    },
+    {
+     "app": "Mailchimp",
+     "field": "existing_mcp",
+     "agent": "unknown",
+     "truth": "community"
+    },
+    {
+     "app": "Amazon Selling Partner",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "admin_approval"
+    },
+    {
+     "app": "Shopify",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "self_serve_free"
+    },
+    {
+     "app": "Firecrawl",
+     "field": "auth_methods",
+     "agent": "unknown",
+     "truth": "api_key|bearer_token"
+    },
+    {
+     "app": "Firecrawl",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "self_serve_free"
+    },
+    {
+     "app": "Firecrawl",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "none"
+    },
+    {
+     "app": "Firecrawl",
+     "field": "existing_mcp",
+     "agent": "unknown",
+     "truth": "official"
+    },
+    {
+     "app": "Firecrawl",
+     "field": "buildable_today",
+     "agent": "unknown",
+     "truth": "yes"
+    },
+    {
+     "app": "GitHub",
+     "field": "auth_methods",
+     "agent": "bearer_token|oauth2|other",
+     "truth": "bearer_token|oauth2"
+    },
+    {
+     "app": "Snowflake",
+     "field": "auth_methods",
+     "agent": "other|other",
+     "truth": "oauth2|other"
+    },
+    {
+     "app": "Snowflake",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "free_trial"
+    },
+    {
+     "app": "Snowflake",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "admin_approval"
+    },
+    {
+     "app": "Snowflake",
+     "field": "existing_mcp",
+     "agent": "unknown",
+     "truth": "official"
+    },
+    {
+     "app": "Notion",
+     "field": "auth_methods",
+     "agent": "api_key|bearer_token|oauth2",
+     "truth": "bearer_token|oauth2"
+    },
+    {
+     "app": "Smartsheet",
+     "field": "auth_methods",
+     "agent": "unknown",
+     "truth": "bearer_token|oauth2"
+    },
+    {
+     "app": "Smartsheet",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "paid_plan"
+    },
+    {
+     "app": "Smartsheet",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "paid_plan"
+    },
+    {
+     "app": "Smartsheet",
+     "field": "existing_mcp",
+     "agent": "unknown",
+     "truth": "official"
+    },
+    {
+     "app": "Smartsheet",
+     "field": "buildable_today",
+     "agent": "unknown",
+     "truth": "partial"
+    },
+    {
+     "app": "PitchBook",
+     "field": "auth_methods",
+     "agent": "unknown",
+     "truth": "api_key|bearer_token"
+    },
+    {
+     "app": "PitchBook",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "partner_or_sales"
+    },
+    {
+     "app": "PitchBook",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "partner_gate"
+    },
+    {
+     "app": "PitchBook",
+     "field": "buildable_today",
+     "agent": "unknown",
+     "truth": "partial"
+    },
+    {
+     "app": "Otter AI",
+     "field": "auth_methods",
+     "agent": "unknown",
+     "truth": "bearer_token"
+    },
+    {
+     "app": "Otter AI",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "paid_plan"
+    },
+    {
+     "app": "Otter AI",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "paid_plan"
+    },
+    {
+     "app": "Otter AI",
+     "field": "buildable_today",
+     "agent": "unknown",
+     "truth": "partial"
+    }
+   ]
+  },
+  "pass2": {
+   "n_apps": 20,
+   "fields": {
+    "auth_methods": {
+     "correct": 6,
+     "total": 20
+    },
+    "access": {
+     "correct": 7,
+     "total": 20
+    },
+    "main_blocker": {
+     "correct": 10,
+     "total": 20
+    },
+    "existing_mcp": {
+     "correct": 15,
+     "total": 20
+    },
+    "buildable_today": {
+     "correct": 11,
+     "total": 20
+    }
+   },
+   "correct": 49,
+   "total": 100,
+   "overall": 0.49,
+   "misses": [
+    {
+     "app": "Salesforce",
+     "field": "auth_methods",
+     "agent": "bearer_token|oauth2",
+     "truth": "oauth2"
+    },
+    {
+     "app": "DealCloud",
+     "field": "auth_methods",
+     "agent": "other",
+     "truth": "api_key|oauth2"
+    },
+    {
+     "app": "DealCloud",
+     "field": "existing_mcp",
+     "agent": "unknown",
+     "truth": "official"
+    },
+    {
+     "app": "Zendesk",
+     "field": "auth_methods",
+     "agent": "api_key|basic|oauth2",
+     "truth": "api_key|oauth2"
+    },
+    {
+     "app": "Zendesk",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "free_trial"
+    },
+    {
+     "app": "Zendesk",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "none"
+    },
+    {
+     "app": "Zendesk",
+     "field": "buildable_today",
+     "agent": "partial",
+     "truth": "yes"
+    },
+    {
+     "app": "Gladly",
+     "field": "auth_methods",
+     "agent": "unknown",
+     "truth": "api_key|basic"
+    },
+    {
+     "app": "Telegram",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "none"
+    },
+    {
+     "app": "Telegram",
+     "field": "buildable_today",
+     "agent": "unknown",
+     "truth": "yes"
+    },
+    {
+     "app": "WhatsApp Business",
+     "field": "auth_methods",
+     "agent": "unknown",
+     "truth": "bearer_token"
+    },
+    {
+     "app": "WhatsApp Business",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "self_serve_free"
+    },
+    {
+     "app": "WhatsApp Business",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "none"
+    },
+    {
+     "app": "WhatsApp Business",
+     "field": "buildable_today",
+     "agent": "partial",
+     "truth": "yes"
+    },
+    {
+     "app": "Google Ads",
+     "field": "auth_methods",
+     "agent": "api_key|oauth2",
+     "truth": "oauth2"
+    },
+    {
+     "app": "Google Ads",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "admin_approval"
+    },
+    {
+     "app": "Google Ads",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "admin_approval"
+    },
+    {
+     "app": "Mailchimp",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "self_serve_free"
+    },
+    {
+     "app": "Mailchimp",
+     "field": "existing_mcp",
+     "agent": "unknown",
+     "truth": "community"
+    },
+    {
+     "app": "Amazon Selling Partner",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "admin_approval"
+    },
+    {
+     "app": "Amazon Selling Partner",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "admin_approval"
+    },
+    {
+     "app": "Shopify",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "self_serve_free"
+    },
+    {
+     "app": "Firecrawl",
+     "field": "auth_methods",
+     "agent": "unknown",
+     "truth": "api_key|bearer_token"
+    },
+    {
+     "app": "Firecrawl",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "self_serve_free"
+    },
+    {
+     "app": "Firecrawl",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "none"
+    },
+    {
+     "app": "Firecrawl",
+     "field": "existing_mcp",
+     "agent": "unknown",
+     "truth": "official"
+    },
+    {
+     "app": "Firecrawl",
+     "field": "buildable_today",
+     "agent": "unknown",
+     "truth": "yes"
+    },
+    {
+     "app": "GitHub",
+     "field": "auth_methods",
+     "agent": "bearer_token|oauth2|other",
+     "truth": "bearer_token|oauth2"
+    },
+    {
+     "app": "GitHub",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "self_serve_free"
+    },
+    {
+     "app": "Snowflake",
+     "field": "auth_methods",
+     "agent": "other|other",
+     "truth": "oauth2|other"
+    },
+    {
+     "app": "Snowflake",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "free_trial"
+    },
+    {
+     "app": "Snowflake",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "admin_approval"
+    },
+    {
+     "app": "Snowflake",
+     "field": "existing_mcp",
+     "agent": "unknown",
+     "truth": "official"
+    },
+    {
+     "app": "Snowflake",
+     "field": "buildable_today",
+     "agent": "unknown",
+     "truth": "partial"
+    },
+    {
+     "app": "Notion",
+     "field": "auth_methods",
+     "agent": "api_key|bearer_token|oauth2",
+     "truth": "bearer_token|oauth2"
+    },
+    {
+     "app": "Smartsheet",
+     "field": "auth_methods",
+     "agent": "unknown",
+     "truth": "bearer_token|oauth2"
+    },
+    {
+     "app": "Smartsheet",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "paid_plan"
+    },
+    {
+     "app": "Smartsheet",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "paid_plan"
+    },
+    {
+     "app": "Smartsheet",
+     "field": "existing_mcp",
+     "agent": "unknown",
+     "truth": "official"
+    },
+    {
+     "app": "Smartsheet",
+     "field": "buildable_today",
+     "agent": "unknown",
+     "truth": "partial"
+    },
+    {
+     "app": "PitchBook",
+     "field": "auth_methods",
+     "agent": "unknown",
+     "truth": "api_key|bearer_token"
+    },
+    {
+     "app": "PitchBook",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "partner_or_sales"
+    },
+    {
+     "app": "PitchBook",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "partner_gate"
+    },
+    {
+     "app": "PitchBook",
+     "field": "buildable_today",
+     "agent": "unknown",
+     "truth": "partial"
+    },
+    {
+     "app": "Otter AI",
+     "field": "auth_methods",
+     "agent": "unknown",
+     "truth": "bearer_token"
+    },
+    {
+     "app": "Otter AI",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "paid_plan"
+    },
+    {
+     "app": "Otter AI",
+     "field": "main_blocker",
+     "agent": "unknown",
+     "truth": "paid_plan"
+    },
+    {
+     "app": "Otter AI",
+     "field": "buildable_today",
+     "agent": "unknown",
+     "truth": "partial"
+    },
+    {
+     "app": "Mermaid CLI",
+     "field": "auth_methods",
+     "agent": "unknown",
+     "truth": "none_found"
+    },
+    {
+     "app": "Mermaid CLI",
+     "field": "access",
+     "agent": "unknown",
+     "truth": "self_serve_free"
+    },
+    {
+     "app": "Mermaid CLI",
+     "field": "buildable_today",
+     "agent": "unknown",
+     "truth": "partial"
+    }
+   ]
+  }
+ },
+ "records": [
+  {
+   "app": "Ahrefs",
+   "category": "Data, SEO and Scraping",
+   "one_liner": "SEO data platform with an API and MCP server.",
+   "auth_methods": [
+    "api_key"
+   ],
+   "access": "paid_plan",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://ahrefs.com/api",
+   "buildable_today": "partial",
+   "main_blocker": "paid_plan",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://ahrefs.com/api",
+     "quote": "Create and manage your API keys"
+    },
+    {
+     "field": "access",
+     "url": "https://ahrefs.com/api",
+     "quote": "Try API endpoints without an Enterprise plan"
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://ahrefs.com/api",
+     "quote": "Try API endpoints without an Enterprise plan"
+    },
+    {
+     "field": "existing_mcp",
+     "url": "https://ahrefs.com/api",
+     "quote": "Connect your Ahrefs data to AI assistants and agents to enhance their answers with real marketing insights."
+    },
+    {
+     "field": "api_type",
+     "url": "https://ahrefs.com/api",
+     "quote": "Browse all available API endpoints"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://ahrefs.com/api",
+     "quote": "Try API endpoints without an Enterprise plan"
+    }
+   ],
+   "hint": "ahrefs.com/api",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Enterprise-plan requirement is inferred from the phrase 'without an Enterprise plan'.",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Aircall",
+   "category": "Communications and Messaging",
+   "one_liner": "Cloud phone system for sales and support teams.",
+   "auth_methods": [
+    "oauth2"
+   ],
+   "access": "partner_or_sales",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "partner_gate",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.aircall.io/docs/how-to-register",
+     "quote": "an OAuth 2.1 authorization server, ideally with Dynamic Client Registration (DCR) support."
+    },
+    {
+     "field": "access",
+     "url": "https://developer.aircall.io/docs/how-to-register",
+     "quote": "Only technology partners can publish public integrations."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developer.aircall.io/docs/how-to-register",
+     "quote": "You must be an approved technology partner or submit an application."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developer.aircall.io/docs/how-to-register",
+     "quote": "You must be an approved technology partner or submit an application."
+    }
+   ],
+   "hint": "aircall.io",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Page is about registering an MCP with Aircall AI (publishing integrations). It does not describe how to call Aircall's own API. Partner gate applies to publishing public integrations only.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Airtable",
+   "category": "Productivity and Project Management",
+   "one_liner": "Spreadsheet-database platform.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "airtable.com/developers",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Cached pages are pricing/marketing only; no API docs. Needs developer docs.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Amazon Selling Partner",
+   "category": "Ecommerce",
+   "one_liner": "Amazon's Selling Partner API for sellers and vendors.",
+   "auth_methods": [
+    "oauth2"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api-applications",
+     "quote": "Authorization method: OAuth 2.0 through Login with Amazon (LWA)."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api-applications",
+     "quote": "Your authorization method choices depend on whether your application is public or private."
+    }
+   ],
+   "hint": "developer-docs.amazon.com/sp-api",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Developer registration/approval requirements not on cached page; blocker app_review is a low-confidence guess. Re-check.",
+   "qc_failed": [
+    "api_type",
+    "api_breadth",
+    "main_blocker"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Apify",
+   "category": "Data, SEO and Scraping",
+   "one_liner": "Web scraping and automation platform with a REST API.",
+   "auth_methods": [
+    "api_key",
+    "bearer_token"
+   ],
+   "access": "self_serve_free",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.apify.com/integrations/api",
+     "quote": "you need to authenticate using your secret API token"
+    },
+    {
+     "field": "api_type",
+     "url": "https://docs.apify.com/integrations/api",
+     "quote": "All aspects of the Apify platform can be controlled via a REST API"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.apify.com/integrations/api",
+     "quote": "In the Personal API tokens section, select Create a new token."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://docs.apify.com/integrations/api",
+     "quote": "In the Personal API tokens section, select Create a new token."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://docs.apify.com/integrations/api",
+     "quote": "In the Personal API tokens section, select Create a new token."
+    }
+   ],
+   "hint": "docs.apify.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Asana",
+   "category": "Productivity and Project Management",
+   "one_liner": "Work management platform with a REST API.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "developers.asana.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "No pages cached (fetch failed); redo.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Attio",
+   "category": "CRM and Sales",
+   "one_liner": "CRM with a public REST API and OAuth for apps.",
+   "auth_methods": [
+    "oauth2"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.attio.com/rest-api/overview",
+     "quote": "Connect an app to Attio through OAuth"
+    },
+    {
+     "field": "api_type",
+     "url": "https://docs.attio.com/rest-api/overview",
+     "quote": "Attio provides a public REST API which exchanges JSON over HTTPS."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://docs.attio.com/rest-api/overview",
+     "quote": "Attio provides a public REST API which exchanges JSON over HTTPS."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://docs.attio.com/rest-api/overview",
+     "quote": "Attio provides a public REST API which exchanges JSON over HTTPS."
+    }
+   ],
+   "hint": "attio.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Pricing/access not on cached page.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "BigCommerce",
+   "category": "Ecommerce",
+   "one_liner": "SaaS commerce platform with REST and GraphQL APIs.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "developer.bigcommerce.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Cached page is Catalyst security; no auth or admin API docs. Needs re-fetch.",
+   "qc_failed": [
+    "api_type"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Binance",
+   "category": "Finance and Fintech",
+   "one_liner": "Not extracted: no readable page.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "binance-docs.github.io (cut off in screenshot, check)",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Pages need a headless browser which wasn't installed.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Brex",
+   "category": "Finance and Fintech",
+   "one_liner": "Corporate card/spend platform with a REST API and user tokens.",
+   "auth_methods": [
+    "bearer_token",
+    "api_key"
+   ],
+   "access": "admin_approval",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.brex.com/docs/authentication/",
+     "quote": "To start making calls to Brex APIs, generate a user token from your Brex dashboard and pass it along in your API call headers."
+    },
+    {
+     "field": "access",
+     "url": "https://developer.brex.com/docs/authentication/",
+     "quote": "If your company has not accepted the developer API agreement, please review the terms and conditions."
+    },
+    {
+     "field": "api_type",
+     "url": "https://developer.brex.com/",
+     "quote": "and use standard HTTP response codes and verbs."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developer.brex.com/docs/authentication/",
+     "quote": "To start making calls to Brex APIs, generate a user token from your Brex dashboard and pass it along in your API call headers."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developer.brex.com/docs/authentication/",
+     "quote": "account admin or card admin"
+    }
+   ],
+   "hint": "developer.brex.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Token creation needs account admin or card admin.",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Bright Data",
+   "category": "Data, SEO and Scraping",
+   "one_liner": "Web data platform: scraper APIs, proxies, browser API and MCP.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://docs.brightdata.com/llms.txt",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "existing_mcp",
+     "url": "https://docs.brightdata.com/llms.txt",
+     "quote": "For web search and page fetching, prefer the Bright Data MCP."
+    },
+    {
+     "field": "api_type",
+     "url": "https://docs.brightdata.com/llms.txt",
+     "quote": "use Scraper API first: pre-built scrapers cover LinkedIn, Instagram, TikTok, Amazon"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://docs.brightdata.com/llms.txt",
+     "quote": "one authenticated request in cURL, the Python SDK or the JavaScript SDK."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://docs.brightdata.com/llms.txt",
+     "quote": "one authenticated request in cURL, the Python SDK or the JavaScript SDK."
+    }
+   ],
+   "hint": "brightdata.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Clay",
+   "category": "Data, SEO and Scraping",
+   "one_liner": "GTM data enrichment and workflow platform with a public API, CLI and MCP.",
+   "auth_methods": [
+    "api_key"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest",
+    "none_public"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://developers.clay.com/llms.txt",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.clay.com/llms.txt",
+     "quote": "Authentication: Authenticate requests with a Clay API key."
+    },
+    {
+     "field": "existing_mcp",
+     "url": "https://developers.clay.com/llms.txt",
+     "quote": "Custom functions: Run your own reusable Clay logic from agents, the CLI, MCP, or the API."
+    },
+    {
+     "field": "api_type",
+     "url": "https://developers.clay.com/llms.txt",
+     "quote": "Errors: Understand Clay Public API error responses."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developers.clay.com/llms.txt",
+     "quote": "Tables (Enterprise): Query known Clay tables with structured filters, selected fields, ordering, and pagination."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developers.clay.com/llms.txt",
+     "quote": "Tables (Enterprise): Query known Clay tables with structured filters, selected fields, ordering, and pagination."
+    }
+   ],
+   "hint": "clay.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Some endpoints are Enterprise-only; plan requirement for the API itself not stated.",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "ClickUp",
+   "category": "Productivity and Project Management",
+   "one_liner": "Work management platform; pricing page only cached.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "clickup.com/api",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Only pricing cached; 'Enterprise API & Integrations' appears as a feature line, but the cached text doesn't say whether the public API needs an enterprise plan.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Close",
+   "category": "CRM and Sales",
+   "one_liner": "Sales CRM for inside sales teams with calling, email and pipeline tools.",
+   "auth_methods": [
+    "api_key",
+    "basic",
+    "oauth2"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.close.com/api/overview/api-key-authentication/",
+     "quote": "HTTP Basic client side authentication."
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://help.close.com/docs/api-keys-oauth",
+     "quote": "Create an OAuth app for Close so your integration can securely connect to Close accounts."
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://help.close.com/docs/api-keys-oauth",
+     "quote": "An API key is a secret token (like a password) which you can use to connect Close data to third-party applications or your own internal system."
+    },
+    {
+     "field": "api_type",
+     "url": "https://developer.close.com/api/overview/api-key-authentication/",
+     "quote": "API Base URL: https://api.close.com/api/v1"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developer.close.com/api/overview/api-key-authentication/",
+     "quote": "API keys can be created and managed in your Close account under Settings → Developer → API Keys."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developer.close.com/api/overview/api-key-authentication/",
+     "quote": "API keys can be created and managed in your Close account under Settings → Developer → API Keys."
+    }
+   ],
+   "hint": "close.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Cloudflare",
+   "category": "Developer, Infra and Data platforms",
+   "one_liner": "CDN/edge platform with REST APIs and official MCP servers.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://mcp.cloudflare.com/mcp",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "existing_mcp",
+     "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+     "quote": "Product specific Cloudflare MCP servers"
+    },
+    {
+     "field": "existing_mcp",
+     "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+     "quote": "https://mcp.cloudflare.com/mcp"
+    }
+   ],
+   "hint": "developers.cloudflare.com/api",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Cached page is the MCP repo, no REST auth detail.",
+   "qc_failed": [
+    "buildable_today"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Coda",
+   "category": "Productivity and Project Management",
+   "one_liner": "Superhuman Docs (formerly Coda) with a RESTful API and MCP server.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "medium",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://coda.io/developers/apis/v1",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "api_type",
+     "url": "https://coda.io/developers/apis/v1",
+     "quote": "The Superhuman Docs API is a RESTful API that lets you programmatically interact with data in Superhuman Docs (formerly Coda):"
+    },
+    {
+     "field": "existing_mcp",
+     "url": "https://coda.io/developers/apis/v1",
+     "quote": "Superhuman Docs MCP server"
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://coda.io/developers/apis/v1",
+     "quote": "Read, insert, upsert, update, and delete rows"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://coda.io/developers/apis/v1",
+     "quote": "The Superhuman Docs REST API is designed to be straightforward to use."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://coda.io/developers/apis/v1",
+     "quote": "The Superhuman Docs REST API is designed to be straightforward to use."
+    }
+   ],
+   "hint": "coda.io/developers",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Auth method not on cached text.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Consensus",
+   "category": "AI, Research and Media-native",
+   "one_liner": "Academic search engine with a paid API and agent.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "paid_plan",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "paid_plan",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "api_type",
+     "url": "https://consensus.app/home/api/",
+     "quote": "Search returns ranked papers in one call."
+    },
+    {
+     "field": "access",
+     "url": "https://consensus.app/home/api/",
+     "quote": "Included on every paid plan, and Deep includes 5x the usage of Pro."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://consensus.app/home/api/",
+     "quote": "Included on every paid plan, and Deep includes 5x the usage of Pro."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://consensus.app/home/api/",
+     "quote": "Bring up-to-date, peer-reviewed citations into your workflows."
+    }
+   ],
+   "hint": "consensus.app (OAuth requested)",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Copper",
+   "category": "CRM and Sales",
+   "one_liner": "CRM built for Google Workspace users.",
+   "auth_methods": [
+    "api_key",
+    "oauth2"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.copper.com/introduction/authentication.html",
+     "quote": "There are two ways to access the Copper Developer API: API keys and OAuth2.0."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developer.copper.com/introduction/authentication.html",
+     "quote": "Admins can see all user generated tokens and generate new ones."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developer.copper.com/introduction/authentication.html",
+     "quote": "Admins can see all user generated tokens and generate new ones."
+    }
+   ],
+   "hint": "copper.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Datadog",
+   "category": "Developer, Infra and Data platforms",
+   "one_liner": "Monitoring and observability platform with an HTTP REST API.",
+   "auth_methods": [
+    "api_key",
+    "oauth2"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.datadoghq.com/api/latest/",
+     "quote": "Authenticate to the API with an API key using the header DD-API-KEY."
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.datadoghq.com/api/latest/",
+     "quote": "Authorization Scopes for OAuth Clients"
+    },
+    {
+     "field": "api_type",
+     "url": "https://docs.datadoghq.com/api/latest/",
+     "quote": "The Datadog API is an HTTP REST API."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://docs.datadoghq.com/api/latest/",
+     "quote": "For some endpoints, you also need an Application key, which uses the header DD-APPLICATION-KEY."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://docs.datadoghq.com/api/latest/",
+     "quote": "For some endpoints, you also need an Application key, which uses the header DD-APPLICATION-KEY."
+    }
+   ],
+   "hint": "docs.datadoghq.com/api",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "DataForSEO",
+   "category": "Data, SEO and Scraping",
+   "one_liner": "Pay-as-you-go SEO data REST APIs.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "free_trial",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "api_type",
+     "url": "https://docs.dataforseo.com/v3/",
+     "quote": "DataForSEO API is using the REST technology for interchanging data between your application and our service."
+    },
+    {
+     "field": "access",
+     "url": "https://docs.dataforseo.com/v3/",
+     "quote": "Free Unlimited Trial Info"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://docs.dataforseo.com/v3/",
+     "quote": "Each of DataForSEO APIs has a certain rate limit"
+    }
+   ],
+   "hint": "docs.dataforseo.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Auth method (basic) is not stated on cached text, so left as unknown at pass 2.",
+   "qc_failed": [
+    "auth_methods",
+    "api_breadth",
+    "main_blocker"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "DealCloud",
+   "category": "CRM and Sales",
+   "one_liner": "Deal and relationship management CRM for financial services firms.",
+   "auth_methods": [
+    "other"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "medium",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://api.docs.dealcloud.com/docs",
+     "quote": "Authentication – Provides tokens for use with all other APIs."
+    },
+    {
+     "field": "api_type",
+     "url": "https://api.docs.dealcloud.com/docs",
+     "quote": "This site provides a comprehensive overview of our REST APIs, their capabilities, and available endpoints."
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://api.docs.dealcloud.com/docs",
+     "quote": "Each area includes multiple endpoints designed to help you perform specific tasks related to that category."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://api.docs.dealcloud.com/docs",
+     "quote": "Authentication – Provides tokens for use with all other APIs."
+    }
+   ],
+   "hint": "api.docs.dealcloud.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Devin",
+   "category": "AI, Research and Media-native",
+   "one_liner": "AI software engineer with a v3 REST API using service users.",
+   "auth_methods": [
+    "api_key",
+    "bearer_token"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "large",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.devin.ai/api-reference/overview",
+     "quote": "Both scopes use service user credentials ("
+    },
+    {
+     "field": "api_type",
+     "url": "https://docs.devin.ai/api-reference/overview",
+     "quote": "Learn how to programmatically interact with Devin using our REST APIs"
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://docs.devin.ai/api-reference/overview",
+     "quote": "For managing resources within a single organization — sessions, knowledge, playbooks, secrets, and more."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://docs.devin.ai/api-reference/overview",
+     "quote": "For teams and standard organizations. Create a service user and make your first API call in minutes."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://docs.devin.ai/api-reference/overview",
+     "quote": "For teams and standard organizations. Create a service user and make your first API call in minutes."
+    }
+   ],
+   "hint": "docs.devin.ai (MCP)",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Enterprise scope is enterprise-only; org scope open to Teams plans. Plan price not stated.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Discord",
+   "category": "Communications and Messaging",
+   "one_liner": "Chat platform with bots, OAuth2 and a developer platform.",
+   "auth_methods": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.discord.com/llms.txt",
+     "quote": "OAuth2 and Permissions: How OAuth2, scopes, and permissions work across the Discord platform."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://docs.discord.com/llms.txt",
+     "quote": "Bots & Companion Apps: Build bots and companion apps that connect to Discord and interact with servers, members, and events."
+    }
+   ],
+   "hint": "discord.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Only the docs index (llms.txt) was cached.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Ecwid",
+   "category": "Ecommerce",
+   "one_liner": "E-commerce widget/platform by Lightspeed.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "api-docs.ecwid.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Cached page is pricing only; no API information.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "fanbasis",
+   "category": "Ecommerce",
+   "one_liner": "Creator commerce platform with checkout, BNPL, APIs/SDKs and an AI-assistant integration.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://fanbasis.com/",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "existing_mcp",
+     "url": "https://fanbasis.com/",
+     "quote": "Run Commas from your AI assistant. Create checkout links, issue refunds and pull your numbers in plain English."
+    },
+    {
+     "field": "api_type",
+     "url": "https://fanbasis.com/",
+     "quote": "Embedded checkouts, multi-rail payouts, APIs and SDKs."
+    }
+   ],
+   "hint": "fanbasis.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "MCP claim is inferred from marketing text; no MCP URL seen.",
+   "qc_failed": [
+    "buildable_today"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Fathom",
+   "category": "AI, Research and Media-native",
+   "one_liner": "AI meeting notetaker with a developer API and SDKs.",
+   "auth_methods": [
+    "api_key",
+    "oauth2"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest",
+    "sdk_only"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.fathom.ai/",
+     "quote": "Generate an API key and make your first call in minutes."
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developers.fathom.ai/",
+     "quote": "Build a Fathom integration that other users can install."
+    },
+    {
+     "field": "api_type",
+     "url": "https://developers.fathom.ai/",
+     "quote": "See all available endpoints and methods."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developers.fathom.ai/",
+     "quote": "Generate an API key and make your first call in minutes."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developers.fathom.ai/",
+     "quote": "Generate an API key and make your first call in minutes."
+    }
+   ],
+   "hint": "fathom.video",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Firecrawl",
+   "category": "Data, SEO and Scraping",
+   "one_liner": "Web scraping API for LLMs.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "api_type",
+     "url": "https://docs.firecrawl.dev/llms.txt",
+     "quote": "v2 (253 pages): Documentation, SDKs, API Reference, Build with AI."
+    }
+   ],
+   "hint": "firecrawl.dev",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Only llms.txt cached; no auth or pricing detail.",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Freshdesk",
+   "category": "Support and Helpdesk",
+   "one_liner": "Customer support ticketing platform by Freshworks.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "freshdesk.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "The cached page was a HighLevel support article hosted on a freshdesk.com subdomain, i.e. the wrong source. It was reassigned to GoHighLevel. Needs Freshdesk's own docs.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Front",
+   "category": "Support and Helpdesk",
+   "one_liner": "Shared inbox and customer operations platform.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "front.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Cached pages were Front Academy training pages, not API docs. Needs developer docs.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "GitHub",
+   "category": "Developer, Infra and Data platforms",
+   "one_liner": "Code hosting platform with REST/GraphQL APIs and an official MCP server.",
+   "auth_methods": [
+    "bearer_token",
+    "oauth2",
+    "other"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://github.com/github/github-mcp-server",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+     "quote": "Authenticating with a personal access token"
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+     "quote": "Authenticating with a token generated by an app"
+    },
+    {
+     "field": "api_type",
+     "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+     "quote": "You can authenticate to the REST API to access more endpoints and have a higher rate limit."
+    },
+    {
+     "field": "existing_mcp",
+     "url": "https://github.com/github/github-mcp-server",
+     "quote": "GitHub - github/github-mcp-server: GitHub's official MCP Server · GitHub"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+     "quote": "There are a few different ways to get a token: You can create a personal access"
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+     "quote": "There are a few different ways to get a token: You can create a personal access"
+    }
+   ],
+   "hint": "docs.github.com/rest",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "access set to self_serve_free is not directly quoted; will reset.",
+   "qc_failed": [
+    "access",
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Gladly",
+   "category": "Support and Helpdesk",
+   "one_liner": "Customer service platform with a REST API.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "admin_approval",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "admin_approval",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "api_type",
+     "url": "https://developer.gladly.com/rest/",
+     "quote": "Resources follow REST semantics and utilize industry-standard HTTP verbs, response codes, and authentication schemes."
+    },
+    {
+     "field": "access",
+     "url": "https://developer.gladly.com/rest/",
+     "quote": "Gladly Administrators can set API permissions on an agent-by-agent basis."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developer.gladly.com/rest/",
+     "quote": "Gladly Administrators can set API permissions on an agent-by-agent basis."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developer.gladly.com/rest/",
+     "quote": "You must create an API token to access Gladly API resources"
+    }
+   ],
+   "hint": "gladly.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Auth scheme type not quoted; auth_methods will reset.",
+   "qc_failed": [
+    "auth_methods",
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "GoHighLevel",
+   "category": "Marketing, Ads, Email and Social",
+   "one_liner": "Not extracted: no readable page.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "highlevel.stoplight.io",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Fetch blocked by robots.txt (marketplace.gohighlevel.com, gohighlevel.com) and the stoplight page needed a browser.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Google Ads",
+   "category": "Marketing, Ads, Email and Social",
+   "one_liner": "Google's advertising platform with the Google Ads API.",
+   "auth_methods": [
+    "oauth2",
+    "api_key"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "unknown",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+     "quote": "Google Ads API utilizes the OAuth 2.0 protocol for authentication and authorization"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+     "quote": "In addition to OAuth 2.0 credentials, a developer token is also required to make Google Ads API calls."
+    }
+   ],
+   "hint": "developers.google.com/google-ads",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Access set to self_serve_free is NOT supported by cached text; developer-token approval is a likely gate. Set to unknown at pass 2 if unverified.",
+   "qc_failed": [
+    "access"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Gorgias",
+   "category": "Support and Helpdesk",
+   "one_liner": "Ecommerce-focused customer support helpdesk.",
+   "auth_methods": [
+    "basic",
+    "api_key"
+   ],
+   "access": "admin_approval",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "admin_approval",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+     "quote": "To authenticate API requests, Gorgias uses HTTP Basic Authentication with three pieces of information: your base API URL, your email address, and an API key."
+    },
+    {
+     "field": "access",
+     "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+     "quote": "The account owner and admins can access the API credentials and create API keys"
+    },
+    {
+     "field": "api_type",
+     "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+     "quote": "The Gorgias REST API lets you read and write data in your helpdesk programmatically."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+     "quote": "Available on all Helpdesk plans"
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+     "quote": "The account owner and admins can access the API credentials and create API keys"
+    }
+   ],
+   "hint": "gorgias.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Grain",
+   "category": "AI, Research and Media-native",
+   "one_liner": "Meeting recorder; pricing page only cached.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "grain.com (meeting notes)",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Pricing only; API not cached.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Gumroad",
+   "category": "Ecommerce",
+   "one_liner": "Not extracted: no readable page.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "gumroad.com/api",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Page needed a headless browser which wasn't installed; only 3 chars cached.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Harvest",
+   "category": "Productivity and Project Management",
+   "one_liner": "Time tracking and invoicing; pricing page only cached.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "free_trial",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "access",
+     "url": "https://www.getharvest.com/pricing",
+     "quote": "Get started on any plan with a free trial. No credit card required."
+    }
+   ],
+   "hint": "harvestapp.com (help.getharvest.com/api-v2)",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Trial is for the product, not API access; API docs not cached.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Help Scout",
+   "category": "Support and Helpdesk",
+   "one_liner": "Customer support inbox and help desk platform.",
+   "auth_methods": [
+    "api_key",
+    "basic"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.helpscout.com/docs-api/",
+     "quote": "The API key is passed via HTTP Basic Authentication and goes in the username field."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developer.helpscout.com/docs-api/",
+     "quote": "Each API key is associated with a Help Scout user."
+    }
+   ],
+   "hint": "helpscout.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Only the Docs API page was cached, not the main Mailbox API.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "higgsfield",
+   "category": "AI, Research and Media-native",
+   "one_liner": "Not extracted: no readable page.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "higgsfield.ai/cli (content suite)",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Fetch blocked by robots.txt on higgsfield.ai.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "HubSpot",
+   "category": "CRM and Sales",
+   "one_liner": "CRM and marketing platform with a developer platform, REST APIs and a remote MCP server.",
+   "auth_methods": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://mcp.hubspot.com",
+   "buildable_today": "partial",
+   "main_blocker": "unknown",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview",
+     "quote": "OAuth is required for multiple accounts, while static auth access tokens are used for installing in a single account at a time."
+    },
+    {
+     "field": "api_type",
+     "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview",
+     "quote": "--header \"Authorization: Bearer 00000000-aaaa-xxx-yyyy-zzzzzzzzzzzz\""
+    },
+    {
+     "field": "existing_mcp",
+     "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server",
+     "quote": "Configuring your MCP client to connect to the HubSpot MCP server at https://mcp.hubspot.com using your connector’s OAuth credentials."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview",
+     "quote": "There are two authentication types available based on how you plan to distribute your app"
+    }
+   ],
+   "hint": "hubspot.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Intercom",
+   "category": "Support and Helpdesk",
+   "one_liner": "AI customer service platform with help desk and messenger.",
+   "auth_methods": [
+    "bearer_token",
+    "oauth2"
+   ],
+   "access": "self_serve_free",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+     "quote": "To access the Intercom API, you have two authentication options depending on whether you app is public or private."
+    },
+    {
+     "field": "access",
+     "url": "https://developers.intercom.com/",
+     "quote": "Get started by setting up a free development workspace to test and publish your app."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developers.intercom.com/",
+     "quote": "Get started by setting up a free development workspace to test and publish your app."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developers.intercom.com/",
+     "quote": "Get started by setting up a free development workspace to test and publish your app."
+    }
+   ],
+   "hint": "intercom.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "iPayX",
+   "category": "Finance and Fintech",
+   "one_liner": "Payments product; only ~118 chars cached.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "ipayx.ai/docs",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "No usable page.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Jira",
+   "category": "Productivity and Project Management",
+   "one_liner": "Atlassian issue tracker with Jira Cloud REST API v3 and a remote MCP server.",
+   "auth_methods": [
+    "basic",
+    "oauth2",
+    "api_key"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://www.atlassian.com/platform/remote-mcp-server",
+   "buildable_today": "partial",
+   "main_blocker": "auth_complexity",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+     "quote": "Basic auth requires API tokens."
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+     "quote": "use OAuth 2.0 authorization code grants (3LO) for security"
+    },
+    {
+     "field": "api_type",
+     "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+     "quote": "The Jira REST API enables you to interact with Jira programmatically."
+    },
+    {
+     "field": "existing_mcp",
+     "url": "https://www.atlassian.com/platform/remote-mcp-server",
+     "quote": "Atlassian's MCP Server connects your AI to your team’s work and knowledge"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+     "quote": "Apps that collect API tokens or instruct customers to create individual 3LO apps don't comply with our"
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+     "quote": "Apps that collect API tokens or instruct customers to create individual 3LO apps don't comply with our"
+    }
+   ],
+   "hint": "developer.atlassian.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Atlassian discourages apps that collect user API tokens or per-customer 3LO apps; Marketplace/Forge route is the sanctioned path.",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Klaviyo",
+   "category": "Marketing, Ads, Email and Social",
+   "one_liner": "Marketing automation platform with server- and client-side APIs.",
+   "auth_methods": [
+    "api_key",
+    "oauth2"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+     "quote": "Klaviyo provides 3 methods of authentication including private key authentication and OAuth"
+    },
+    {
+     "field": "api_type",
+     "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+     "quote": "A majority of Klaviyo’s APIs are server-side endpoints"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+     "quote": "All /api endpoints use API private keys to authenticate requests."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+     "quote": "All /api endpoints use API private keys to authenticate requests."
+    }
+   ],
+   "hint": "developers.klaviyo.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Lark (Larksuite)",
+   "category": "Communications and Messaging",
+   "one_liner": "Workplace suite (chat, docs, calendar) with an open platform.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "open.larksuite.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Cached pages were H5 client JSAPI docs, not the server API authentication docs. Needs correct docs.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Linear",
+   "category": "Productivity and Project Management",
+   "one_liner": "Issue tracker with a GraphQL API.",
+   "auth_methods": [
+    "api_key",
+    "oauth2",
+    "bearer_token"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "graphql"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://linear.app/developers/graphql",
+     "quote": "The Linear API supports personal API keys and OAuth2 authentication."
+    },
+    {
+     "field": "api_type",
+     "url": "https://linear.app/developers/graphql",
+     "quote": "Linear’s public API is built using GraphQL."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://linear.app/developers/graphql",
+     "quote": "It supports introspection so you can query the whole schema."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://linear.app/developers/graphql",
+     "quote": "It supports introspection so you can query the whole schema."
+    }
+   ],
+   "hint": "developers.linear.app",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "access not quoted; will reset to unknown.",
+   "qc_failed": [
+    "access",
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "LinkedIn Ads",
+   "category": "Marketing, Ads, Email and Social",
+   "one_liner": "LinkedIn Marketing API for ads, audiences and leads.",
+   "auth_methods": [
+    "oauth2"
+   ],
+   "access": "admin_approval",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "admin_approval",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication",
+     "quote": "Member Authorization (3-legged OAuth)"
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication",
+     "quote": "Application Authorization (2-legged OAuth Client Credential Flow)"
+    },
+    {
+     "field": "access",
+     "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access",
+     "quote": "General Availability (GA) programs are open to all approved developers"
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access",
+     "quote": "Available to qualified developers who meet additional criteria for access."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access",
+     "quote": "are open to all approved developers — apply through the standard process."
+    }
+   ],
+   "hint": "learn.microsoft.com/linkedin/marketing",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Access requires LinkedIn developer approval; some products closed to new applicants.",
+   "qc_failed": [
+    "api_type",
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "LiveAgent",
+   "category": "Support and Helpdesk",
+   "one_liner": "Help desk and live chat software.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "liveagent.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Only a third-party partner page (Bold BI) was cached, not LiveAgent's API docs. Needs official docs.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Magento (Adobe Commerce)",
+   "category": "Ecommerce",
+   "one_liner": "Adobe Commerce / Magento Open Source with REST web APIs.",
+   "auth_methods": [
+    "bearer_token",
+    "oauth2",
+    "other"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+     "quote": "Before you can make web API calls, you must authenticate your identity and have necessary permissions (authorization) to access the API resource."
+    },
+    {
+     "field": "api_type",
+     "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+     "quote": "Adobe Commerce and Magento Open Source allow developers to define web API resources and their permissions in the webapi.xml configuration file."
+    }
+   ],
+   "hint": "developer.adobe.com/commerce",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Authentication is split between PaaS and SaaS guides; token types not quoted, so auth_methods may reset.",
+   "qc_failed": [
+    "api_breadth",
+    "buildable_today",
+    "main_blocker"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Mailchimp",
+   "category": "Marketing, Ads, Email and Social",
+   "one_liner": "Email marketing platform with a Marketing API.",
+   "auth_methods": [
+    "api_key",
+    "oauth2",
+    "basic",
+    "bearer_token"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+     "quote": "Authenticate with an API key or OAuth 2 token"
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+     "quote": "You can use either HTTP Basic Authentication or Bearer Authentication."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+     "quote": "You can start development against your own account with a key and move to OAuth 2 later"
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+     "quote": "You can start development against your own account with a key and move to OAuth 2 later"
+    }
+   ],
+   "hint": "mailchimp.com/developer",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Pricing page not cached; free-tier access inferred from the plan enum 'forever free' on the API page, so access should be re-checked.",
+   "qc_failed": [
+    "access",
+    "api_type",
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Mermaid CLI",
+   "category": "AI, Research and Media-native",
+   "one_liner": "Open-source command line tool for the Mermaid diagram library.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "no_public_api",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "main_blocker",
+     "url": "https://github.com/mermaid-js/mermaid-cli",
+     "quote": "GitHub - mermaid-js/mermaid-cli: Command line tool for the Mermaid library"
+    }
+   ],
+   "hint": "github.com/mermaid-js/mermaid-cli",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "It is a local CLI, not a hosted API; the quote only shows it is a CLI. auth none_found and access are unquoted.",
+   "qc_failed": [
+    "auth_methods",
+    "access",
+    "api_type",
+    "api_breadth",
+    "buildable_today"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Meta Ads",
+   "category": "Marketing, Ads, Email and Social",
+   "one_liner": "Meta Marketing API for campaigns, ad sets and ads.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "admin_approval",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "admin_approval",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "access",
+     "url": "https://developers.facebook.com/docs/marketing-api/overview/authorization",
+     "quote": "Depending on your intended use case, you may need to submit your app for review to gain access to specific permissions related to ad management."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developers.facebook.com/docs/marketing-api/overview/authorization",
+     "quote": "Depending on your intended use case, you may need to submit your app for review to gain access to specific permissions related to ad management."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developers.facebook.com/docs/marketing-api/overview/authorization",
+     "quote": "The authorization process verifies the users and apps that will be accessing the Marketing API and grants them permissions."
+    }
+   ],
+   "hint": "developers.facebook.com/docs/marketing-apis",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "api_type graphql and oauth2 are not stated in cached text; they will be reset by the quote check.",
+   "qc_failed": [
+    "auth_methods",
+    "api_type",
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Monday.com",
+   "category": "Productivity and Project Management",
+   "one_liner": "Work OS with an API for apps and integrations.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "access",
+     "url": "https://monday.com/pricing",
+     "quote": "Start free, no credit card needed."
+    }
+   ],
+   "hint": "developer.monday.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Pricing page only (product free tier); API docs not cached.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "MongoDB Atlas",
+   "category": "Developer, Infra and Data platforms",
+   "one_liner": "Managed MongoDB with an Atlas Administration API.",
+   "auth_methods": [
+    "oauth2",
+    "other"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+     "quote": "Service account access tokens ( OAuth 2.0)"
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+     "quote": "API keys ( HTTP Digest Authentication)"
+    },
+    {
+     "field": "api_type",
+     "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+     "quote": "To use the Atlas Administration API to manage your Atlas clusters, you must authenticate your API requests."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+     "quote": "We recommend you use service accounts instead of API keys to authenticate to the Atlas Administration API."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+     "quote": "We recommend you use service accounts instead of API keys to authenticate to the Atlas Administration API."
+    }
+   ],
+   "hint": "mongodb.com/docs/atlas/api",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "The Admin API does not expose cluster data; reading/writing data needs database-user credentials.",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "MrScraper",
+   "category": "Data, SEO and Scraping",
+   "one_liner": "AI scraping platform with API, CLI and MCP server.",
+   "auth_methods": [
+    "api_key",
+    "bearer_token"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "https://docs.mrscraper.com/docs/getting-started/overview",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.mrscraper.com/docs/getting-started/quickstart",
+     "quote": "Create a MrScraper account and obtain your API key from the Scraper API before following this guide."
+    },
+    {
+     "field": "api_type",
+     "url": "https://docs.mrscraper.com/docs/getting-started/quickstart",
+     "quote": "Make Your First API Request"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://docs.mrscraper.com/docs/getting-started/quickstart",
+     "quote": "Create a MrScraper account and obtain your API key from the Scraper API before following this guide."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://docs.mrscraper.com/docs/getting-started/quickstart",
+     "quote": "Create a MrScraper account and obtain your API key from the Scraper API before following this guide."
+    }
+   ],
+   "hint": "docs.mrscraper.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "api_breadth",
+    "existing_mcp"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Neo4j",
+   "category": "Developer, Infra and Data platforms",
+   "one_liner": "Not extracted: no readable page.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "neo4j.com/docs/api",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Fetch blocked by robots.txt on neo4j.com.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Netlify",
+   "category": "Developer, Infra and Data platforms",
+   "one_liner": "Web hosting/deploy platform with a REST API.",
+   "auth_methods": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "access": "self_serve_free",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+     "quote": "Netlify uses OAuth2 for authentication"
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+     "quote": "Authorization: Bearer <YOUR_PERSONAL_ACCESS_TOKEN>"
+    },
+    {
+     "field": "api_type",
+     "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+     "quote": "Use the Netlify REST API to manage atomic deploys of your sites and apps"
+    },
+    {
+     "field": "access",
+     "url": "https://www.netlify.com/pricing/",
+     "quote": "Build and deploy free forever."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+     "quote": "To generate a personal access token"
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+     "quote": "To generate a personal access token"
+    }
+   ],
+   "hint": "docs.netlify.com/api",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "NotebookLM",
+   "category": "AI, Research and Media-native",
+   "one_liner": "Google's notebook AI; the Enterprise edition has an API for notebooks.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "paid_plan",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "none_found",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "paid_plan",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "api_type",
+     "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+     "quote": "Create and manage notebooks (API)"
+    },
+    {
+     "field": "access",
+     "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview",
+     "quote": "Gemini Notebook Enterprise is a Generative AI Service subject to the applicable terms of the agreement under which you access Google Cloud services."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview",
+     "quote": "Gemini Notebook Enterprise is a highly compliant, enterprise-ready version of Gemini Notebook."
+    }
+   ],
+   "hint": "cloud.google.com/gemini (Enterprise API)",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "The API is for the Enterprise edition on Google Cloud; personal NotebookLM has no API in cached text. existing_mcp none_found is unquoted and unproven.",
+   "qc_failed": [
+    "api_breadth",
+    "buildable_today"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Notion",
+   "category": "Productivity and Project Management",
+   "one_liner": "Workspace/docs tool with a REST API and an official MCP.",
+   "auth_methods": [
+    "bearer_token",
+    "oauth2",
+    "api_key"
+   ],
+   "access": "self_serve_free",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://developers.notion.com/docs/mcp",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.notion.com/docs/authorization",
+     "quote": "Authenticate Notion API requests with personal access tokens, internal connection tokens, or OAuth integration OAuth flows."
+    },
+    {
+     "field": "api_type",
+     "url": "https://developers.notion.com/reference/authentication",
+     "quote": "Learn how to authenticate your connection requests using bearer tokens."
+    },
+    {
+     "field": "existing_mcp",
+     "url": "https://developers.notion.com/docs/mcp",
+     "quote": "Connect AI assistants to Notion with MCP"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.notion.com/docs/authorization",
+     "quote": "You are required to be a workspace owner to create a connection."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developers.notion.com/docs/authorization",
+     "quote": "Create a new connection from the Developer portal."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developers.notion.com/docs/authorization",
+     "quote": "Before a connection can interact with your Notion workspace page(s), the page must be manually shared with the connection."
+    }
+   ],
+   "hint": "developers.notion.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "access: needs workspace owner to create an internal connection, so not purely self-serve; marked self_serve_free but quote is about owner requirement. Re-check.",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Otter AI",
+   "category": "AI, Research and Media-native",
+   "one_liner": "Meeting transcription; pricing page lists MCP server integration.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://otter.ai/pricing",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "existing_mcp",
+     "url": "https://otter.ai/pricing",
+     "quote": "MCP server integration for AI assistants"
+    }
+   ],
+   "hint": "help.otter.ai (MCP server)",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Pricing page only; API/auth not cached. The MCP line appears as a plan feature.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Paygent Connect",
+   "category": "Finance and Fintech",
+   "one_liner": "Not extracted: no readable page.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "paygent (NMI-powered)",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "docs.nmi.com blocked by robots.txt; paygent.com needed a browser.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Pinterest",
+   "category": "Marketing, Ads, Email and Social",
+   "one_liner": "Visual discovery platform with a developer API and a forthcoming MCP server.",
+   "auth_methods": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://developers.pinterest.com/about-pinterest-mcp/",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "existing_mcp",
+     "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+     "quote": "Pinterest MCP Server brings the power of Pinterest data directly into the AI assistants"
+    },
+    {
+     "field": "existing_mcp",
+     "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+     "quote": "Be the first to know when it launches."
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+     "quote": "OAuth 2.0 authorization and granular permissions keep credentials protected"
+    }
+   ],
+   "hint": "developers.pinterest.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "The MCP page says 'Be the first to know when it launches', so the MCP may not be live. Marked official but unverified.",
+   "qc_failed": [
+    "api_type",
+    "buildable_today"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Pipedrive",
+   "category": "CRM and Sales",
+   "one_liner": "Sales CRM and pipeline management tool.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "pipedrive.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Only a community forum thread was cached (a user's question, not official docs). Needs official docs.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "PitchBook",
+   "category": "Finance and Fintech",
+   "one_liner": "Not extracted: no readable page.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "pitchbook.com (research API)",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Fetch blocked by robots.txt on pitchbook.com.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Plaid",
+   "category": "Finance and Fintech",
+   "one_liner": "Financial data aggregation API.",
+   "auth_methods": [
+    "api_key"
+   ],
+   "access": "admin_approval",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "admin_approval",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://plaid.com/docs/api/",
+     "quote": "Almost all Plaid API endpoints require a"
+    },
+    {
+     "field": "api_type",
+     "url": "https://plaid.com/docs/api/",
+     "quote": "Comprehensive reference for integrating with Plaid API endpoints"
+    },
+    {
+     "field": "access",
+     "url": "https://plaid.com/docs/api/",
+     "quote": "Plaid has two environments: Sandbox and Production."
+    },
+    {
+     "field": "access",
+     "url": "https://plaid.com/docs/api/",
+     "quote": "request Production API access"
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://plaid.com/docs/api/",
+     "quote": "request Production API access"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://plaid.com/docs/api/",
+     "quote": "The Sandbox environment supports only test Items."
+    }
+   ],
+   "hint": "plaid.com/docs",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Sandbox is self-serve; Production requires a request/approval.",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Plain",
+   "category": "Support and Helpdesk",
+   "one_liner": "Support platform with a GraphQL API and OAuth apps.",
+   "auth_methods": [
+    "oauth2"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "graphql"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://www.plain.com/docs/graphql/oauth",
+     "quote": "An OAuth app lets users in your workspace sign in to your app with their Plain account."
+    },
+    {
+     "field": "api_type",
+     "url": "https://www.plain.com/docs/graphql/oauth",
+     "quote": "Call the API as a user in your workspace after they sign in to your OAuth app."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://www.plain.com/docs/graphql/oauth",
+     "quote": "Creating an OAuth app gives you a client ID, which identifies your app to Plain and isn’t secret."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://www.plain.com/docs/graphql/oauth",
+     "quote": "Creating an OAuth app gives you a client ID, which identifies your app to Plain and isn’t secret."
+    }
+   ],
+   "hint": "plain.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Podio",
+   "category": "CRM and Sales",
+   "one_liner": "Customizable work platform (apps, workspaces) with an API.",
+   "auth_methods": [
+    "oauth2",
+    "api_key"
+   ],
+   "access": "self_serve_free",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.podio.com/authentication",
+     "quote": "The Podio API uses the OAuth2 protocol for authentication."
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developers.podio.com/api-key",
+     "quote": "It's easy to get one or more API keys for accessing your Podio data."
+    },
+    {
+     "field": "access",
+     "url": "https://developers.podio.com/api-key",
+     "quote": "You just have to sign in or sign up with Podio, and go to the API key tab in your settings."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developers.podio.com/api-key",
+     "quote": "It's easy to get one or more API keys for accessing your Podio data."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developers.podio.com/api-key",
+     "quote": "It's easy to get one or more API keys for accessing your Podio data."
+    }
+   ],
+   "hint": "podio.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Pumble",
+   "category": "Communications and Messaging",
+   "one_liner": "Free team chat app.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://pumble.com/help/integrations/",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "existing_mcp",
+     "url": "https://pumble.com/help/integrations/",
+     "quote": "How to use the Pumble MCP server"
+    }
+   ],
+   "hint": "pumble.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Pages only list a help-article title mentioning a Pumble MCP server; the article itself was not read. Needs API docs.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Pylon",
+   "category": "Support and Helpdesk",
+   "one_liner": "B2B customer support platform (issues, Slack/Teams support).",
+   "auth_methods": [
+    "bearer_token"
+   ],
+   "access": "admin_approval",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "admin_approval",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+     "quote": "The Pylon API uses Bearer authentication."
+    },
+    {
+     "field": "access",
+     "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+     "quote": "Only Admin users can create API tokens."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+     "quote": "Only Admins can create and manage API tokens."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+     "quote": "Only Admins can create and manage API tokens."
+    }
+   ],
+   "hint": "usepylon.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "QuickBooks",
+   "category": "Finance and Fintech",
+   "one_liner": "Intuit accounting; only ~124 chars cached.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "developer.intuit.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "No usable page.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Ramp",
+   "category": "Finance and Fintech",
+   "one_liner": "Not extracted: no readable page.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "docs.ramp.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Fetch blocked by robots.txt on docs.ramp.com.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Reducto",
+   "category": "AI, Research and Media-native",
+   "one_liner": "Document processing platform with REST/SDKs and MCP tools.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest",
+    "sdk_only"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://docs.reducto.ai/",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "api_type",
+     "url": "https://docs.reducto.ai/",
+     "quote": "Available in Python, Node.js, Go, and REST, with Studio for visual pipeline building."
+    },
+    {
+     "field": "existing_mcp",
+     "url": "https://docs.reducto.ai/",
+     "quote": "Give agents Reducto tools directly in Claude Code, Codex, Cursor, and other MCP clients."
+    }
+   ],
+   "hint": "reducto.ai (document parsing)",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Auth and signup not cached.",
+   "qc_failed": [
+    "buildable_today"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Salesforce",
+   "category": "CRM and Sales",
+   "one_liner": "Cloud CRM platform for sales, service and marketing, with REST APIs and an MCP server.",
+   "auth_methods": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "access": "self_serve_free",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "large",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://api.salesforce.com/platform/mcp/v1/platform/headless-360",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html",
+     "quote": "Use the access token (also known as a “bearer token”) that you get from Salesforce CLI to authenticate cURL requests."
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/references/reference/headless-360-mcp.html",
+     "quote": "MCP client installed and configured with OAuth authentication"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html",
+     "quote": "Step One: Sign up for Salesforce Developer Edition"
+    },
+    {
+     "field": "api_type",
+     "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html",
+     "quote": "To successfully send requests, REST API requires an access token obtained by authentication."
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/references/reference/headless-360-mcp.html",
+     "quote": "The platform/headless-360 server brings the full breadth of Salesforce to any MCP-aware agent through a single connection."
+    },
+    {
+     "field": "existing_mcp",
+     "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/references/reference/headless-360-mcp.html",
+     "quote": "Beta: The Headless 360 MCP Server is a Beta Service."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html",
+     "quote": "Complete these steps in your Developer Edition org or development sandbox."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html",
+     "quote": "Complete these steps in your Developer Edition org or development sandbox."
+    }
+   ],
+   "hint": "salesforce.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Salesforce Commerce Cloud",
+   "category": "Ecommerce",
+   "one_liner": "Salesforce B2C Commerce with SCAPI Shopper and Admin APIs.",
+   "auth_methods": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "unknown",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html",
+     "quote": "The JWT access tokens for both SCAPI Admin APIs and Shopper APIs are included in your API requests as an HTTP header that follows the Bearer authentication scheme."
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html",
+     "quote": "we’ve defined a set of scopes based on the OAuth 2.1 standard"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html",
+     "quote": "Create an API client in Account Manager"
+    }
+   ],
+   "hint": "developer.salesforce.com/docs/commerce",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Requires an existing B2C Commerce instance and Account Manager; whether that is self-serve is not stated.",
+   "qc_failed": [
+    "api_type",
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "SE Ranking",
+   "category": "Data, SEO and Scraping",
+   "one_liner": "SEO platform with API and MCP access included in every plan.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "free_trial",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://seranking.com/api.html",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "access",
+     "url": "https://seranking.com/api.html",
+     "quote": "API access is included in every SE Ranking plan"
+    },
+    {
+     "field": "access",
+     "url": "https://seranking.com/api.html",
+     "quote": "Start free trial"
+    },
+    {
+     "field": "existing_mcp",
+     "url": "https://seranking.com/api.html",
+     "quote": "Connect via MCP and work with your SEO data inside Claude, Codex, Cursor, or any other AI tool."
+    },
+    {
+     "field": "api_type",
+     "url": "https://seranking.com/api.html",
+     "quote": "Retrieve instant, structured JSON responses with up to 10 requests per second."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://seranking.com/api.html",
+     "quote": "Buy a stand-alone API, start with pay-as-you-go, or combine with any SE Ranking subscription."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://seranking.com/api.html",
+     "quote": "Buy a stand-alone API, start with pay-as-you-go, or combine with any SE Ranking subscription."
+    }
+   ],
+   "hint": "seranking.com/api",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "SendGrid",
+   "category": "Marketing, Ads, Email and Social",
+   "one_liner": "Twilio SendGrid email delivery API.",
+   "auth_methods": [
+    "api_key",
+    "bearer_token",
+    "basic"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.sendgrid.com/for-developers/sending-email/authentication/",
+     "quote": "Twilio SendGrid supports API keys delivered via Bearer token or Basic authentication"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://docs.sendgrid.com/for-developers/sending-email/authentication/",
+     "quote": "Authenticate to the Twilio SendGrid API by creating an API Key in the Settings section of the Twilio SendGrid console"
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://docs.sendgrid.com/for-developers/sending-email/authentication/",
+     "quote": "Authenticate to the Twilio SendGrid API by creating an API Key in the Settings section of the Twilio SendGrid console"
+    }
+   ],
+   "hint": "sendgrid.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "api_type",
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Sentry",
+   "category": "Developer, Infra and Data platforms",
+   "one_liner": "Error and performance monitoring with a web API.",
+   "auth_methods": [
+    "bearer_token",
+    "oauth2"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.sentry.io/api/auth/",
+     "quote": "Authentication tokens are passed using an auth header"
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.sentry.io/api/auth/",
+     "quote": "Sentry supports OAuth2 with the authorization code grant type."
+    },
+    {
+     "field": "api_type",
+     "url": "https://docs.sentry.io/api/",
+     "quote": "The Sentry web API is used to access the Sentry platform programmatically."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://docs.sentry.io/api/auth/",
+     "quote": "You can create authentication tokens within Sentry by creating an internal integration."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://docs.sentry.io/api/auth/",
+     "quote": "You can create authentication tokens within Sentry by creating an internal integration."
+    }
+   ],
+   "hint": "docs.sentry.io/api",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Sherlock",
+   "category": "Data, SEO and Scraping",
+   "one_liner": "Open-source CLI that hunts usernames across social networks.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "no_public_api",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "main_blocker",
+     "url": "https://github.com/sherlock-project/sherlock/issues/854",
+     "quote": "Sherlock is open source, so there is no \"outside help\"."
+    }
+   ],
+   "hint": "github.com/sherlock-project/sherlock",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Only a GitHub issue was cached. 'cli_only / none / no_api' is inferred from Sherlock being a CLI tool, not stated in the cached text; verify against the README.",
+   "qc_failed": [
+    "auth_methods",
+    "api_type",
+    "buildable_today"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Shopify",
+   "category": "Ecommerce",
+   "one_liner": "Commerce platform with GraphQL Admin and Storefront APIs.",
+   "auth_methods": [
+    "oauth2"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "graphql"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://shopify.dev/changelog/posts/mcp-server-for-the-shopify-dev-assistant",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://shopify.dev/docs/api/usage/authentication",
+     "quote": "Your code obtains an access token scoped to the access it needs."
+    },
+    {
+     "field": "api_type",
+     "url": "https://shopify.dev/docs/api/usage/authentication",
+     "quote": "Most Shopify APIs, including the GraphQL Admin API, Storefront API, and Partner API"
+    },
+    {
+     "field": "existing_mcp",
+     "url": "https://shopify.dev/changelog/posts/mcp-server-for-the-shopify-dev-assistant",
+     "quote": "The MCP server gives your AI assistant access to Shopify's development resources"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://shopify.dev/docs/api/usage/authentication",
+     "quote": "Your code includes the token in a request header."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://shopify.dev/docs/api/usage/authentication",
+     "quote": "Your code includes the token in a request header."
+    }
+   ],
+   "hint": "shopify.dev",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "The Shopify MCP is a dev-docs assistant, not a store-data MCP.",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Slack",
+   "category": "Communications and Messaging",
+   "one_liner": "Team messaging platform with a Web API and app platform.",
+   "auth_methods": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://api.slack.com/authentication",
+     "quote": "Tokens: Understand the different types of tokens your app can use (user tokens, bot tokens, and app tokens)"
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://api.slack.com/authentication",
+     "quote": "OAuth 2.0: Learn how to use OAuth 2.0 to securely authenticate users and request access tokens."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://api.slack.com/authentication",
+     "quote": "Slack apps use OAuth scopes to govern what they can access."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://api.slack.com/authentication",
+     "quote": "Slack apps use OAuth scopes to govern what they can access."
+    }
+   ],
+   "hint": "slack.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Smartsheet",
+   "category": "Productivity and Project Management",
+   "one_liner": "Work management platform; pricing page only cached.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "smartsheet.com/developers",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "No API docs cached.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Snowflake",
+   "category": "Developer, Infra and Data platforms",
+   "one_liner": "Cloud data warehouse with REST APIs.",
+   "auth_methods": [
+    "other",
+    "other"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication",
+     "quote": "Using key pair authentication"
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication",
+     "quote": "Using a programmatic access token (PAT)"
+    }
+   ],
+   "hint": "docs.snowflake.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Auth is account/user-level; no free tier or pricing stated on the cached page.",
+   "qc_failed": [
+    "api_type",
+    "api_breadth",
+    "buildable_today"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Squarespace",
+   "category": "Ecommerce",
+   "one_liner": "Website builder with Commerce APIs and an MCP server.",
+   "auth_methods": [
+    "api_key",
+    "oauth2"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://developers.squarespace.com/mcp/overview",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "quote": "you can use a generated API key or start the OAuth process with Squarespace"
+    },
+    {
+     "field": "existing_mcp",
+     "url": "https://developers.squarespace.com/mcp/overview",
+     "quote": "The Squarespace MCP server connects AI assistants to Squarespace."
+    },
+    {
+     "field": "api_type",
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "quote": "every request to Commerce APIs must be authenticated and have minimum permissions."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "quote": "you can use a generated API key or start the OAuth process with Squarespace"
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "quote": "you can use a generated API key or start the OAuth process with Squarespace"
+    }
+   ],
+   "hint": "developers.squarespace.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Stripe",
+   "category": "Finance and Fintech",
+   "one_liner": "Payments platform with a REST API and official MCP server.",
+   "auth_methods": [
+    "api_key",
+    "basic",
+    "bearer_token",
+    "oauth2"
+   ],
+   "access": "self_serve_free",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://docs.stripe.com/mcp",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "high",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.stripe.com/api/authentication",
+     "quote": "The Stripe API authenticates requests using"
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.stripe.com/mcp",
+     "quote": "Use OAuth when a client accesses Stripe on behalf of your Stripe user account."
+    },
+    {
+     "field": "api_type",
+     "url": "https://docs.stripe.com/api/authentication",
+     "quote": "Make all API requests over"
+    },
+    {
+     "field": "existing_mcp",
+     "url": "https://docs.stripe.com/mcp",
+     "quote": "The Stripe Model Context Protocol (MCP) server provides tools that AI agents can use to interact with the Stripe API"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.stripe.com/api/authentication",
+     "quote": "A sample test API key is included in all the examples here, so you can test any example right away."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://docs.stripe.com/api/authentication",
+     "quote": "Provide your API key as the basic auth username value. You don’t need to provide a password."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://docs.stripe.com/api/authentication",
+     "quote": "Provide your API key as the basic auth username value. You don’t need to provide a password."
+    }
+   ],
+   "hint": "stripe.com/docs/api",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Test-mode keys come with any account; whether the account is free is not quoted. access may reset.",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Supabase",
+   "category": "Developer, Infra and Data platforms",
+   "one_liner": "Open-source Postgres backend with a Management API.",
+   "auth_methods": [
+    "bearer_token",
+    "oauth2"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://supabase.com/docs/reference/api/introduction",
+     "quote": "There are two ways to generate an access token:"
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://supabase.com/docs/reference/api/introduction",
+     "quote": "OAuth2 allows your application to generate tokens on behalf of a Supabase user"
+    },
+    {
+     "field": "api_type",
+     "url": "https://supabase.com/docs/reference/api/introduction",
+     "quote": "Manage your Supabase organizations and projects programmatically."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://supabase.com/docs/reference/api/introduction",
+     "quote": "To generate or manage your personal access tokens, visit your account page."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://supabase.com/docs/reference/api/introduction",
+     "quote": "To generate or manage your personal access tokens, visit your account page."
+    }
+   ],
+   "hint": "supabase.com/docs",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "systeme.io",
+   "category": "Marketing, Ads, Email and Social",
+   "one_liner": "All-in-one funnel, email and course platform with a free plan.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "systeme.io (funnel builder)",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Cached page is pricing only; it shows a free plan for the product but nothing about the public API. Needs API docs.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Telegram",
+   "category": "Communications and Messaging",
+   "one_liner": "Messaging app with a free Bot API.",
+   "auth_methods": [
+    "api_key"
+   ],
+   "access": "self_serve_free",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "high",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://core.telegram.org/bots/api",
+     "quote": "Each bot is given a unique authentication token"
+    },
+    {
+     "field": "api_type",
+     "url": "https://core.telegram.org/bots/api",
+     "quote": "All queries to the Telegram Bot API must be served over HTTPS and need to be presented in this form:"
+    },
+    {
+     "field": "access",
+     "url": "https://core.telegram.org/bots",
+     "quote": "Telegram bots are special accounts that do not need a phone number to set up."
+    }
+   ],
+   "hint": "core.telegram.org",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "api_breadth",
+    "buildable_today",
+    "main_blocker"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Threads (Meta)",
+   "category": "Marketing, Ads, Email and Social",
+   "one_liner": "Meta's Threads API for publishing and reading posts.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "admin_approval",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "admin_approval",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "access",
+     "url": "https://developers.facebook.com/docs/threads/create-posts/share-to-ig-stories/",
+     "quote": "If your app has not been approved for advanced access for the threadscontentpublish permission, you can only post on behalf of Threads testers on your app."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developers.facebook.com/docs/threads/create-posts/share-to-ig-stories/",
+     "quote": "you can only post on behalf of Threads testers on your app."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developers.facebook.com/docs/threads/create-posts/share-to-ig-stories/",
+     "quote": "After your app is published and approved, you can post on behalf of any Threads user who grants your app the permission."
+    }
+   ],
+   "hint": "developers.facebook.com/docs/threads",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "auth_methods",
+    "api_type",
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Twenty",
+   "category": "CRM and Sales",
+   "one_liner": "Open-source CRM you build and version like the rest of your stack.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "twenty.com (open-source CRM)",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Cached page is the GitHub README; no API or auth detail.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Twilio",
+   "category": "Communications and Messaging",
+   "one_liner": "Cloud communications APIs for SMS, voice, verification and more.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "large",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "api_type",
+     "url": "https://www.twilio.com/docs",
+     "quote": "Learn how to interact with the REST API for account management, development testing, and fraud protection."
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://www.twilio.com/docs",
+     "quote": "Build better and engage your customers across all channels with our API reference documentation, quickstarts, SDKs and multi-language code samples."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://www.twilio.com/docs",
+     "quote": "Manage your projects, securely authenticate REST API requests, and learn best practices for accessing Twilio's resources."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://www.twilio.com/docs",
+     "quote": "Manage your projects, securely authenticate REST API requests, and learn best practices for accessing Twilio's resources."
+    }
+   ],
+   "hint": "twilio.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Only the docs landing page was cached; auth method and pricing not stated there.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Vercel",
+   "category": "Developer, Infra and Data platforms",
+   "one_liner": "Frontend cloud platform with a REST API.",
+   "auth_methods": [
+    "bearer_token"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://vercel.com/docs/rest-api",
+     "quote": "Vercel Access Tokens are required to authenticate and use the Vercel API."
+    },
+    {
+     "field": "api_type",
+     "url": "https://vercel.com/docs/rest-api",
+     "quote": "All endpoints live under the URLhttps://api.vercel.com and follow the REST architecture."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://vercel.com/docs/rest-api",
+     "quote": "Create and manage Access Tokens in your account settings."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://vercel.com/docs/rest-api",
+     "quote": "Create and manage Access Tokens in your account settings."
+    }
+   ],
+   "hint": "vercel.com/docs/rest-api",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Vonage",
+   "category": "Communications and Messaging",
+   "one_liner": "Communications APIs (SMS, voice, Messages, Verify).",
+   "auth_methods": [
+    "api_key",
+    "basic",
+    "bearer_token"
+   ],
+   "access": "self_serve_free",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+     "quote": "Messages supports both JWT and Basic authentication"
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+     "quote": "API Key and Secret (Header)"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+     "quote": "When you create a Vonage account, an API key and secret will be created for you."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+     "quote": "When you create a Vonage account, an API key and secret will be created for you."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+     "quote": "When you create a Vonage account, an API key and secret will be created for you."
+    }
+   ],
+   "hint": "developer.vonage.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [
+    "api_type",
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Waterfall.io",
+   "category": "Data, SEO and Scraping",
+   "one_liner": "Contact and company enrichment API aggregating 30+ data vendors.",
+   "auth_methods": [
+    "api_key"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "medium",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.waterfall.io/",
+     "quote": "Send your API key in the"
+    },
+    {
+     "field": "api_type",
+     "url": "https://docs.waterfall.io/",
+     "quote": "Explore Waterfall’s APIs and compare their inputs, results, and use cases to choose the right endpoint for your workflow."
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://docs.waterfall.io/",
+     "quote": "Look up company context from an IPv4 address, with entity type and confidence."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://docs.waterfall.io/",
+     "quote": "create and manage keys for your workflows."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://docs.waterfall.io/",
+     "quote": "create and manage keys for your workflows."
+    }
+   ],
+   "hint": "waterfall.io (contact/company intel)",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Pricing is usage-based; whether signup is self-serve is not on cached pages.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "WhatsApp Business",
+   "category": "Communications and Messaging",
+   "one_liner": "WhatsApp Cloud API through Meta's developer platform.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "buildable_today",
+     "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+     "quote": "This guide helps developers quickly get started with the WhatsApp Cloud API."
+    }
+   ],
+   "hint": "developers.facebook.com/docs/whatsapp",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Cached text is a get-started guide; business verification and app review not quoted.",
+   "qc_failed": [
+    "auth_methods",
+    "access",
+    "api_type",
+    "api_breadth",
+    "main_blocker"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "WooCommerce",
+   "category": "Ecommerce",
+   "one_liner": "Open-source WordPress commerce plugin with a REST API.",
+   "auth_methods": [
+    "api_key"
+   ],
+   "access": "self_serve_free",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+     "quote": "Most integrations require you to generate API keys in WooCommerce and enter them in the external service to establish the connection."
+    },
+    {
+     "field": "api_type",
+     "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+     "quote": "The WooCommerce REST API connects your store to external systems and services."
+    },
+    {
+     "field": "access",
+     "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+     "quote": "Go to WooCommerce Settings Advanced REST API."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+     "quote": "Copy the Consumer Key and Consumer Secret and enter them in the application you are connecting to."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+     "quote": "Copy the Consumer Key and Consumer Secret and enter them in the application you are connecting to."
+    }
+   ],
+   "hint": "woocommerce.com/document/woocommerce-rest-api",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Keys are generated on the merchant's own self-hosted store; no vendor approval.",
+   "qc_failed": [
+    "api_breadth"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Xero",
+   "category": "Finance and Fintech",
+   "one_liner": "Accounting platform with developer tiers and a remote MCP server.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "large",
+   "existing_mcp": "official",
+   "existing_mcp_url": "https://developer.xero.com/pricing",
+   "buildable_today": "partial",
+   "main_blocker": "admin_approval",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "existing_mcp",
+     "url": "https://developer.xero.com/pricing",
+     "quote": "AI toolkit (Remote MCP server)"
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://developer.xero.com/pricing",
+     "quote": "Journal endpoint (require security assessment and use case approval)"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developer.xero.com/pricing",
+     "quote": "Bulk connections (require security assessment and use case approval)"
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://developer.xero.com/pricing",
+     "quote": "XPM API (require security assessment and use case approval)"
+    }
+   ],
+   "hint": "developer.xero.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "OAuth 2.0 page cached empty; auth stays unknown at pass 2 unless quote exists. Some endpoints need security assessment.",
+   "qc_failed": [
+    "auth_methods",
+    "api_type"
+   ],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "YouTube Transcript",
+   "category": "AI, Research and Media-native",
+   "one_liner": "Not extracted: no readable page.",
+   "auth_methods": [
+    "unknown"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "unknown",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [],
+   "hint": "transcriptapi.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Fetch blocked by robots.txt on transcriptapi.com.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Zendesk",
+   "category": "Support and Helpdesk",
+   "one_liner": "Customer service and support ticketing platform.",
+   "auth_methods": [
+    "oauth2",
+    "api_key",
+    "basic"
+   ],
+   "access": "unknown",
+   "api_type": [
+    "unknown"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "unknown",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+     "quote": "Zendesk supports using OAuth access tokens to authenticate API requests."
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+     "quote": "If you're an existing Zendesk customer and are currently using basic authentication or API tokens, you will have to migrate to OAuth access tokens for improved security and compatibility with future requirements."
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+     "quote": "An OAuth token gives access to a single Zendesk instance (the one with the OAuth client used to create the token)."
+    }
+   ],
+   "hint": "zendesk.com",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Zoho Cliq",
+   "category": "Communications and Messaging",
+   "one_liner": "Team chat from Zoho with a REST API.",
+   "auth_methods": [
+    "oauth2"
+   ],
+   "access": "free_trial",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "partial",
+   "main_blocker": "unknown",
+   "confidence": "low",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://www.zoho.com/cliq/help/restapi/",
+     "quote": "Introduction to OAuth 2.0 - Overview"
+    },
+    {
+     "field": "access",
+     "url": "https://www.zoho.com/cliq/",
+     "quote": "Start your 15-day free trial"
+    },
+    {
+     "field": "api_type",
+     "url": "https://www.zoho.com/cliq/help/restapi/",
+     "quote": "Retrieve a particular userfield"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://www.zoho.com/cliq/help/restapi/",
+     "quote": "Register your application - Overview"
+    }
+   ],
+   "hint": "zoho.com/cliq",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "The free trial is for the product; the pages do not say how API credentials are obtained.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  },
+  {
+   "app": "Zoho CRM",
+   "category": "CRM and Sales",
+   "one_liner": "CRM with a V8 REST API and a free edition for 3 users.",
+   "auth_methods": [
+    "oauth2"
+   ],
+   "access": "self_serve_free",
+   "api_type": [
+    "rest"
+   ],
+   "api_breadth": "unknown",
+   "existing_mcp": "unknown",
+   "existing_mcp_url": "",
+   "buildable_today": "yes",
+   "main_blocker": "none",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "field": "auth_methods",
+     "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+     "quote": "OAuth 2.0 for V8 APIs - An Overview"
+    },
+    {
+     "field": "access",
+     "url": "https://www.zoho.com/crm/pricing/",
+     "quote": "Zoho CRM Pricing and Editions - Free for 3 users"
+    },
+    {
+     "field": "api_type",
+     "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+     "quote": "Zoho CRM API | V8"
+    },
+    {
+     "field": "buildable_today",
+     "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+     "quote": "The consumer key generated from the connected application."
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+     "quote": "The consumer key generated from the connected application."
+    }
+   ],
+   "hint": "zoho.com/crm",
+   "model": "claude-in-session",
+   "prompt_version": "v1",
+   "date": "2026-11-23",
+   "needs_human": false,
+   "why": "Free edition is for the product; API access on the free edition is not stated.",
+   "qc_failed": [],
+   "retried": false,
+   "stage": "pass2"
+  }
+ ]
+}

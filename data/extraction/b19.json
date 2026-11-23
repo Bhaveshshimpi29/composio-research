@@ -1,0 +1,130 @@
+[
+ {
+  "app": "iPayX",
+  "category": "Finance",
+  "one_liner": "Payments product; only ~118 chars cached.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "No usable page."
+ },
+ {
+  "app": "QuickBooks",
+  "category": "Finance",
+  "one_liner": "Intuit accounting; only ~124 chars cached.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "No usable page."
+ },
+ {
+  "app": "Xero",
+  "category": "Finance",
+  "one_liner": "Accounting platform with developer tiers and a remote MCP server.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "official",
+  "existing_mcp_url": "https://developer.xero.com/pricing",
+  "buildable_today": "partial",
+  "main_blocker": "admin_approval",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "existing_mcp",
+    "url": "https://developer.xero.com/pricing",
+    "quote": "AI toolkit (Remote MCP server)"
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://developer.xero.com/pricing",
+    "quote": "Journal endpoint (require security assessment and use case approval)"
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://developer.xero.com/pricing",
+    "quote": "Bulk connections (require security assessment and use case approval)"
+   },
+   {
+    "field": "api_breadth",
+    "url": "https://developer.xero.com/pricing",
+    "quote": "XPM API (require security assessment and use case approval)"
+   }
+  ],
+  "note": "OAuth 2.0 page cached empty; auth stays unknown at pass 2 unless quote exists. Some endpoints need security assessment."
+ },
+ {
+  "app": "Brex",
+  "category": "Finance",
+  "one_liner": "Corporate card/spend platform with a REST API and user tokens.",
+  "auth_methods": [
+   "bearer_token",
+   "api_key"
+  ],
+  "access": "admin_approval",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "medium",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.brex.com/docs/authentication/",
+    "quote": "To start making calls to Brex APIs, generate a user token from your Brex dashboard and pass it along in your API call headers."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.brex.com/docs/authentication/",
+    "quote": "If your company has not accepted the developer API agreement, please review the terms and conditions."
+   },
+   {
+    "field": "api_type",
+    "url": "https://developer.brex.com/",
+    "quote": "and use standard HTTP response codes and verbs."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://developer.brex.com/docs/authentication/",
+    "quote": "To start making calls to Brex APIs, generate a user token from your Brex dashboard and pass it along in your API call headers."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://developer.brex.com/docs/authentication/",
+    "quote": "account admin or card admin"
+   }
+  ],
+  "note": "Token creation needs account admin or card admin."
+ }
+]

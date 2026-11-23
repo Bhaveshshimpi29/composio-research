@@ -1,0 +1,15 @@
+{
+ "app": "Brex",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://developer.brex.com/docs/authentication/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://developer.brex.com/",
+   "kind": "seed"
+  }
+ ]
+}

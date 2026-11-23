@@ -1,0 +1,204 @@
+[
+ {
+  "app": "Shopify",
+  "category": "E-commerce",
+  "one_liner": "Commerce platform with GraphQL Admin and Storefront APIs.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "graphql"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "official",
+  "existing_mcp_url": "https://shopify.dev/changelog/posts/mcp-server-for-the-shopify-dev-assistant",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://shopify.dev/docs/api/usage/authentication",
+    "quote": "Your code obtains an access token scoped to the access it needs."
+   },
+   {
+    "field": "api_type",
+    "url": "https://shopify.dev/docs/api/usage/authentication",
+    "quote": "Most Shopify APIs, including the GraphQL Admin API, Storefront API, and Partner API"
+   },
+   {
+    "field": "existing_mcp",
+    "url": "https://shopify.dev/changelog/posts/mcp-server-for-the-shopify-dev-assistant",
+    "quote": "The MCP server gives your AI assistant access to Shopify's development resources"
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://shopify.dev/docs/api/usage/authentication",
+    "quote": "Your code includes the token in a request header."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://shopify.dev/docs/api/usage/authentication",
+    "quote": "Your code includes the token in a request header."
+   }
+  ],
+  "note": "The Shopify MCP is a dev-docs assistant, not a store-data MCP."
+ },
+ {
+  "app": "WooCommerce",
+  "category": "E-commerce",
+  "one_liner": "Open-source WordPress commerce plugin with a REST API.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+    "quote": "Most integrations require you to generate API keys in WooCommerce and enter them in the external service to establish the connection."
+   },
+   {
+    "field": "api_type",
+    "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+    "quote": "The WooCommerce REST API connects your store to external systems and services."
+   },
+   {
+    "field": "access",
+    "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+    "quote": "Go to WooCommerce Settings Advanced REST API."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+    "quote": "Copy the Consumer Key and Consumer Secret and enter them in the application you are connecting to."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+    "quote": "Copy the Consumer Key and Consumer Secret and enter them in the application you are connecting to."
+   }
+  ],
+  "note": "Keys are generated on the merchant's own self-hosted store; no vendor approval."
+ },
+ {
+  "app": "BigCommerce",
+  "category": "E-commerce",
+  "one_liner": "SaaS commerce platform with REST and GraphQL APIs.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "graphql"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "api_type",
+    "url": "https://developer.bigcommerce.com/docs/storefront/catalyst/reference/security",
+    "quote": "Catalyst uses only the GraphQL Storefront API, which has no access to admin functionality."
+   }
+  ],
+  "note": "Cached page is Catalyst security; no auth or admin API docs. Needs re-fetch."
+ },
+ {
+  "app": "Salesforce Commerce Cloud",
+  "category": "E-commerce",
+  "one_liner": "Salesforce B2C Commerce with SCAPI Shopper and Admin APIs.",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "partial",
+  "main_blocker": "unknown",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html",
+    "quote": "The JWT access tokens for both SCAPI Admin APIs and Shopper APIs are included in your API requests as an HTTP header that follows the Bearer authentication scheme."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html",
+    "quote": "we’ve defined a set of scopes based on the OAuth 2.1 standard"
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html",
+    "quote": "Create an API client in Account Manager"
+   }
+  ],
+  "note": "Requires an existing B2C Commerce instance and Account Manager; whether that is self-serve is not stated."
+ },
+ {
+  "app": "Squarespace",
+  "category": "E-commerce",
+  "one_liner": "Website builder with Commerce APIs and an MCP server.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "rest",
+   "mcp"
+  ],
+  "api_breadth": "medium",
+  "existing_mcp": "official",
+  "existing_mcp_url": "https://developers.squarespace.com/mcp/overview",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+    "quote": "you can use a generated API key or start the OAuth process with Squarespace"
+   },
+   {
+    "field": "existing_mcp",
+    "url": "https://developers.squarespace.com/mcp/overview",
+    "quote": "The Squarespace MCP server connects AI assistants to Squarespace."
+   },
+   {
+    "field": "api_type",
+    "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+    "quote": "every request to Commerce APIs must be authenticated and have minimum permissions."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+    "quote": "you can use a generated API key or start the OAuth process with Squarespace"
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+    "quote": "you can use a generated API key or start the OAuth process with Squarespace"
+   }
+  ]
+ }
+]

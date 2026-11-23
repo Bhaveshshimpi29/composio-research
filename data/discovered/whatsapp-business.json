@@ -1,0 +1,19 @@
+{
+ "app": "WhatsApp Business",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+   "kind": "seed"
+  },
+  {
+   "url": "https://developers.facebook.com/docs/whatsapp/business-management-api/get-started",
+   "kind": "seed"
+  },
+  {
+   "url": "https://developers.facebook.com/docs/whatsapp/pricing",
+   "kind": "seed"
+  }
+ ]
+}

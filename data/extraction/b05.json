@@ -1,0 +1,48 @@
+[
+{"app":"Google Ads","category":"Marketing","one_liner":"Google's advertising platform with the Google Ads API.",
+ "auth_methods":["oauth2","api_key"],"access":"self_serve_free","api_type":["unknown"],"api_breadth":"unknown","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"partial","main_blocker":"unknown","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://developers.google.com/google-ads/api/docs/oauth/overview","quote":"Google Ads API utilizes the OAuth 2.0 protocol for authentication and authorization"},
+  {"field":"buildable_today","url":"https://developers.google.com/google-ads/api/docs/oauth/overview","quote":"In addition to OAuth 2.0 credentials, a developer token is also required to make Google Ads API calls."}],
+ "note":"Access set to self_serve_free is NOT supported by cached text; developer-token approval is a likely gate. Set to unknown at pass 2 if unverified."},
+{"app":"Mailchimp","category":"Marketing","one_liner":"Email marketing platform with a Marketing API.",
+ "auth_methods":["api_key","oauth2","basic","bearer_token"],"access":"self_serve_free","api_type":["rest"],"api_breadth":"large","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"yes","main_blocker":"none","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://mailchimp.com/developer/marketing/api-concepts/authentication","quote":"Authenticate with an API key or OAuth 2 token"},
+  {"field":"auth_methods","url":"https://mailchimp.com/developer/marketing/api-concepts/authentication","quote":"You can use either HTTP Basic Authentication or Bearer Authentication."},
+  {"field":"buildable_today","url":"https://mailchimp.com/developer/marketing/api-concepts/authentication","quote":"You can start development against your own account with a key and move to OAuth 2 later"},
+  {"field":"main_blocker","url":"https://mailchimp.com/developer/marketing/api-concepts/authentication","quote":"You can start development against your own account with a key and move to OAuth 2 later"}],
+ "note":"Pricing page not cached; free-tier access inferred from the plan enum 'forever free' on the API page, so access should be re-checked."},
+{"app":"Klaviyo","category":"Marketing","one_liner":"Marketing automation platform with server- and client-side APIs.",
+ "auth_methods":["api_key","oauth2"],"access":"unknown","api_type":["rest"],"api_breadth":"large","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"yes","main_blocker":"none","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://developers.klaviyo.com/en/docs/authenticate_","quote":"Klaviyo provides 3 methods of authentication including private key authentication and OAuth"},
+  {"field":"api_type","url":"https://developers.klaviyo.com/en/docs/authenticate_","quote":"A majority of Klaviyo’s APIs are server-side endpoints"},
+  {"field":"buildable_today","url":"https://developers.klaviyo.com/en/docs/authenticate_","quote":"All /api endpoints use API private keys to authenticate requests."},
+  {"field":"main_blocker","url":"https://developers.klaviyo.com/en/docs/authenticate_","quote":"All /api endpoints use API private keys to authenticate requests."}]},
+{"app":"Pinterest","category":"Marketing","one_liner":"Visual discovery platform with a developer API and a forthcoming MCP server.",
+ "auth_methods":["oauth2","bearer_token"],"access":"unknown","api_type":["rest","mcp"],"api_breadth":"unknown","existing_mcp":"official","existing_mcp_url":"https://developers.pinterest.com/about-pinterest-mcp/",
+ "buildable_today":"partial","main_blocker":"unknown","confidence":"low",
+ "evidence":[
+  {"field":"existing_mcp","url":"https://developers.pinterest.com/about-pinterest-mcp/","quote":"Pinterest MCP Server brings the power of Pinterest data directly into the AI assistants"},
+  {"field":"existing_mcp","url":"https://developers.pinterest.com/about-pinterest-mcp/","quote":"Be the first to know when it launches."},
+  {"field":"auth_methods","url":"https://developers.pinterest.com/about-pinterest-mcp/","quote":"OAuth 2.0 authorization and granular permissions keep credentials protected"}],
+ "note":"The MCP page says 'Be the first to know when it launches', so the MCP may not be live. Marked official but unverified."},
+{"app":"Threads (Meta)","category":"Marketing","one_liner":"Meta's Threads API for publishing and reading posts.",
+ "auth_methods":["oauth2"],"access":"admin_approval","api_type":["rest"],"api_breadth":"medium","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"partial","main_blocker":"app_review","confidence":"medium",
+ "evidence":[
+  {"field":"access","url":"https://developers.facebook.com/docs/threads/create-posts/share-to-ig-stories/","quote":"If your app has not been approved for advanced access for the threadscontentpublish permission, you can only post on behalf of Threads testers on your app."},
+  {"field":"main_blocker","url":"https://developers.facebook.com/docs/threads/create-posts/share-to-ig-stories/","quote":"you can only post on behalf of Threads testers on your app."},
+  {"field":"buildable_today","url":"https://developers.facebook.com/docs/threads/create-posts/share-to-ig-stories/","quote":"After your app is published and approved, you can post on behalf of any Threads user who grants your app the permission."}]},
+{"app":"SendGrid","category":"Marketing","one_liner":"Twilio SendGrid email delivery API.",
+ "auth_methods":["api_key","bearer_token","basic"],"access":"unknown","api_type":["rest"],"api_breadth":"large","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"yes","main_blocker":"none","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://docs.sendgrid.com/for-developers/sending-email/authentication/","quote":"Twilio SendGrid supports API keys delivered via Bearer token or Basic authentication"},
+  {"field":"buildable_today","url":"https://docs.sendgrid.com/for-developers/sending-email/authentication/","quote":"Authenticate to the Twilio SendGrid API by creating an API Key in the Settings section of the Twilio SendGrid console"},
+  {"field":"main_blocker","url":"https://docs.sendgrid.com/for-developers/sending-email/authentication/","quote":"Authenticate to the Twilio SendGrid API by creating an API Key in the Settings section of the Twilio SendGrid console"}]}
+]

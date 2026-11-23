@@ -1,0 +1,15 @@
+{
+ "app": "Devin",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://docs.devin.ai/api-reference/overview",
+   "kind": "seed"
+  },
+  {
+   "url": "https://docs.devin.ai/",
+   "kind": "seed"
+  }
+ ]
+}

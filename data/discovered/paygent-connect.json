@@ -1,0 +1,15 @@
+{
+ "app": "Paygent Connect",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://docs.nmi.com/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://www.paygent.com/",
+   "kind": "seed"
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "app": "Lark (Larksuite)",
+ "provider": "error: \"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+ "date": "2026-11-24",
+ "urls": [
+  {
+   "url": "https://open.larksuite.com",
+   "kind": "hint"
+  }
+ ]
+}

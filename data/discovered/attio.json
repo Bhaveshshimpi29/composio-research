@@ -1,0 +1,19 @@
+{
+ "app": "Attio",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://docs.attio.com/rest-api/guides/authentication",
+   "kind": "seed"
+  },
+  {
+   "url": "https://attio.com/pricing",
+   "kind": "seed"
+  },
+  {
+   "url": "https://docs.attio.com/rest-api/overview",
+   "kind": "seed"
+  }
+ ]
+}

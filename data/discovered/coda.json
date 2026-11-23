@@ -1,0 +1,15 @@
+{
+ "app": "Coda",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://coda.io/developers/apis/v1",
+   "kind": "seed"
+  },
+  {
+   "url": "https://coda.io/pricing",
+   "kind": "seed"
+  }
+ ]
+}

@@ -1,0 +1,127 @@
+{
+ "n": 100,
+ "auth_counts": {
+  "oauth2": 35,
+  "api_key": 28,
+  "bearer_token": 24,
+  "basic": 9,
+  "other": 6
+ },
+ "dominant_auth": "oauth2",
+ "access_counts": {
+  "unknown": 73,
+  "self_serve_free": 11,
+  "admin_approval": 8,
+  "free_trial": 4,
+  "paid_plan": 3,
+  "partner_or_sales": 1
+ },
+ "blocker_counts": {
+  "admin_approval": 8,
+  "paid_plan": 3,
+  "no_public_api": 2,
+  "partner_gate": 1,
+  "auth_complexity": 1
+ },
+ "top_blocker": "admin_approval",
+ "category_access": {
+  "CRM and Sales": {
+   "self_serve_free": 3,
+   "unknown": 7
+  },
+  "Support and Helpdesk": {
+   "unknown": 6,
+   "self_serve_free": 1,
+   "admin_approval": 3
+  },
+  "Communications and Messaging": {
+   "unknown": 6,
+   "free_trial": 1,
+   "partner_or_sales": 1,
+   "self_serve_free": 2
+  },
+  "Marketing, Ads, Email and Social": {
+   "unknown": 7,
+   "admin_approval": 3
+  },
+  "Ecommerce": {
+   "unknown": 9,
+   "self_serve_free": 1
+  },
+  "Data, SEO and Scraping": {
+   "free_trial": 2,
+   "unknown": 6,
+   "self_serve_free": 1,
+   "paid_plan": 1
+  },
+  "Developer, Infra and Data platforms": {
+   "unknown": 9,
+   "self_serve_free": 1
+  },
+  "Productivity and Project Management": {
+   "self_serve_free": 1,
+   "unknown": 8,
+   "free_trial": 1
+  },
+  "Finance and Fintech": {
+   "self_serve_free": 1,
+   "admin_approval": 2,
+   "unknown": 7
+  },
+  "AI, Research and Media-native": {
+   "paid_plan": 2,
+   "unknown": 8
+  }
+ },
+ "gated_share_by_category": {
+  "CRM and Sales": 0.0,
+  "Support and Helpdesk": 0.3,
+  "Communications and Messaging": 0.1,
+  "Marketing, Ads, Email and Social": 0.3,
+  "Ecommerce": 0.0,
+  "Data, SEO and Scraping": 0.1,
+  "Developer, Infra and Data platforms": 0.0,
+  "Productivity and Project Management": 0.0,
+  "Finance and Fintech": 0.2,
+  "AI, Research and Media-native": 0.2
+ },
+ "easy_wins": [
+  "Salesforce",
+  "Podio",
+  "Intercom",
+  "WooCommerce",
+  "DataForSEO",
+  "SE Ranking",
+  "Apify",
+  "Zoho CRM",
+  "Vonage",
+  "Netlify",
+  "Notion",
+  "Stripe"
+ ],
+ "needs_outreach": [
+  "Pylon",
+  "Gorgias",
+  "Aircall",
+  "Threads (Meta)",
+  "Meta Ads",
+  "LinkedIn Ads",
+  "Plaid",
+  "Brex",
+  "Gladly"
+ ],
+ "paid_only": [
+  "Ahrefs",
+  "NotebookLM",
+  "Consensus"
+ ],
+ "buildable_counts": {
+  "yes": 38,
+  "partial": 22,
+  "unknown": 40
+ },
+ "n_needs_human": 0,
+ "n_existing_mcp": 20,
+ "n_unknown_access": 73,
+ "stage": "pass2"
+}

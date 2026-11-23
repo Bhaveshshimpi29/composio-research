@@ -1,0 +1,15 @@
+{
+ "app": "QuickBooks",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0",
+   "kind": "seed"
+  },
+  {
+   "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started",
+   "kind": "seed"
+  }
+ ]
+}

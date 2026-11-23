@@ -1,0 +1,118 @@
+[
+ {
+  "app": "Notion",
+  "category": "Productivity",
+  "one_liner": "Workspace/docs tool with a REST API and an official MCP.",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2",
+   "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "official",
+  "existing_mcp_url": "https://developers.notion.com/docs/mcp",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.notion.com/docs/authorization",
+    "quote": "Authenticate Notion API requests with personal access tokens, internal connection tokens, or OAuth integration OAuth flows."
+   },
+   {
+    "field": "api_type",
+    "url": "https://developers.notion.com/reference/authentication",
+    "quote": "Learn how to authenticate your connection requests using bearer tokens."
+   },
+   {
+    "field": "existing_mcp",
+    "url": "https://developers.notion.com/docs/mcp",
+    "quote": "Connect AI assistants to Notion with MCP"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.notion.com/docs/authorization",
+    "quote": "You are required to be a workspace owner to create a connection."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://developers.notion.com/docs/authorization",
+    "quote": "Create a new connection from the Developer portal."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://developers.notion.com/docs/authorization",
+    "quote": "Before a connection can interact with your Notion workspace page(s), the page must be manually shared with the connection."
+   }
+  ],
+  "note": "access: needs workspace owner to create an internal connection, so not purely self-serve; marked self_serve_free but quote is about owner requirement. Re-check."
+ },
+ {
+  "app": "Airtable",
+  "category": "Productivity",
+  "one_liner": "Spreadsheet-database platform.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "Cached pages are pricing/marketing only; no API docs. Needs developer docs."
+ },
+ {
+  "app": "Linear",
+  "category": "Project management",
+  "one_liner": "Issue tracker with a GraphQL API.",
+  "auth_methods": [
+   "api_key",
+   "oauth2",
+   "bearer_token"
+  ],
+  "access": "self_serve_free",
+  "api_type": [
+   "graphql"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "The Linear API supports personal API keys and OAuth2 authentication."
+   },
+   {
+    "field": "api_type",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "Linear’s public API is built using GraphQL."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "It supports introspection so you can query the whole schema."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "It supports introspection so you can query the whole schema."
+   }
+  ],
+  "note": "access not quoted; will reset to unknown."
+ }
+]

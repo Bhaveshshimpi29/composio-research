@@ -1,0 +1,38 @@
+[
+{"app":"Freshdesk","category":"Support / Helpdesk","one_liner":"Customer support ticketing platform by Freshworks.",
+ "auth_methods":["unknown"],"access":"unknown","api_type":["unknown"],"api_breadth":"unknown","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"unknown","main_blocker":"unknown","confidence":"low","evidence":[],
+ "note":"The cached page was a HighLevel support article hosted on a freshdesk.com subdomain, i.e. the wrong source. It was reassigned to GoHighLevel. Needs Freshdesk's own docs."},
+{"app":"Front","category":"Support / Helpdesk","one_liner":"Shared inbox and customer operations platform.",
+ "auth_methods":["unknown"],"access":"unknown","api_type":["unknown"],"api_breadth":"unknown","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"unknown","main_blocker":"unknown","confidence":"low","evidence":[],
+ "note":"Cached pages were Front Academy training pages, not API docs. Needs developer docs."},
+{"app":"Pylon","category":"Support / Helpdesk","one_liner":"B2B customer support platform (issues, Slack/Teams support).",
+ "auth_methods":["bearer_token"],"access":"admin_approval","api_type":["unknown"],"api_breadth":"unknown","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"partial","main_blocker":"admin_approval","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://docs.usepylon.com/pylon-docs/developer/api/authentication","quote":"The Pylon API uses Bearer authentication."},
+  {"field":"access","url":"https://docs.usepylon.com/pylon-docs/developer/api","quote":"Only Admin users can create API tokens."},
+  {"field":"buildable_today","url":"https://docs.usepylon.com/pylon-docs/developer/api/authentication","quote":"Only Admins can create and manage API tokens."},
+  {"field":"main_blocker","url":"https://docs.usepylon.com/pylon-docs/developer/api/authentication","quote":"Only Admins can create and manage API tokens."}]},
+{"app":"LiveAgent","category":"Support / Helpdesk","one_liner":"Help desk and live chat software.",
+ "auth_methods":["unknown"],"access":"unknown","api_type":["unknown"],"api_breadth":"unknown","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"unknown","main_blocker":"unknown","confidence":"low","evidence":[],
+ "note":"Only a third-party partner page (Bold BI) was cached, not LiveAgent's API docs. Needs official docs."},
+{"app":"Help Scout","category":"Support / Helpdesk","one_liner":"Customer support inbox and help desk platform.",
+ "auth_methods":["api_key","basic"],"access":"unknown","api_type":["unknown"],"api_breadth":"unknown","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"partial","main_blocker":"unknown","confidence":"low",
+ "evidence":[
+  {"field":"auth_methods","url":"https://developer.helpscout.com/docs-api/","quote":"The API key is passed via HTTP Basic Authentication and goes in the username field."},
+  {"field":"buildable_today","url":"https://developer.helpscout.com/docs-api/","quote":"Each API key is associated with a Help Scout user."}],
+ "note":"Only the Docs API page was cached, not the main Mailbox API."},
+{"app":"Gorgias","category":"Support / Helpdesk","one_liner":"Ecommerce-focused customer support helpdesk.",
+ "auth_methods":["basic","api_key"],"access":"admin_approval","api_type":["rest"],"api_breadth":"unknown","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"partial","main_blocker":"admin_approval","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://docs.gorgias.com/en-US/rest-api-208286","quote":"To authenticate API requests, Gorgias uses HTTP Basic Authentication with three pieces of information: your base API URL, your email address, and an API key."},
+  {"field":"access","url":"https://docs.gorgias.com/en-US/rest-api-208286","quote":"The account owner and admins can access the API credentials and create API keys"},
+  {"field":"api_type","url":"https://docs.gorgias.com/en-US/rest-api-208286","quote":"The Gorgias REST API lets you read and write data in your helpdesk programmatically."},
+  {"field":"buildable_today","url":"https://docs.gorgias.com/en-US/rest-api-208286","quote":"Available on all Helpdesk plans"},
+  {"field":"main_blocker","url":"https://docs.gorgias.com/en-US/rest-api-208286","quote":"The account owner and admins can access the API credentials and create API keys"}]}
+]

@@ -1,0 +1,104 @@
+[
+ {
+  "app": "Ecwid",
+  "category": "E-commerce",
+  "one_liner": "E-commerce widget/platform by Lightspeed.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "Cached page is pricing only; no API information."
+ },
+ {
+  "app": "fanbasis",
+  "category": "E-commerce",
+  "one_liner": "Creator commerce platform with checkout, BNPL, APIs/SDKs and an AI-assistant integration.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "official",
+  "existing_mcp_url": "https://fanbasis.com/",
+  "buildable_today": "partial",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "existing_mcp",
+    "url": "https://fanbasis.com/",
+    "quote": "Run Commas from your AI assistant. Create checkout links, issue refunds and pull your numbers in plain English."
+   },
+   {
+    "field": "api_type",
+    "url": "https://fanbasis.com/",
+    "quote": "Embedded checkouts, multi-rail payouts, APIs and SDKs."
+   }
+  ],
+  "note": "MCP claim is inferred from marketing text; no MCP URL seen."
+ },
+ {
+  "app": "Ahrefs",
+  "category": "SEO",
+  "one_liner": "SEO data platform with an API and MCP server.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "access": "paid_plan",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "official",
+  "existing_mcp_url": "https://ahrefs.com/api",
+  "buildable_today": "partial",
+  "main_blocker": "paid_plan",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://ahrefs.com/api",
+    "quote": "Create and manage your API keys"
+   },
+   {
+    "field": "access",
+    "url": "https://ahrefs.com/api",
+    "quote": "Try API endpoints without an Enterprise plan"
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://ahrefs.com/api",
+    "quote": "Try API endpoints without an Enterprise plan"
+   },
+   {
+    "field": "existing_mcp",
+    "url": "https://ahrefs.com/api",
+    "quote": "Connect your Ahrefs data to AI assistants and agents to enhance their answers with real marketing insights."
+   },
+   {
+    "field": "api_type",
+    "url": "https://ahrefs.com/api",
+    "quote": "Browse all available API endpoints"
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://ahrefs.com/api",
+    "quote": "Try API endpoints without an Enterprise plan"
+   }
+  ],
+  "note": "Enterprise-plan requirement is inferred from the phrase 'without an Enterprise plan'."
+ }
+]

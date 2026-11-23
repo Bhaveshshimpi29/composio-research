@@ -1,0 +1,101 @@
+[
+ {
+  "app": "LinkedIn Ads",
+  "category": "Marketing",
+  "one_liner": "LinkedIn Marketing API for ads, audiences and leads.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "access": "admin_approval",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "partial",
+  "main_blocker": "admin_approval",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication",
+    "quote": "Member Authorization (3-legged OAuth)"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication",
+    "quote": "Application Authorization (2-legged OAuth Client Credential Flow)"
+   },
+   {
+    "field": "access",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access",
+    "quote": "General Availability (GA) programs are open to all approved developers"
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access",
+    "quote": "Available to qualified developers who meet additional criteria for access."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access",
+    "quote": "are open to all approved developers — apply through the standard process."
+   }
+  ],
+  "note": "Access requires LinkedIn developer approval; some products closed to new applicants."
+ },
+ {
+  "app": "systeme.io",
+  "category": "E-commerce",
+  "one_liner": "All-in-one funnel, email and course platform with a free plan.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "Cached page is pricing only; it shows a free plan for the product but nothing about the public API. Needs API docs."
+ },
+ {
+  "app": "Magento (Adobe Commerce)",
+  "category": "E-commerce",
+  "one_liner": "Adobe Commerce / Magento Open Source with REST web APIs.",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2",
+   "other"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "partial",
+  "main_blocker": "auth_complexity",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+    "quote": "Before you can make web API calls, you must authenticate your identity and have necessary permissions (authorization) to access the API resource."
+   },
+   {
+    "field": "api_type",
+    "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+    "quote": "Adobe Commerce and Magento Open Source allow developers to define web API resources and their permissions in the webapi.xml configuration file."
+   }
+  ],
+  "note": "Authentication is split between PaaS and SaaS guides; token types not quoted, so auth_methods may reset."
+ }
+]

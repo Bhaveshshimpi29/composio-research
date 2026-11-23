@@ -1,0 +1,19 @@
+{
+ "app": "Xero",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://developer.xero.com/documentation/guides/oauth2/overview/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://developer.xero.com/pricing",
+   "kind": "seed"
+  },
+  {
+   "url": "https://developer.xero.com/documentation/getting-started-guide/",
+   "kind": "seed"
+  }
+ ]
+}

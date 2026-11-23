@@ -1,0 +1,15 @@
+{
+ "app": "Otter AI",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://help.otter.ai/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://otter.ai/pricing",
+   "kind": "seed"
+  }
+ ]
+}

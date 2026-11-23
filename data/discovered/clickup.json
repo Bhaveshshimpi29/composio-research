@@ -1,0 +1,19 @@
+{
+ "app": "ClickUp",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://developer.clickup.com/docs/authentication",
+   "kind": "seed"
+  },
+  {
+   "url": "https://developer.clickup.com/docs/index",
+   "kind": "seed"
+  },
+  {
+   "url": "https://clickup.com/pricing",
+   "kind": "seed"
+  }
+ ]
+}

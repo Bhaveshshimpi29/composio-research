@@ -1,0 +1,19 @@
+{
+ "app": "GoHighLevel",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://marketplace.gohighlevel.com/docs/oauth/GettingStarted",
+   "kind": "seed"
+  },
+  {
+   "url": "https://highlevel.stoplight.io/docs/integrations/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://www.gohighlevel.com/pricing",
+   "kind": "seed"
+  }
+ ]
+}

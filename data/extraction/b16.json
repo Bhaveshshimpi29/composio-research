@@ -1,0 +1,101 @@
+[
+ {
+  "app": "Jira",
+  "category": "Project management",
+  "one_liner": "Atlassian issue tracker with Jira Cloud REST API v3 and a remote MCP server.",
+  "auth_methods": [
+   "basic",
+   "oauth2",
+   "api_key"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "official",
+  "existing_mcp_url": "https://www.atlassian.com/platform/remote-mcp-server",
+  "buildable_today": "partial",
+  "main_blocker": "auth_complexity",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+    "quote": "Basic auth requires API tokens."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+    "quote": "use OAuth 2.0 authorization code grants (3LO) for security"
+   },
+   {
+    "field": "api_type",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+    "quote": "The Jira REST API enables you to interact with Jira programmatically."
+   },
+   {
+    "field": "existing_mcp",
+    "url": "https://www.atlassian.com/platform/remote-mcp-server",
+    "quote": "Atlassian's MCP Server connects your AI to your team’s work and knowledge"
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+    "quote": "Apps that collect API tokens or instruct customers to create individual 3LO apps don't comply with our"
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+    "quote": "Apps that collect API tokens or instruct customers to create individual 3LO apps don't comply with our"
+   }
+  ],
+  "note": "Atlassian discourages apps that collect user API tokens or per-customer 3LO apps; Marketplace/Forge route is the sanctioned path."
+ },
+ {
+  "app": "Asana",
+  "category": "Project management",
+  "one_liner": "Work management platform with a REST API.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "No pages cached (fetch failed); redo."
+ },
+ {
+  "app": "Monday.com",
+  "category": "Project management",
+  "one_liner": "Work OS with an API for apps and integrations.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "access",
+    "url": "https://monday.com/pricing",
+    "quote": "Start free, no credit card needed."
+   }
+  ],
+  "note": "Pricing page only (product free tier); API docs not cached."
+ }
+]

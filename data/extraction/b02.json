@@ -1,0 +1,42 @@
+[
+{"app":"Close","category":"CRM","one_liner":"Sales CRM for inside sales teams with calling, email and pipeline tools.",
+ "auth_methods":["api_key","basic","oauth2"],"access":"unknown","api_type":["rest"],"api_breadth":"unknown","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"yes","main_blocker":"none","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://developer.close.com/api/overview/api-key-authentication/","quote":"HTTP Basic client side authentication."},
+  {"field":"auth_methods","url":"https://help.close.com/docs/api-keys-oauth","quote":"Create an OAuth app for Close so your integration can securely connect to Close accounts."},
+  {"field":"auth_methods","url":"https://help.close.com/docs/api-keys-oauth","quote":"An API key is a secret token (like a password) which you can use to connect Close data to third-party applications or your own internal system."},
+  {"field":"api_type","url":"https://developer.close.com/api/overview/api-key-authentication/","quote":"API Base URL: https://api.close.com/api/v1"},
+  {"field":"buildable_today","url":"https://developer.close.com/api/overview/api-key-authentication/","quote":"API keys can be created and managed in your Close account under Settings → Developer → API Keys."},
+  {"field":"main_blocker","url":"https://developer.close.com/api/overview/api-key-authentication/","quote":"API keys can be created and managed in your Close account under Settings → Developer → API Keys."}]},
+{"app":"Copper","category":"CRM","one_liner":"CRM built for Google Workspace users.",
+ "auth_methods":["api_key","oauth2"],"access":"unknown","api_type":["unknown"],"api_breadth":"unknown","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"yes","main_blocker":"none","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://developer.copper.com/introduction/authentication.html","quote":"There are two ways to access the Copper Developer API: API keys and OAuth2.0."},
+  {"field":"buildable_today","url":"https://developer.copper.com/introduction/authentication.html","quote":"Admins can see all user generated tokens and generate new ones."},
+  {"field":"main_blocker","url":"https://developer.copper.com/introduction/authentication.html","quote":"Admins can see all user generated tokens and generate new ones."}]},
+{"app":"DealCloud","category":"CRM","one_liner":"Deal and relationship management CRM for financial services firms.",
+ "auth_methods":["other"],"access":"unknown","api_type":["rest"],"api_breadth":"medium","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"partial","main_blocker":"unknown","confidence":"low",
+ "evidence":[
+  {"field":"auth_methods","url":"https://api.docs.dealcloud.com/docs","quote":"Authentication – Provides tokens for use with all other APIs."},
+  {"field":"api_type","url":"https://api.docs.dealcloud.com/docs","quote":"This site provides a comprehensive overview of our REST APIs, their capabilities, and available endpoints."},
+  {"field":"api_breadth","url":"https://api.docs.dealcloud.com/docs","quote":"Each area includes multiple endpoints designed to help you perform specific tasks related to that category."},
+  {"field":"buildable_today","url":"https://api.docs.dealcloud.com/docs","quote":"Authentication – Provides tokens for use with all other APIs."}]},
+{"app":"Zendesk","category":"Support / Helpdesk","one_liner":"Customer service and support ticketing platform.",
+ "auth_methods":["oauth2","api_key","basic"],"access":"unknown","api_type":["unknown"],"api_breadth":"unknown","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"partial","main_blocker":"unknown","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://developer.zendesk.com/api-reference/introduction/security-and-auth/","quote":"Zendesk supports using OAuth access tokens to authenticate API requests."},
+  {"field":"auth_methods","url":"https://developer.zendesk.com/api-reference/introduction/security-and-auth/","quote":"If you're an existing Zendesk customer and are currently using basic authentication or API tokens, you will have to migrate to OAuth access tokens for improved security and compatibility with future requirements."},
+  {"field":"buildable_today","url":"https://developer.zendesk.com/api-reference/introduction/security-and-auth/","quote":"An OAuth token gives access to a single Zendesk instance (the one with the OAuth client used to create the token)."}]},
+{"app":"Intercom","category":"Support / Helpdesk","one_liner":"AI customer service platform with help desk and messenger.",
+ "auth_methods":["bearer_token","oauth2"],"access":"self_serve_free","api_type":["unknown"],"api_breadth":"unknown","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"yes","main_blocker":"none","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://developers.intercom.com/docs/build-an-integration/learn-more/authentication","quote":"To access the Intercom API, you have two authentication options depending on whether you app is public or private."},
+  {"field":"access","url":"https://developers.intercom.com/","quote":"Get started by setting up a free development workspace to test and publish your app."},
+  {"field":"buildable_today","url":"https://developers.intercom.com/","quote":"Get started by setting up a free development workspace to test and publish your app."},
+  {"field":"main_blocker","url":"https://developers.intercom.com/","quote":"Get started by setting up a free development workspace to test and publish your app."}]}
+]

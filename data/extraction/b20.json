@@ -1,0 +1,151 @@
+[
+ {
+  "app": "NotebookLM",
+  "category": "AI research",
+  "one_liner": "Google's notebook AI; the Enterprise edition has an API for notebooks.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "paid_plan",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "small",
+  "existing_mcp": "none_found",
+  "existing_mcp_url": "",
+  "buildable_today": "partial",
+  "main_blocker": "paid_plan",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "api_type",
+    "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+    "quote": "Create and manage notebooks (API)"
+   },
+   {
+    "field": "access",
+    "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview",
+    "quote": "Gemini Notebook Enterprise is a Generative AI Service subject to the applicable terms of the agreement under which you access Google Cloud services."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview",
+    "quote": "Gemini Notebook Enterprise is a highly compliant, enterprise-ready version of Gemini Notebook."
+   }
+  ],
+  "note": "The API is for the Enterprise edition on Google Cloud; personal NotebookLM has no API in cached text. existing_mcp none_found is unquoted and unproven."
+ },
+ {
+  "app": "Otter AI",
+  "category": "Meetings",
+  "one_liner": "Meeting transcription; pricing page lists MCP server integration.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "official",
+  "existing_mcp_url": "https://otter.ai/pricing",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "existing_mcp",
+    "url": "https://otter.ai/pricing",
+    "quote": "MCP server integration for AI assistants"
+   }
+  ],
+  "note": "Pricing page only; API/auth not cached. The MCP line appears as a plan feature."
+ },
+ {
+  "app": "Fathom",
+  "category": "Meetings",
+  "one_liner": "AI meeting notetaker with a developer API and SDKs.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "rest",
+   "sdk_only"
+  ],
+  "api_breadth": "medium",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.fathom.ai/",
+    "quote": "Generate an API key and make your first call in minutes."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developers.fathom.ai/",
+    "quote": "Build a Fathom integration that other users can install."
+   },
+   {
+    "field": "api_type",
+    "url": "https://developers.fathom.ai/",
+    "quote": "See all available endpoints and methods."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://developers.fathom.ai/",
+    "quote": "Generate an API key and make your first call in minutes."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://developers.fathom.ai/",
+    "quote": "Generate an API key and make your first call in minutes."
+   }
+  ]
+ },
+ {
+  "app": "Consensus",
+  "category": "AI research",
+  "one_liner": "Academic search engine with a paid API and agent.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "paid_plan",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "medium",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "partial",
+  "main_blocker": "paid_plan",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "api_type",
+    "url": "https://consensus.app/home/api/",
+    "quote": "Search returns ranked papers in one call."
+   },
+   {
+    "field": "access",
+    "url": "https://consensus.app/home/api/",
+    "quote": "Included on every paid plan, and Deep includes 5x the usage of Pro."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://consensus.app/home/api/",
+    "quote": "Included on every paid plan, and Deep includes 5x the usage of Pro."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://consensus.app/home/api/",
+    "quote": "Bring up-to-date, peer-reviewed citations into your workflows."
+   }
+  ]
+ }
+]

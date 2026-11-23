@@ -1,0 +1,31 @@
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python environment
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local research caches
+data/raw/*
+!data/raw/.gitkeep
+data/raw_live/
+data/verify_cache/
+
+# Temporary files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+# Local research archive
+pages.zip

@@ -1,0 +1,19 @@
+{
+ "app": "Neo4j",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://neo4j.com/docs/query-api/current/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://neo4j.com/docs/aura/api/authentication/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://neo4j.com/pricing/",
+   "kind": "seed"
+  }
+ ]
+}

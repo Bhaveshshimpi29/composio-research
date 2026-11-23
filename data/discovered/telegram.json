@@ -1,0 +1,19 @@
+{
+ "app": "Telegram",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://core.telegram.org/bots/api",
+   "kind": "seed"
+  },
+  {
+   "url": "https://core.telegram.org/api/obtaining_api_id",
+   "kind": "seed"
+  },
+  {
+   "url": "https://core.telegram.org/bots",
+   "kind": "seed"
+  }
+ ]
+}

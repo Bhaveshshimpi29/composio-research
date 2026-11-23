@@ -1,0 +1,15 @@
+{
+ "app": "NotebookLM",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview",
+   "kind": "seed"
+  },
+  {
+   "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+   "kind": "seed"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "app": "Plaid",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://plaid.com/docs/quickstart/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://plaid.com/docs/api/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://plaid.com/pricing/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://plaid.com/docs/resources/mcp/",
+   "kind": "seed"
+  }
+ ]
+}

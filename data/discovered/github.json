@@ -1,0 +1,15 @@
+{
+ "app": "GitHub",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+   "kind": "seed"
+  },
+  {
+   "url": "https://github.com/github/github-mcp-server",
+   "kind": "seed"
+  }
+ ]
+}

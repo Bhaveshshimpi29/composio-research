@@ -1,0 +1,1765 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>SaaS Agent Integration Readiness — Research Case Study</title>
+
+<style>
+:root {
+  --bg:#f5f7fb;
+  --ink:#172033;
+  --muted:#64748b;
+  --line:#e2e8f0;
+  --panel:#fff;
+  --accent:#3157d5;
+}
+* {box-sizing:border-box}
+body {
+  margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.55 Inter,Segoe UI,Arial,sans-serif
+}
+header {
+  padding:48px max(22px,calc((100vw - 1200px)/2));
+  background:#111b34;color:white
+}
+header p {color:#cbd5e1;max-width:780px}
+h1 {font-size:clamp(30px,5vw,48px);line-height:1.08;margin:8px 0 14px}
+main {max-width:1200px;margin:28px auto;padding:0 20px}
+.grid {
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:14px
+}
+.card,section {
+  background:var(--panel);border:1px solid var(--line);
+  border-radius:14px;padding:20px;margin-bottom:18px
+}
+.metric {font-size:30px;font-weight:750}
+.muted,small {color:var(--muted)}
+small {display:block;font-size:12px;margin-top:4px}
+h2 {margin:0 0 14px;font-size:21px}
+.filters {display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+input,select {
+  padding:11px 12px;border:1px solid var(--line);
+  border-radius:9px;background:white;min-width:210px
+}
+.table-wrap {overflow:auto}
+table {border-collapse:collapse;width:100%;min-width:1100px;font-size:13px}
+th,td {padding:12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th {background:#f8fafc;position:sticky;top:0}
+a {color:var(--accent);margin-right:8px}
+ul.categories {
+  list-style:none;padding:0;margin:0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px
+}
+.categories li {
+  display:flex;justify-content:space-between;
+  padding:9px 11px;background:#f8fafc;border-radius:8px
+}
+.note {
+  border-left:3px solid var(--accent);padding:12px 14px;
+  background:#f7f9ff;color:#334155
+}
+.warning {
+  border-left:3px solid #d97706;padding:12px 14px;
+  background:#fff8eb;color:#713f12
+}
+footer {color:var(--muted);font-size:12px;padding:20px 0 40px}
+@media(max-width:600px) {
+  header {padding:34px 20px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div style="color:#a5b4fc;font-weight:700;letter-spacing:.12em">
+    RESEARCH CASE STUDY
+  </div>
+
+  <h1>SaaS Agent Integration Readiness</h1>
+
+  <p>
+    A structured assessment of API access, authentication,
+    developer onboarding, MCP availability and implementation
+    readiness across 100 researched applications.
+  </p>
+
+  <p>
+    <strong>Evidence-first assessment.</strong>
+    Unknown fields remain explicitly unknown and should not be
+    interpreted as proof that an API or MCP server does not exist.
+  </p>
+</header>
+
+<main>
+
+<div class="grid">
+  <div class="card">
+    <div class="muted">Apps researched</div>
+    <div class="metric">100</div>
+  </div>
+
+  <div class="card">
+    <div class="muted">Categories</div>
+    <div class="metric">10</div>
+  </div>
+
+  <div class="card">
+    <div class="muted">Authentication identified</div>
+    <div class="metric">44/100</div>
+  </div>
+
+  <div class="card">
+    <div class="muted">Apps with source URLs</div>
+    <div class="metric">62/100</div>
+  </div>
+
+  <div class="card">
+    <div class="muted">Awaiting human review</div>
+    <div class="metric">100</div>
+  </div>
+</div>
+
+<section>
+  <h2>Category coverage</h2>
+  <ul class="categories"><li><span>AI, Research and Media-native</span><b>10</b></li>
+<li><span>CRM and Sales</span><b>10</b></li>
+<li><span>Communications and Messaging</span><b>10</b></li>
+<li><span>Data, SEO and Scraping</span><b>10</b></li>
+<li><span>Developer, Infra and Data platforms</span><b>10</b></li>
+<li><span>Ecommerce</span><b>10</b></li>
+<li><span>Finance and Fintech</span><b>10</b></li>
+<li><span>Marketing, Ads, Email and Social</span><b>10</b></li>
+<li><span>Productivity and Project Management</span><b>10</b></li>
+<li><span>Support and Helpdesk</span><b>10</b></li></ul>
+</section>
+
+<section>
+  <h2>Buildability snapshot</h2>
+  <ul class="categories"><li><span>Insufficient evidence</span><b>52</b></li>
+<li><span>Needs further investigation</span><b>21</b></li>
+<li><span>Potentially buildable; validate endpoints, scopes and terms</span><b>27</b></li></ul>
+</section>
+
+<section>
+  <h2>Research review status</h2>
+  <ul class="categories"><li><span>needs_human_review</span><b>100</b></li></ul>
+</section>
+
+<section>
+  <h2>Research findings</h2>
+
+  <p class="note">
+    The assessment uses collected public search results, official
+    documentation and rule-based extraction. Unsupported conclusions
+    are kept unconfirmed. Records marked for human review have not
+    been presented as fully verified.
+  </p>
+
+  <div class="filters">
+    <input id="q" placeholder="Search apps or descriptions...">
+    <select id="cat">
+      <option value="">All categories</option>
+      <option value="AI, Research and Media-native">AI, Research and Media-native</option>
+<option value="CRM and Sales">CRM and Sales</option>
+<option value="Communications and Messaging">Communications and Messaging</option>
+<option value="Data, SEO and Scraping">Data, SEO and Scraping</option>
+<option value="Developer, Infra and Data platforms">Developer, Infra and Data platforms</option>
+<option value="Ecommerce">Ecommerce</option>
+<option value="Finance and Fintech">Finance and Fintech</option>
+<option value="Marketing, Ads, Email and Social">Marketing, Ads, Email and Social</option>
+<option value="Productivity and Project Management">Productivity and Project Management</option>
+<option value="Support and Helpdesk">Support and Helpdesk</option>
+    </select>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>App</th>
+          <th>Authentication</th>
+          <th>Developer access</th>
+          <th>API type</th>
+          <th>API breadth</th>
+          <th>Existing MCP</th>
+          <th>Buildability / blockers</th>
+          <th>Evidence</th>
+        </tr>
+      </thead>
+      <tbody id="rows">
+        <tr data-category="AI, Research and Media-native"
+            data-search="consensus ai, research and media-native consensus is listed in the ai, research and media-native category; product description needs source verification.">
+          <td><strong>Consensus</strong>
+              <small>AI, Research and Media-native</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="AI, Research and Media-native"
+            data-search="devin ai, research and media-native devin is listed in the ai, research and media-native category; product description needs source verification.">
+          <td><strong>Devin</strong>
+              <small>AI, Research and Media-native</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="AI, Research and Media-native"
+            data-search="fathom ai, research and media-native fathom is listed in the ai, research and media-native category; product description needs source verification.">
+          <td><strong>Fathom</strong>
+              <small>AI, Research and Media-native</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="AI, Research and Media-native"
+            data-search="grain ai, research and media-native grain is listed in the ai, research and media-native category; product description needs source verification.">
+          <td><strong>Grain</strong>
+              <small>AI, Research and Media-native</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="AI, Research and Media-native"
+            data-search="mermaid cli ai, research and media-native mermaid cli is listed in the ai, research and media-native category; product description needs source verification.">
+          <td><strong>Mermaid CLI</strong>
+              <small>AI, Research and Media-native</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="AI, Research and Media-native"
+            data-search="notebooklm ai, research and media-native notebooklm is listed in the ai, research and media-native category; product description needs source verification.">
+          <td><strong>NotebookLM</strong>
+              <small>AI, Research and Media-native</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="AI, Research and Media-native"
+            data-search="otter ai ai, research and media-native otter ai is listed in the ai, research and media-native category; product description needs source verification.">
+          <td><strong>Otter AI</strong>
+              <small>AI, Research and Media-native</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="AI, Research and Media-native"
+            data-search="reducto ai, research and media-native reducto is listed in the ai, research and media-native category; product description needs source verification.">
+          <td><strong>Reducto</strong>
+              <small>AI, Research and Media-native</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="AI, Research and Media-native"
+            data-search="youtube transcript ai, research and media-native youtube transcript is listed in the ai, research and media-native category; product description needs source verification.">
+          <td><strong>YouTube Transcript</strong>
+              <small>AI, Research and Media-native</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="AI, Research and Media-native"
+            data-search="higgsfield ai, research and media-native higgsfield is listed in the ai, research and media-native category; product description needs source verification.">
+          <td><strong>higgsfield</strong>
+              <small>AI, Research and Media-native</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="CRM and Sales"
+            data-search="attio crm and sales {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data_preview&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;&gt; ## documentation index\n&gt;\n&gt; fetch the complete documentation index at: [/llms.txt](https://docs.attio.com/llms.txt)\n&gt;\n&gt; use this file to discover all available pages before exploring further.\n\n[skip ...&quot;, &quot;metadata&quot;: {&quot;apple-mobile-web-app-title&quot;: &quot;attio docs&quot;, &quot;application-name&quot;: &quot;attio docs&quot;, &quot;c">
+          <td><strong>Attio</strong>
+              <small>CRM and Sales</small></td>
+          <td>API key</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Developer access model not confirmed; API type not confirmed; No existing MCP server evidence found; absence not verified</small></td>
+          <td><a href="https://docs.attio.com/rest-api/guides/authentication#content-area" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://docs.attio.com/rest-api/guides/authenti" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://docs.attio.com/llms.txt" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="CRM and Sales"
+            data-search="close crm and sales {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;for ai agents: a documentation index is available at the root level at /llms.txt. append /llms.txt to any url for a page-level index, or .md for the markdown version of any page.\n\n[skip to navigation](https://developer.close.com/api/overview/api-key-authentication/#fern-sidebar)\n\napi keys are best used for s">
+          <td><strong>Close</strong>
+              <small>CRM and Sales</small></td>
+          <td>OAuth 2.0, API key, Bearer token, Basic authentication</td>
+          <td>Gated or approval-based access indicated</td>
+          <td>REST</td>
+          <td>Broad API surface indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small></small></td>
+          <td><a href="https://developer.close.com/api/overview/api-key-authentication/#fern-sidebar" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developer.close.com/api/overview/oauth-authentication" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://help.close.com/docs/api-keys-oauth" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="CRM and Sales"
+            data-search="copper crm and sales {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to content](https://developer.copper.com/introduction/authentication.html#authentication)\n\n# authentication [¶](https://developer.copper.com/introduction/authentication.html\\#authentication \&quot;permanent link\&quot;)\n\nthere are two ways to access the copper developer api: [api keys](https://developer.copper.">
+          <td><strong>Copper</strong>
+              <small>CRM and Sales</small></td>
+          <td>OAuth 2.0, API key, Bearer token</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://developer.copper.com/introduction/authentication.html#authentication" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developer.copper.com/introduction/authentication.html#api-keys" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developer.copper.com/introduction/authentication.html#oauth20" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="CRM and Sales"
+            data-search="dealcloud crm and sales {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;# dealcloud developer documentation\n\n## quick start [permalink for this section](https://api.docs.dealcloud.com/\\#quick-start)\n\n[![reference](https://api.docs.dealcloud.com/_next/image?url=%2f_next%2fstatic%2fmedia%2fref-2.3a87d02a.jpg&amp;w=3840&amp;q=75)\\\\\napi references→](https://api.docs.dealcloud.com/docs)">
+          <td><strong>DealCloud</strong>
+              <small>CRM and Sales</small></td>
+          <td>API key, Bearer token</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://api.docs.dealcloud.com/\\#quick-start" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://api.docs.dealcloud.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fref-2.3a87d02a.jpg&amp;w=3840&amp;q=75" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://api.docs.dealcloud.com/docs" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="CRM and Sales"
+            data-search="hubspot crm and sales {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data_preview&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;# hubspot docs\n\n## home\n\n- [hubspot developer documentation](https://developers.hubspot.com/docs/index.md)\n\n## get started\n\n### overview\n\n- [introduction to hubspot&#x27;s developer platform](https://devel...&quot;, &quot;metadata&quot;: {&quot;cachestate&quot;: &quot;hit&quot;, &quot;cachedat&quot;: &quot;2026-11-23t16:04:25.571z&quot;, &quot;concurrencylim">
+          <td><strong>HubSpot</strong>
+              <small>CRM and Sales</small></td>
+          <td>OAuth 2.0, API key, Bearer token</td>
+          <td>Not established from collected evidence</td>
+          <td>Webhooks mentioned; API type needs confirmation</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://developers.hubspot.com/docs/llms.txt" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="CRM and Sales"
+            data-search="pipedrive crm and sales {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to where you left off (last reply, post 3)](https://devcommunity.pipedrive.com/t/queries-around-api-authentication-current-baseurl-tokens/5662/3) [skip to top](https://devcommunity.pipedrive.com/t/queries-around-api-authentication-current-baseurl-tokens/5662/1)\n\n[skip to main content](https://devcommunit">
+          <td><strong>Pipedrive</strong>
+              <small>CRM and Sales</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://devcommunity.pipedrive.com/t/queries-around-api-authentication-current-baseurl-tokens/5662/3" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://devcommunity.pipedrive.com" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://devcommunity.pipedrive.com/t/queries-around-api-authentication-current-baseurl-tokens/5662" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="CRM and Sales"
+            data-search="podio crm and sales {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;- [getting started](https://developers.podio.com/)\n- [get an api key](https://developers.podio.com/api-key)\n- [authentication](https://developers.podio.com/authentication)\n - [scopes &amp; permissions](https://developers.podio.com/authentication/scopes)\n - [server-side flow](https://developers.podio.com/authenti">
+          <td><strong>Podio</strong>
+              <small>CRM and Sales</small></td>
+          <td>OAuth 2.0, API key</td>
+          <td>Not established from collected evidence</td>
+          <td>Webhooks mentioned; API type needs confirmation</td>
+          <td>Broad API surface indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://developers.podio.com/authentication" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developers.podio.com/authentication/username_password" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developers.podio.com/api-key" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="CRM and Sales"
+            data-search="salesforce crm and sales {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip navigation](https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html#maincontent)\n\n![home](https://a.sfdcstatic.com/shared/images/c360-nav/salesforce-no-type-logo.svg)\n\ndevelopers\n\n[![](https://a.sfdcstatic.com/shared/images/c360-nav/salesforce-no-type-logo.svg)\\\\\ndevelo">
+          <td><strong>Salesforce</strong>
+              <small>CRM and Sales</small></td>
+          <td>Bearer token</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Limited API evidence collected</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html#maincontent" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developer.salesforce.com/docs/platform/hosted-mcp-servers/references/reference/headless-360-mcp.html" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="CRM and Sales"
+            data-search="twenty crm and sales twenty is listed in the crm and sales category; product description needs source verification.">
+          <td><strong>Twenty</strong>
+              <small>CRM and Sales</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="CRM and Sales"
+            data-search="zoho crm crm and sales {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data_preview&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;version 2version 2.1version 3version 4version 5version 6version 7version 8\n\n- [overview](https://www.zoho.com/crm/developer/docs/api/v8/index.html)\n- [what&#x27;s new in v8?](https://www.zoho.com/crm/devel...&quot;, &quot;metadata&quot;: {&quot;cachestate&quot;: &quot;miss&quot;, &quot;concurrencylimited&quot;: false, &quot;contenttype&quot;: &quot;text/html&quot;, &quot;cre">
+          <td><strong>Zoho CRM</strong>
+              <small>CRM and Sales</small></td>
+          <td>OAuth 2.0</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://www.zoho.com/crm/developer/docs/api/v8/select-api-scopes.html" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://www.zoho.com/crm/developer/docs/api/v8/index.html" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Communications and Messaging"
+            data-search="aircall communications and messaging {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;for ai agents: the docs index is at https://developer.aircall.io/llms.txt. append .md to any documentation page url to get its markdown version.\n\n## overview [skip link to overview](https://developer.aircall.io/docs/how-to-register\\#overview)\n\nregistering an mcp with aircall makes your tools and resources a">
+          <td><strong>Aircall</strong>
+              <small>Communications and Messaging</small></td>
+          <td>OAuth 2.0</td>
+          <td>Gated or approval-based access indicated</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>API type not confirmed</small></td>
+          <td><a href="https://developer.aircall.io/docs/how-to-register#prerequisites" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developer.aircall.io/llms.txt" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developer.aircall.io/docs/how-to-register" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Communications and Messaging"
+            data-search="discord communications and messaging {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;```json\n{\&quot;message\&quot;: \&quot;404: not found\&quot;, \&quot;code\&quot;: 0}\n```&quot;, &quot;metadata&quot;: {&quot;cachestate&quot;: &quot;miss&quot;, &quot;concurrencylimited&quot;: false, &quot;contenttype&quot;: &quot;application/json&quot;, &quot;creditsused&quot;: 1, &quot;error&quot;: &quot;not found&quot;, &quot;indexid&quot;: &quot;f38369f7-0875-47af-a439-6ce777776f80&quot;, &quot;proxyused&quot;: &quot;basic&quot;, &quot;scrapeid&quot;: &quot;01a20975-32fe-72cc-beb7-e">
+          <td><strong>Discord</strong>
+              <small>Communications and Messaging</small></td>
+          <td>OAuth 2.0, Basic authentication</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Some API capabilities indicated</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed; No existing MCP server evidence found; absence not verified</small></td>
+          <td><a href="https://discord.com/api\n```\n\n##" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://docs.discord.com/developers/reference#authentication" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://docs.discord.com/llms.txt" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Communications and Messaging"
+            data-search="lark (larksuite) communications and messaging {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;english\n\n- english\n- bahasa indonesia\n- bahasa melayu\n- deutsch\n- español\n- français\n- italiano\n- português (brasil)\n- русский\n- tiếng việt\n- हिन्दी\n- ภาษาไทย\n- 日本語\n- 简体中文\n- 繁體中文（香港）\n- 繁體中文（台灣）\n- 한국어\n\n![logo](https://sf16-scmcdn.larksuitecdn.com/obj/lark-static-sgsaas/ee/suite/passport/static">
+          <td><strong>Lark (Larksuite)</strong>
+              <small>Communications and Messaging</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://open.larksuite.com/tool/cardbuilder?from=open_docs_header" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://open.larksuite.com/document/client-docs/h5/" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://open.larksuite.com/document/uYjL24iN/uQjMuQjMuQjM/authentication/h5sdkconfig" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Communications and Messaging"
+            data-search="pumble communications and messaging {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;#### how can we help?\n\n[![](https://pumble.com/help/wp-content/uploads/2025/12/tutorials-pumble-cover.jpg)\\\\\n**tutorials** \\\\\n\\\\\nsee how pumble works by watching videos](https://pumble.com/help/tutorials/)\n\n[![](https://pumble.com/help/wp-content/uploads/2025/12/integrations-pumble-cover-1.jpg)\\\\\">
+          <td><strong>Pumble</strong>
+              <small>Communications and Messaging</small></td>
+          <td>API key</td>
+          <td>Not established from collected evidence</td>
+          <td>Webhooks mentioned; API type needs confirmation</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://pumble.com/help/" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://pumble.com/help/integrations/" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://pumble.com/he" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Communications and Messaging"
+            data-search="slack communications and messaging {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;guide\n\n[skip to main content](https://docs.slack.dev/authentication/#__docusaurus_skiptocontent_fallback)\n\ncopy as markdown\n\non this page\n\nauthentication is a critical part of the development process, but it doesn’t have to be daunting. with the right tools and best practices, you’ll have a secure, smoot">
+          <td><strong>Slack</strong>
+              <small>Communications and Messaging</small></td>
+          <td>OAuth 2.0</td>
+          <td>Gated or approval-based access indicated</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>API type not confirmed</small></td>
+          <td><a href="https://api.slack.com/authentication" target="_blank" rel="noopener noreferrer">Source 1</a></td>
+        </tr>
+        
+
+        <tr data-category="Communications and Messaging"
+            data-search="telegram communications and messaging {&quot;successful&quot;: false, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: false, &quot;data&quot;: {&quot;http_error&quot;: &quot;403 client error: forbidden for url: https://api.firecrawl.dev/v2/scrape&quot;, &quot;message&quot;: &quot;{\&quot;success\&quot;:false,\&quot;error\&quot;:\&quot;we apologize for the inconvenience but we do not support this site. if you are part of an enterprise and want to have a further conversation about this, please contact our sales team here: https://www">
+          <td><strong>Telegram</strong>
+              <small>Communications and Messaging</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://core.telegram.org/api/auth" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://core.telegram.org/widgets/login" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://core.telegram.org/api/obtaining_api_id" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Communications and Messaging"
+            data-search="twilio communications and messaging {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to content](https://www.twilio.com/docs#twilio-docs-content-area) [skip to navigation](https://www.twilio.com/docs#twilio-docs-sidebar-nav) [skip to topbar](https://www.twilio.com/docs#twilio-docs-topbar)\n\nsearch`` `k`\n\nsearch`` `k`\n\n# twilio docs\n\n## build better and engage your customers across a">
+          <td><strong>Twilio</strong>
+              <small>Communications and Messaging</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed</small></td>
+          <td><a href="https://www.twilio.com/docs#twilio-docs-content-area" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://www.twilio.com/docs#twilio-docs-sidebar-nav" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://www.twilio.com/docs#twilio-do" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Communications and Messaging"
+            data-search="vonage communications and messaging {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data_preview&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to main content](https://developer.vonage.com/en/getting-started/concepts/authentication#content-section)\n\n# [documentation anchor link](https://developer.vonage.com/en/getting-started/concepts/...&quot;, &quot;metadata&quot;: {&quot;cachestate&quot;: &quot;hit&quot;, &quot;cachedat&quot;: &quot;2026-11-23t12:12:50.529z&quot;, &quot;concurrencylimited&quot;: f">
+          <td><strong>Vonage</strong>
+              <small>Communications and Messaging</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://developer.vonage.com/en/getting-started/concepts/authentication#authentication" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developer.vonage.com/en/gett" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developer.vonage.com/en/getting-started/concepts/authentication#content-section" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Communications and Messaging"
+            data-search="whatsapp business communications and messaging {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data_preview&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;![](https://googleads.g.doubleclick.net/pagead/viewthroughconversion/963623955/?guid=on&amp;script=0)\n\n![](https://dc.ads.linkedin.com/collect/?pid=276116&amp;fmt=gif)\n\n![](https://analytics.twitter.com/i/ads...&quot;, &quot;metadata&quot;: {&quot;bingbot&quot;: &quot;noarchive&quot;, &quot;cachestate&quot;: &quot;hit&quot;, &quot;cachedat&quot;: &quot;2026-11-21t19:43:05.187z">
+          <td><strong>WhatsApp Business</strong>
+              <small>Communications and Messaging</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://developers.facebook.com/docs/whatsapp/on-premises/payments-api/upi/" target="_blank" rel="noopener noreferrer">Source 1</a></td>
+        </tr>
+        
+
+        <tr data-category="Communications and Messaging"
+            data-search="zoho cliq communications and messaging {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;# business communication software for teams\n\nwork how you want from wherever you want. zoho cliq streamlines your business communication and fuels effortless conversations within teams and external stakeholders through organization, automation, and ai.\n\n[try for free](https://www.zoho.com/cliq/signup.html)\n">
+          <td><strong>Zoho Cliq</strong>
+              <small>Communications and Messaging</small></td>
+          <td>OAuth 2.0</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://www.zoho.com/cliq/" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://www.zoho.com/cliq/help/restapi/" target="_blank" rel="noopener noreferrer">Source 2</a></td>
+        </tr>
+        
+
+        <tr data-category="Data, SEO and Scraping"
+            data-search="ahrefs data, seo and scraping ahrefs is listed in the data, seo and scraping category; product description needs source verification.">
+          <td><strong>Ahrefs</strong>
+              <small>Data, SEO and Scraping</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Data, SEO and Scraping"
+            data-search="apify data, seo and scraping {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to main content](https://docs.apify.com/integrations/api#__docusaurus_skiptocontent_fallback)\n\non this page\n\n# api integration\n\ncopy for llm\n\nall aspects of the apify platform can be controlled via a rest api, which is described in detail in the [**api reference**](https://docs.apify.com/api/v2).\n">
+          <td><strong>Apify</strong>
+              <small>Data, SEO and Scraping</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed</small></td>
+          <td><a href="https://docs.apify.com/integrations/api#limited-permissions" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://docs.apify.com/integrations/api#__docusaurus_skipToContent_fallback" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://docs.apify.com/integrations/api" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Data, SEO and Scraping"
+            data-search="bright data data, seo and scraping {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data_preview&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;&gt; ## documentation index\n&gt;\n&gt; fetch the complete documentation index at: [/llms.txt](https://docs.brightdata.com/llms.txt)\n&gt;\n&gt; use this file to discover all available pages before exploring further.\n\n[...&quot;, &quot;metadata&quot;: {&quot;apple-mobile-web-app-title&quot;: &quot;bright data docs&quot;, &quot;application-name&quot;: &quot;bright da">
+          <td><strong>Bright Data</strong>
+              <small>Data, SEO and Scraping</small></td>
+          <td>API key, Bearer token</td>
+          <td>Not established from collected evidence</td>
+          <td>Webhooks mentioned; API type needs confirmation</td>
+          <td>Broad API surface indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://docs.brightdata.com/api-reference/authentication#content-area" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://docs.brightdata.com/llms.txt" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://docs.brightdata.com/api-reference/authentication" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Data, SEO and Scraping"
+            data-search="clay data, seo and scraping {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data_preview&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;&gt; ## documentation index\n&gt;\n&gt; fetch the complete documentation index at: [/llms.txt](https://developers.clay.com/llms.txt)\n&gt;\n&gt; use this file to discover all available pages before exploring further.\n\n[...&quot;, &quot;metadata&quot;: {&quot;apple-mobile-web-app-title&quot;: &quot;clay docs&quot;, &quot;application-name&quot;: &quot;clay docs&quot;, &quot;cac">
+          <td><strong>Clay</strong>
+              <small>Data, SEO and Scraping</small></td>
+          <td>API key</td>
+          <td>Not established from collected evidence</td>
+          <td>Webhooks mentioned; API type needs confirmation</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://developers.clay.com/public-api/authentication#content-area" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://api.clay.com/public/v0/me" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developers.clay.com/llms.txt" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Data, SEO and Scraping"
+            data-search="dataforseo data, seo and scraping {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;# introduction\n\nadd to favoritescopy urlemailshare\n\n### welcome to dataforseo api!\n\nthis is the starting point on your journey towards building powerful seo software, data analysis pipelines, and robust no-code automations. with dataforseo you can get all the data you need while saving your time and budget">
+          <td><strong>DataForSEO</strong>
+              <small>Data, SEO and Scraping</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Webhooks mentioned; API type needs confirmation</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed</small></td>
+          <td><a href="https://docs.dataforseo.com/v3/" target="_blank" rel="noopener noreferrer">Source 1</a></td>
+        </tr>
+        
+
+        <tr data-category="Data, SEO and Scraping"
+            data-search="firecrawl data, seo and scraping {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data_preview&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;&gt; ## documentation index\n&gt;\n&gt; fetch the complete documentation index at: [/llms.txt](https://docs.firecrawl.dev/llms.txt)\n&gt;\n&gt; use this file to discover all available pages before exploring further.\n\n[s...&quot;, &quot;metadata&quot;: {&quot;apple-mobile-web-app-title&quot;: &quot;firecrawl docs&quot;, &quot;application-name&quot;: &quot;firecrawl d">
+          <td><strong>Firecrawl</strong>
+              <small>Data, SEO and Scraping</small></td>
+          <td>API key, Bearer token</td>
+          <td>Not established from collected evidence</td>
+          <td>Webhooks mentioned; API type needs confirmation</td>
+          <td>Some API capabilities indicated</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed; No existing MCP server evidence found; absence not verified</small></td>
+          <td><a href="https://docs.firecrawl.dev/api-reference/introduction#authentication" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://docs.firecrawl.dev/llms.txt" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://docs.firecrawl.dev/api-reference/introduction" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Data, SEO and Scraping"
+            data-search="mrscraper data, seo and scraping {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;## scrape any data for\n\nai-powered scraper to extract valuable information effortlessly.&quot;, &quot;metadata&quot;: {&quot;cachestate&quot;: &quot;miss&quot;, &quot;concurrencylimited&quot;: false, &quot;contenttype&quot;: &quot;image/gif&quot;, &quot;creditsused&quot;: 1, &quot;indexid&quot;: &quot;e1b98b98-fab8-40a3-b38f-be3c2b4f40b4&quot;, &quot;proxyused&quot;: &quot;basic&quot;, &quot;scrapeid&quot;: &quot;01a2097b-071c-75d8-ac00-">
+          <td><strong>MrScraper</strong>
+              <small>Data, SEO and Scraping</small></td>
+          <td>API key, Bearer token</td>
+          <td>Not established from collected evidence</td>
+          <td>Webhooks mentioned; API type needs confirmation</td>
+          <td>Broad API surface indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://docs.mrscraper.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbanner.78abe79c.gif&amp;w=3840&amp;q=75" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://docs.mrscraper.com/docs/getting-started/overview\\#start-here" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://docs.mrscraper.com/docs/getting-started/quickstart" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Data, SEO and Scraping"
+            data-search="se ranking data, seo and scraping {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;api\n\napi access is included in every se ranking plan\n\n# seo api: automate your seo workflows\n\nconnect via api for custom integrations and bulk processes, or via mcp to query data from inside claude or any ai assistant. or do both.\n\n[start free trial](https://seranking.com/sign-up.html) [see product tour]">
+          <td><strong>SE Ranking</strong>
+              <small>Data, SEO and Scraping</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://seranking.com/api.html" target="_blank" rel="noopener noreferrer">Source 1</a></td>
+        </tr>
+        
+
+        <tr data-category="Data, SEO and Scraping"
+            data-search="sherlock data, seo and scraping {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to content](https://github.com/sherlock-project/sherlock/issues/854#start-of-content)\n\nyou signed in with another tab or window. [reload](https://github.com/sherlock-project/sherlock/issues/854) to refresh your session.you signed out in another tab or window. [reload](https://github.com/sherlock-project/">
+          <td><strong>Sherlock</strong>
+              <small>Data, SEO and Scraping</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://github.com/sherlock-project/sherlock/issues/854#start-of-content" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://github.com/sherlock-project/sherlock/issues/854" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://github.com/login?return_to=https://github.com/sherlock-project/sherlock/issues/854" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Data, SEO and Scraping"
+            data-search="waterfall.io data, seo and scraping waterfall.io is listed in the data, seo and scraping category; product description needs source verification.">
+          <td><strong>Waterfall.io</strong>
+              <small>Data, SEO and Scraping</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Developer, Infra and Data platforms"
+            data-search="cloudflare developer, infra and data platforms {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data_preview&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to content](https://developers.cloudflare.com/api/#_top)\n\n# api reference\n\n### libraries\n\ntypescript\n\n7.3.0\n\n```\nnpm install cloudflare\n```\n\n[read docs](https://developers.cloudflare.com/api/typ...&quot;, &quot;metadata&quot;: {&quot;agent:instructions&quot;: &quot;this site offers a search api that returns releva">
+          <td><strong>Cloudflare</strong>
+              <small>Developer, Infra and Data platforms</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://developers.cloudflare.com/api/#_top" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developers.cloudflare.com/api/typ" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developers.cloudflare.com/api/" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Developer, Infra and Data platforms"
+            data-search="datadog developer, infra and data platforms {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;for ai agents: a markdown version of this page is available at [https://docs.datadoghq.com/api/latest.md](https://docs.datadoghq.com/api/latest.md). a documentation index is available at [/llms.txt](https://docs.datadoghq.com/llms.txt).\n\n[![home](&lt;base64-image-removed&gt;)home](https://www.datadoghq.com/) [![docs">
+          <td><strong>Datadog</strong>
+              <small>Developer, Infra and Data platforms</small></td>
+          <td>OAuth 2.0, API key</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://docs.datadoghq.com/api/latest#getting-started" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://docs.datadoghq.com/api/latest.md" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://docs.datadoghq.com/api/latest/" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Developer, Infra and Data platforms"
+            data-search="github developer, infra and data platforms {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data_preview&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to main content](https://docs.github.com/en/rest/using-the-rest-api/getting-started-with-the-rest-api?apiversion=2026-03-10#main-content)\n\n[skip to content](https://docs.github.com/en/rest/using...&quot;, &quot;metadata&quot;: {&quot;cachestate&quot;: &quot;hit&quot;, &quot;cachedat&quot;: &quot;2026-11-23t17:24:28.679z&quot;, &quot;concurrencylimited&quot;: f">
+          <td><strong>GitHub</strong>
+              <small>Developer, Infra and Data platforms</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Insufficient evidence</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed</small></td>
+          <td><a href="https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api" target="_blank" rel="noopener noreferrer">Source 1</a></td>
+        </tr>
+        
+
+        <tr data-category="Developer, Infra and Data platforms"
+            data-search="mongodb atlas developer, infra and data platforms {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;for ai agents: a documentation index is available at https://www.mongodb.com/docs/llms.txt — markdown versions of all pages are available by appending .md to any url path.\n\ndocs menu\n\nask mongodb ai\n\n# atlas administration api authentication methods [permalink to this heading](https://www.mongodb.com/docs/">
+          <td><strong>MongoDB Atlas</strong>
+              <small>Developer, Infra and Data platforms</small></td>
+          <td>OAuth 2.0, API key</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://www.mongodb.com/docs/atlas/api/api-authentication/" target="_blank" rel="noopener noreferrer">Source 1</a></td>
+        </tr>
+        
+
+        <tr data-category="Developer, Infra and Data platforms"
+            data-search="neo4j developer, infra and data platforms {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data_preview&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;### quick search\n\n### index\n\n- [alphabetical](https://neo4j.com/docs/api/python-driver/current/genindex.html)\n- [tree](https://neo4j.com/docs/api/python-driver/current/gentree.html)\n\n# api documentati...&quot;, &quot;metadata&quot;: {&quot;cachestate&quot;: &quot;hit&quot;, &quot;cachedat&quot;: &quot;2026-11-23t02:58:50.911z&quot;, &quot;concurrencylimite">
+          <td><strong>Neo4j</strong>
+              <small>Developer, Infra and Data platforms</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://neo4j.com/docs/api/python-driver/current/api.html#api-documentation" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://neo4j.com/docs/api/python-driver/current/api.html#graphdatabase" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://neo4j.com/docs/api/python-driver/current/genindex.html" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Developer, Infra and Data platforms"
+            data-search="netlify developer, infra and data platforms {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data_preview&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to content](https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/#_top)\n\n&gt; for the complete netlify documentation index, see [llms.txt](https://docs.netlify.com/llms.txt)....&quot;, &quot;metadata&quot;: {&quot;cachestate&quot;: &quot;hit&quot;, &quot;cachedat&quot;: &quot;2026-11-23t17:32:53.069z&quot;, &quot;concurrencylimited&quot;: f">
+          <td><strong>Netlify</strong>
+              <small>Developer, Infra and Data platforms</small></td>
+          <td>OAuth 2.0</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Limited API evidence collected</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/#authentication" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/#_top" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Developer, Infra and Data platforms"
+            data-search="sentry developer, infra and data platforms {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to content](https://docs.sentry.io/api/#main)\n\n- [home](https://docs.sentry.io/)\n- [api reference](https://docs.sentry.io/api/)\n\ncopy page\n\n# api reference\n\nthe sentry web api is used to access the sentry platform programmatically. you can use the apis to manage account-level resources, like organ">
+          <td><strong>Sentry</strong>
+              <small>Developer, Infra and Data platforms</small></td>
+          <td>OAuth 2.0, API key, Bearer token</td>
+          <td>Not established from collected evidence</td>
+          <td>Webhooks mentioned; API type needs confirmation</td>
+          <td>Broad API surface indicated</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed; No existing MCP server evidence found; absence not verified</small></td>
+          <td><a href="https://docs.sentry.io/api/" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://docs.sentry.io/api/#getting-started" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://docs.sentry.io/api/auth/" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Developer, Infra and Data platforms"
+            data-search="snowflake developer, infra and data platforms {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;# authenticating snowflake rest apis with snowflake [¶](https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication\\#authenticating-snowflake-rest-apis-with-snowflake)\n\nthis topic describes how to authenticate to the server when using the snowflake rest apis.\n\nwhen you send a request, th">
+          <td><strong>Snowflake</strong>
+              <small>Developer, Infra and Data platforms</small></td>
+          <td>Bearer token, JWT</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication#authenticating-snowflake-rest-apis-with-snowflake" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication\\#authenticating-snowflake-rest-apis-with-snowflake" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Developer, Infra and Data platforms"
+            data-search="supabase developer, infra and data platforms {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to content](https://supabase.com/docs/reference/api/introduction#docs-content-container)\n\n# management api\n\nmanage your supabase organizations and projects programmatically.\n\n## authentication [copy link to section](https://supabase.com/docs/reference/api/introduction\\#authentication)\n\nall api req">
+          <td><strong>Supabase</strong>
+              <small>Developer, Infra and Data platforms</small></td>
+          <td>OAuth 2.0, Bearer token</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://supabase.com/docs/reference/api/introduction#authentication" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://supabase.com/docs/reference/api/introduction#docs-content-container" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://supabase.com/docs/reference/api/introduction" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Developer, Infra and Data platforms"
+            data-search="vercel developer, infra and data platforms {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to content](https://vercel.com/docs/rest-api#geist-skip-nav)\n\napis &amp; sdks\n\nvercel rest api\n\n# [using the rest api](https://vercel.com/docs/rest-api\\#using-the-rest-api) [copy link to section](https://vercel.com/docs/rest-api\\#using-the-rest-api)\n\ninteract programmatically with your vercel account">
+          <td><strong>Vercel</strong>
+              <small>Developer, Infra and Data platforms</small></td>
+          <td>Bearer token</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Broad API surface indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://vercel.com/docs/rest-api#using-the-rest-api" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://vercel.com/docs/rest-api#geist-skip-nav" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://vercel.com/docs/rest-api\\#using-the-rest-api" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Ecommerce"
+            data-search="amazon selling partner ecommerce {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;for ai agents: the docs index is at https://developer-docs.amazon/sp-api/llms.txt. the index for every project on this site is at https://developer-docs.amazon/llms.txt. append .md to any documentation page url to get its markdown version.\n\nauthorization is the process by which a selling partner grants your ap">
+          <td><strong>Amazon Selling Partner</strong>
+              <small>Ecommerce</small></td>
+          <td>OAuth 2.0</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api-applications" target="_blank" rel="noopener noreferrer">Source 1</a></td>
+        </tr>
+        
+
+        <tr data-category="Ecommerce"
+            data-search="bigcommerce ecommerce {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;for ai agents: a documentation index is available at the root level at /llms.txt. append /llms.txt to any url for a page-level index, or .md for the markdown version of any page.\n\n[skip to navigation](https://docs.bigcommerce.com/developer/docs/storefront/catalyst/reference/security?mktid=awqlm0ewntetvuhgltcxo">
+          <td><strong>BigCommerce</strong>
+              <small>Ecommerce</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>REST and/or GraphQL (verify exact supported interfaces)</td>
+          <td>Insufficient evidence</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed</small></td>
+          <td><a href="https://developer.bigcommerce.com/docs/storefront/catalyst/reference/security?mktid=aWQlM0EwNTEtVUhGLTcxOCUyNnRva2VuJTNBX21jaC0zcXVpaHY3NTctNjhxcGV5bDN5LWNvbW1lcmNlLW1hcmtldGluZy52ZXJjZWwuYXBwLWU0NGI5YzQ5M2JlZTczYmQ4NTY1NmZhMzdjOTYzZWNk" target="_blank" rel="noopener noreferrer">Source 1</a></td>
+        </tr>
+        
+
+        <tr data-category="Ecommerce"
+            data-search="ecwid ecommerce ecwid is listed in the ecommerce category; product description needs source verification.">
+          <td><strong>Ecwid</strong>
+              <small>Ecommerce</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Ecommerce"
+            data-search="gumroad ecommerce {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data_preview&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;manual backlink indexing works until the seo workflow starts producing urls faster than a person can reasonably process them. a freelancer handling 20 referring pages each month can paste urls into a ...&quot;, &quot;metadata&quot;: {&quot;cachestate&quot;: &quot;miss&quot;, &quot;concurrencylimited&quot;: false, &quot;contenttype&quot;: &quot;text/html; charset=">
+          <td><strong>Gumroad</strong>
+              <small>Ecommerce</small></td>
+          <td>API key</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://barvearpit.gumroad.com/api-based-link-indexing-a-developer-s-guide-to-automating-the-process" target="_blank" rel="noopener noreferrer">Source 1</a></td>
+        </tr>
+        
+
+        <tr data-category="Ecommerce"
+            data-search="magento (adobe commerce) ecommerce {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to ai assistant](https://developer.adobe.com/commerce/webapi/rest/authentication/#ai-assistant-chat-button)\n\n[edit in github](https://github.com/adobedocs/commerce-webapi/edit/main/src/pages/rest/authentication/index.md) [log an issue](https://github.com/adobedocs/commerce-webapi/issues/new?title=issue%2">
+          <td><strong>Magento (Adobe Commerce)</strong>
+              <small>Ecommerce</small></td>
+          <td>OAuth 2.0, Bearer token</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Some API capabilities indicated</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed; No existing MCP server evidence found; absence not verified</small></td>
+          <td><a href="https://developer.adobe.com/commerce/webapi/rest/authentication/" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developer.adobe.com/commerce/webapi/get-started/authentication/#ai-assistant-chat-button" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developer.adobe.com/commerce/webapi/get-started/authentication/" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Ecommerce"
+            data-search="salesforce commerce cloud ecommerce {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip navigation](https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html#maincontent)\n\n![home](https://a.sfdcstatic.com/shared/images/c360-nav/salesforce-no-type-logo.svg)\n\ndevelopers\n\n[![](https://a.sfdcstatic.com/shared/images/c360-nav/salesforce-no-type-logo.svg)\\\\\ndevel">
+          <td><strong>Salesforce Commerce Cloud</strong>
+              <small>Ecommerce</small></td>
+          <td>OAuth 2.0, Bearer token, JWT</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developer.salesforce.com/docs/commerce/commerce-api/gu" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developer.salesforce.com/docs/commerce/commerce-api/guide/custom-api-authentication.html#maincontent" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Ecommerce"
+            data-search="shopify ecommerce {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to main content](https://shopify.dev/docs/api/usage/authentication#main-content)\n\n[![shopify editions](https://shopify-assets.shopifycdn.com/shopifycloud/shopify-dev/production/assets/medallion-bag-3xhvc113.png)](https://www.shopify.com/editions/fall2026?utm_source=shopify-dev&amp;utm_medium=shopify-dev&amp;utm_">
+          <td><strong>Shopify</strong>
+              <small>Ecommerce</small></td>
+          <td>OAuth 2.0</td>
+          <td>Not established from collected evidence</td>
+          <td>REST and/or GraphQL (verify exact supported interfaces)</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://shopify.dev/docs/api/usage/authentication#main-content" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://shopify.dev/docs/api/usage/authentication" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://shopify.dev/changelog/posts/mcp-server-for-the-shopify-dev-assistant#main-content" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Ecommerce"
+            data-search="squarespace ecommerce {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;menu\n\nnext steps\n\n# authentication and permissions [link to authentication-and-permissions](https://developers.squarespace.com/commerce-apis/authentication-and-permissions//\\#authentication-and-permissions)\n\nto keep squarespace merchant site data private and secure,\nevery request to commerce apis must be">
+          <td><strong>Squarespace</strong>
+              <small>Ecommerce</small></td>
+          <td>OAuth 2.0, API key</td>
+          <td>Not established from collected evidence</td>
+          <td>Webhooks mentioned; API type needs confirmation</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://developers.squarespace.com/commerce-apis/authentication-and-permissions\\#authentication-and-permissi" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developers.squarespace.com/commerce-apis/authentication-and-permissions" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developers.squarespace.com/mcp/overview#overview-of-the-squarespace-mcp-server" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Ecommerce"
+            data-search="woocommerce ecommerce {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to navigation](https://woocommerce.com/document/woocommerce-rest-api/#main-navigation) [skip to content](https://woocommerce.com/document/woocommerce-rest-api/#doc-content)\n\nwoocommerce\n\n- woocommerce\n - [getting started](https://woocommerce.com/documentation/woocommerce/getting-started/ \&quot;everything">
+          <td><strong>WooCommerce</strong>
+              <small>Ecommerce</small></td>
+          <td>API key</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://woocommerce.com/document/woocommerce-rest-api/#main-navigation" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://woocommerce.com/document/woocommerce-rest-api/#doc-content" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://woocommerce.com/document/woocommerce-rest-api/" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Ecommerce"
+            data-search="fanbasis ecommerce fanbasis is listed in the ecommerce category; product description needs source verification.">
+          <td><strong>fanbasis</strong>
+              <small>Ecommerce</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Finance and Fintech"
+            data-search="binance finance and fintech binance is listed in the finance and fintech category; product description needs source verification.">
+          <td><strong>Binance</strong>
+              <small>Finance and Fintech</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Finance and Fintech"
+            data-search="brex finance and fintech brex is listed in the finance and fintech category; product description needs source verification.">
+          <td><strong>Brex</strong>
+              <small>Finance and Fintech</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Finance and Fintech"
+            data-search="paygent connect finance and fintech paygent connect is listed in the finance and fintech category; product description needs source verification.">
+          <td><strong>Paygent Connect</strong>
+              <small>Finance and Fintech</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Finance and Fintech"
+            data-search="pitchbook finance and fintech pitchbook is listed in the finance and fintech category; product description needs source verification.">
+          <td><strong>PitchBook</strong>
+              <small>Finance and Fintech</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Finance and Fintech"
+            data-search="plaid finance and fintech plaid is listed in the finance and fintech category; product description needs source verification.">
+          <td><strong>Plaid</strong>
+              <small>Finance and Fintech</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Finance and Fintech"
+            data-search="quickbooks finance and fintech quickbooks is listed in the finance and fintech category; product description needs source verification.">
+          <td><strong>QuickBooks</strong>
+              <small>Finance and Fintech</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Finance and Fintech"
+            data-search="ramp finance and fintech ramp is listed in the finance and fintech category; product description needs source verification.">
+          <td><strong>Ramp</strong>
+              <small>Finance and Fintech</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Finance and Fintech"
+            data-search="stripe finance and fintech stripe is listed in the finance and fintech category; product description needs source verification.">
+          <td><strong>Stripe</strong>
+              <small>Finance and Fintech</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Finance and Fintech"
+            data-search="xero finance and fintech xero is listed in the finance and fintech category; product description needs source verification.">
+          <td><strong>Xero</strong>
+              <small>Finance and Fintech</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Finance and Fintech"
+            data-search="ipayx finance and fintech ipayx is listed in the finance and fintech category; product description needs source verification.">
+          <td><strong>iPayX</strong>
+              <small>Finance and Fintech</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Marketing, Ads, Email and Social"
+            data-search="gohighlevel marketing, ads, email and social gohighlevel is listed in the marketing, ads, email and social category; product description needs source verification.">
+          <td><strong>GoHighLevel</strong>
+              <small>Marketing, Ads, Email and Social</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Marketing, Ads, Email and Social"
+            data-search="google ads marketing, ads, email and social {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to main content](https://developers.google.com/google-ads/api/docs/oauth/overview#main-content)\n\n[![google ads api](https://developers.google.com/static/ads/images/ads_192px_clr.svg)](https://developers.google.com/google-ads/api)\n\n- [googleads api](https://developers.google.com/google-ads/api)\n\n`/`\n">
+          <td><strong>Google Ads</strong>
+              <small>Marketing, Ads, Email and Social</small></td>
+          <td>OAuth 2.0</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://developers.google.com/google-ads/api/docs/oauth/overview#main-content" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developers.google.com/google-ads/api" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developers.google.com/google-ads/api/docs/oauth/overview" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Marketing, Ads, Email and Social"
+            data-search="klaviyo marketing, ads, email and social {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to content](https://developers.klaviyo.com/en/docs/authenticate_#content)\n\nthis page is available as markdown at https://developers.klaviyo.com/en/docs/authenticate\\_.md. an index of every page is at https://developers.klaviyo.com/llms.txt.\n\n## you will learn [\\#](https://developers.klaviyo.com/en/do">
+          <td><strong>Klaviyo</strong>
+              <small>Marketing, Ads, Email and Social</small></td>
+          <td>API key</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Broad API surface indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://developers.klaviyo.com/en/docs/authenticate_#server-side-vs-client-side-apis" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developers.klaviyo.com/en/docs/authenticate_#content" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developers.klaviyo.com/en/docs/authenticate\\_.md" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Marketing, Ads, Email and Social"
+            data-search="linkedin ads marketing, ads, email and social linkedin ads is listed in the marketing, ads, email and social category; product description needs source verification.">
+          <td><strong>LinkedIn Ads</strong>
+              <small>Marketing, Ads, Email and Social</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Marketing, Ads, Email and Social"
+            data-search="mailchimp marketing, ads, email and social {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;for ai agents: a documentation index is available at the root level at /llms.txt. append /llms.txt to any url for a page-level index, or .md for the markdown version of any page.\n\n[skip to navigation](https://mailchimp.com/developer/marketing/api-concepts/authentication#fern-sidebar)\n\nthis page is for mailch">
+          <td><strong>Mailchimp</strong>
+              <small>Marketing, Ads, Email and Social</small></td>
+          <td>OAuth 2.0, API key, Bearer token, Basic authentication</td>
+          <td>Not established from collected evidence</td>
+          <td>Webhooks mentioned; API type needs confirmation</td>
+          <td>Broad API surface indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://mailchimp.com/developer/marketing/api-concepts/authentication#fern-sidebar" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://mailchimp.com/developer/marketing/api-concepts/authentication/api-keys" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://mailchimp.com/developer/marketing/api" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Marketing, Ads, Email and Social"
+            data-search="meta ads marketing, ads, email and social meta ads is listed in the marketing, ads, email and social category; product description needs source verification.">
+          <td><strong>Meta Ads</strong>
+              <small>Marketing, Ads, Email and Social</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Marketing, Ads, Email and Social"
+            data-search="pinterest marketing, ads, email and social {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to content](https://developers.pinterest.com/about-pinterest-mcp/#)\n\nnew announcement\n\n# your ai just got a new superpower\n\npinterest mcp server brings the power of pinterest data directly into the ai assistants, copilots, and agentic workflows you already use. turn natural-language questions into fa">
+          <td><strong>Pinterest</strong>
+              <small>Marketing, Ads, Email and Social</small></td>
+          <td>OAuth 2.0</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://developers.pinterest.com/about-pinterest-mcp/#" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developers.pinterest.com/about-pinterest-mcp/" target="_blank" rel="noopener noreferrer">Source 2</a></td>
+        </tr>
+        
+
+        <tr data-category="Marketing, Ads, Email and Social"
+            data-search="sendgrid marketing, ads, email and social {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to content](https://www.twilio.com/docs/sendgrid/for-developers/sending-email/authentication#twilio-docs-content-area) [skip to navigation](https://www.twilio.com/docs/sendgrid/for-developers/sending-email/authentication#twilio-docs-sidebar-nav) [skip to topbar](https://www.twilio.com/docs/sendgrid/for-dev">
+          <td><strong>SendGrid</strong>
+              <small>Marketing, Ads, Email and Social</small></td>
+          <td>API key, Bearer token, Basic authentication</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://docs.sendgrid.com/for-developers/sending-email/authentication/" target="_blank" rel="noopener noreferrer">Source 1</a></td>
+        </tr>
+        
+
+        <tr data-category="Marketing, Ads, Email and Social"
+            data-search="threads (meta) marketing, ads, email and social {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;threads\n\nwas this helpful?\n\n# debug\n\nupdated: aug 18, 2026\n\ncopy for llm\n\n[view as markdown](https://developers.facebook.com/documentation/threads/reference/debug.md)\n\nthe threads debug endpoint allows you to inspect an access token. see [debug access token](https://developers.facebook.com/documentat">
+          <td><strong>Threads (Meta)</strong>
+              <small>Marketing, Ads, Email and Social</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://developers.facebook.com/docs/threads/reference/debug/" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developers.facebook.com/docs/threads/create-posts/share-to-ig-stories/" target="_blank" rel="noopener noreferrer">Source 2</a></td>
+        </tr>
+        
+
+        <tr data-category="Marketing, Ads, Email and Social"
+            data-search="systeme.io marketing, ads, email and social systeme.io is listed in the marketing, ads, email and social category; product description needs source verification.">
+          <td><strong>systeme.io</strong>
+              <small>Marketing, Ads, Email and Social</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Productivity and Project Management"
+            data-search="airtable productivity and project management airtable is listed in the productivity and project management category; product description needs source verification.">
+          <td><strong>Airtable</strong>
+              <small>Productivity and Project Management</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Productivity and Project Management"
+            data-search="asana productivity and project management asana is listed in the productivity and project management category; product description needs source verification.">
+          <td><strong>Asana</strong>
+              <small>Productivity and Project Management</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Productivity and Project Management"
+            data-search="clickup productivity and project management clickup is listed in the productivity and project management category; product description needs source verification.">
+          <td><strong>ClickUp</strong>
+              <small>Productivity and Project Management</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Productivity and Project Management"
+            data-search="coda productivity and project management coda is listed in the productivity and project management category; product description needs source verification.">
+          <td><strong>Coda</strong>
+              <small>Productivity and Project Management</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Productivity and Project Management"
+            data-search="harvest productivity and project management harvest is listed in the productivity and project management category; product description needs source verification.">
+          <td><strong>Harvest</strong>
+              <small>Productivity and Project Management</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Productivity and Project Management"
+            data-search="jira productivity and project management jira is listed in the productivity and project management category; product description needs source verification.">
+          <td><strong>Jira</strong>
+              <small>Productivity and Project Management</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Productivity and Project Management"
+            data-search="linear productivity and project management linear is listed in the productivity and project management category; product description needs source verification.">
+          <td><strong>Linear</strong>
+              <small>Productivity and Project Management</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Productivity and Project Management"
+            data-search="monday.com productivity and project management monday.com is listed in the productivity and project management category; product description needs source verification.">
+          <td><strong>Monday.com</strong>
+              <small>Productivity and Project Management</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Productivity and Project Management"
+            data-search="notion productivity and project management {&quot;successful&quot;: false, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: false, &quot;data&quot;: {&quot;http_error&quot;: &quot;402 client error: payment required for url: https://api.firecrawl.dev/v2/scrape&quot;, &quot;message&quot;: &quot;{\&quot;success\&quot;:false,\&quot;code\&quot;:\&quot;insufficient_credits\&quot;,\&quot;requested_credits\&quot;:1,\&quot;remaining_credits\&quot;:0,\&quot;error\&quot;:\&quot;insufficient credits to perform this request: it can use up to 1 credits and your team has 0 left. for more cre">
+          <td><strong>Notion</strong>
+              <small>Productivity and Project Management</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Insufficient evidence</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No existing MCP server evidence found; absence not verified</small></td>
+          <td><a href="https://developers.notion.com/reference/authentication#content-area" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developers.notion.com/llms.txt" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developers.notion.com/reference/authentication" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Productivity and Project Management"
+            data-search="smartsheet productivity and project management smartsheet is listed in the productivity and project management category; product description needs source verification.">
+          <td><strong>Smartsheet</strong>
+              <small>Productivity and Project Management</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed; No official page was successfully scraped; No existing MCP server evidence found; absence not verified</small></td>
+          <td>No official source captured</td>
+        </tr>
+        
+
+        <tr data-category="Support and Helpdesk"
+            data-search="freshdesk support and helpdesk {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;all\n\narticles\n\n\n## recent searches\n\nclear all\n\nno recent searches\n\n## popular articles\n\n* * *\n\n## articles\n\n[view all](https://gohighlevelassist.freshdesk.com/support/search/solutions)\n\n* * *\n\n## topics\n\n[view all](https://gohighlevelassist.freshdesk.com/support/search/topics)\n\n* * *\n\n">
+          <td><strong>Freshdesk</strong>
+              <small>Support and Helpdesk</small></td>
+          <td>OAuth 2.0, API key, Basic authentication</td>
+          <td>Not established from collected evidence</td>
+          <td>Webhooks mentioned; API type needs confirmation</td>
+          <td>Broad API surface indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://gohighlevelassist.freshdesk.com/support/search/solutions" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://gohighlevelassist.freshdesk.com/support/solutions/articles/48001060529-highlevel-api-documentation" target="_blank" rel="noopener noreferrer">Source 2</a></td>
+        </tr>
+        
+
+        <tr data-category="Support and Helpdesk"
+            data-search="front support and helpdesk {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[home](https://academy.front.com/app) [dashboard](https://academy.front.com/app/dashboard) [events](https://academy.front.com/app/training_events) [learning paths](https://academy.front.com/app/learning_paths)\n\n[sign out](https://academy.front.com/learners/sign_out)\n\nlearn about front ai and more!\n\n\nwhat">
+          <td><strong>Front</strong>
+              <small>Support and Helpdesk</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://academy.front.com/app" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://academy.front.com/app/dashboard" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://academy.front.com/app/training_events" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Support and Helpdesk"
+            data-search="gladly support and helpdesk {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data_preview&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;- introducing the gladly api\n- overview\n - rest api\n - lookup api\n - testing\n- getting started\n - permissions\n - creating api tokens\n - replacing/rotating api tokens\n- authentication\n- rest api\n...&quot;, &quot;metadata&quot;: {&quot;cachestate&quot;: &quot;hit&quot;, &quot;cachedat&quot;: &quot;2026-11-23t12:11:54.809z&quot;, &quot;concurrencylimited&quot;">
+          <td><strong>Gladly</strong>
+              <small>Support and Helpdesk</small></td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Insufficient evidence</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Authentication method not confirmed; Developer access model not confirmed</small></td>
+          <td><a href="https://developer.gladly.com/rest/#section/Authentication" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developer.gladly.com/rest/" target="_blank" rel="noopener noreferrer">Source 2</a></td>
+        </tr>
+        
+
+        <tr data-category="Support and Helpdesk"
+            data-search="gorgias support and helpdesk {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;search\n\nall articles\n\n# access your gorgias rest api credentialsupdated 5 months ago\n\nthe gorgias rest api lets you read and write data in your helpdesk programmatically. to authenticate api requests, gorgias uses http basic authentication with three pieces of information: your base api url, your email add">
+          <td><strong>Gorgias</strong>
+              <small>Support and Helpdesk</small></td>
+          <td>API key, Basic authentication</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Limited API evidence collected</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://docs.gorgias.com/en-US/rest-api-208286" target="_blank" rel="noopener noreferrer">Source 1</a></td>
+        </tr>
+        
+
+        <tr data-category="Support and Helpdesk"
+            data-search="help scout support and helpdesk {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;# overview\n\n## your api key [anchor link for: your api key](https://developer.helpscout.com/docs-api/\\#your-api-key)\n\neach user has a docs api key. to generate, view, or regenerate the api key,\nclick your avatar in the top right of your account, then click **your profile**.\n\n![profile menu](https://devel">
+          <td><strong>Help Scout</strong>
+              <small>Support and Helpdesk</small></td>
+          <td>API key, Basic authentication</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Limited API evidence collected</td>
+          <td>No MCP evidence found in this search (not proof none exists)</td>
+          <td><strong>Insufficient evidence</strong>
+              <small>Developer access model not confirmed; API type not confirmed; No existing MCP server evidence found; absence not verified</small></td>
+          <td><a href="https://developer.helpscout.com/docs-api/#authentication" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developer.helpscout.com/docs-api/\\#your-api-key" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developer.helpscout.com/docs-api/" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Support and Helpdesk"
+            data-search="intercom support and helpdesk {&quot;successful&quot;: false, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: false, &quot;data&quot;: {&quot;http_error&quot;: &quot;429 client error: too many requests for url: https://api.firecrawl.dev/v2/scrape&quot;, &quot;message&quot;: &quot;{\&quot;success\&quot;:false,\&quot;error\&quot;:\&quot;rate limit exceeded. consumed (req/min): 13, remaining (req/min): 0. upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 2s, resets at mon nov 23">
+          <td><strong>Intercom</strong>
+              <small>Support and Helpdesk</small></td>
+          <td>API key, Bearer token</td>
+          <td>Likely self-serve; confirm account/plan requirements</td>
+          <td>Webhooks mentioned; API type needs confirmation</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small></small></td>
+          <td><a href="https://developers.intercom.com/docs/build-an-integration/learn-more/authentication#content" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://developers.intercom.com/" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developers.intercom.com/docs/build-an-integration/learn-more/authentication" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Support and Helpdesk"
+            data-search="liveagent support and helpdesk {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;#\n\n## boldbi by syncfusion&quot;, &quot;metadata&quot;: {&quot;cachestate&quot;: &quot;miss&quot;, &quot;concurrencylimited&quot;: false, &quot;contenttype&quot;: &quot;image/png&quot;, &quot;creditsused&quot;: 1, &quot;indexid&quot;: &quot;47e32296-68e4-49b3-896d-f4af037ecdde&quot;, &quot;proxyused&quot;: &quot;basic&quot;, &quot;scrapeid&quot;: &quot;01a20972-84ac-779f-a143-311a705025cf&quot;, &quot;sourceurl&quot;: &quot;https://images.liveagent.com/imag">
+          <td><strong>LiveAgent</strong>
+              <small>Support and Helpdesk</small></td>
+          <td>API key</td>
+          <td>Not established from collected evidence</td>
+          <td>REST</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://images.liveagent.com/images/processed/integrations/logos/bold-bi-185x185.png" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://images.liveagent.com/images/processed/integrations/integration-detail.png" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://www.liveagent.com/integrations/bold-bi/" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Support and Helpdesk"
+            data-search="plain support and helpdesk {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data_preview&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;&gt; ## documentation index\n&gt;\n&gt; fetch the complete documentation index at: [/docs/llms.txt](https://www.plain.com/docs/llms.txt)\n&gt;\n&gt; use this file to discover all available pages before exploring further...&quot;, &quot;metadata&quot;: {&quot;apple-mobile-web-app-title&quot;: &quot;plain docs&quot;, &quot;application-name&quot;: &quot;plain docs&quot;, &quot;cac">
+          <td><strong>Plain</strong>
+              <small>Support and Helpdesk</small></td>
+          <td>API key</td>
+          <td>Not established from collected evidence</td>
+          <td>REST and/or GraphQL (verify exact supported interfaces)</td>
+          <td>Limited API evidence collected</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Potentially buildable; validate endpoints, scopes and terms</strong>
+              <small>Developer access model not confirmed</small></td>
+          <td><a href="https://www.plain.com/docs/graphql/oauth" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://www.plain.com/docs/llms.txt" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://www.plain.com/docs/graphql/authentication" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Support and Helpdesk"
+            data-search="pylon support and helpdesk {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;for the complete documentation index, see [llms.txt](https://docs.usepylon.com/pylon-docs/llms.txt). markdown versions of documentation pages are available by appending `.md` to page urls.\n\n [skip to content](https://docs.usepylon.com/pylon-docs/developer/api/authentication#gitbook-main-content)\n\nthe pylon a">
+          <td><strong>Pylon</strong>
+              <small>Support and Helpdesk</small></td>
+          <td>Bearer token</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Broad API surface indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://docs.usepylon.com/pylon-docs/developer/api/authentication" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://docs.usepylon.com/pylon-docs/llms.txt" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://docs.usepylon.com/pylon-docs/developer/api" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        
+
+        <tr data-category="Support and Helpdesk"
+            data-search="zendesk support and helpdesk {&quot;successful&quot;: true, &quot;data&quot;: {&quot;results&quot;: [{&quot;response&quot;: {&quot;successful&quot;: true, &quot;data&quot;: {&quot;data&quot;: {&quot;markdown&quot;: &quot;[skip to main content](https://www.zendesk.com/company/agreements-and-terms/application-d/#main-content)\n\n##### platform\n\n- [zendesk resolution platformdeliver faster, higher quality resolutions with the only ai-first service platform](https://www.zendesk.com/platform/)\n\n- [zendesk aipower your service wit">
+          <td><strong>Zendesk</strong>
+              <small>Support and Helpdesk</small></td>
+          <td>Bearer token, Basic authentication, JWT</td>
+          <td>Not established from collected evidence</td>
+          <td>Not established from collected evidence</td>
+          <td>Some API capabilities indicated</td>
+          <td>Evidence found; inspect cited source</td>
+          <td><strong>Needs further investigation</strong>
+              <small>Developer access model not confirmed; API type not confirmed</small></td>
+          <td><a href="https://www.zendesk.com/company/agreements-and-terms/application-d" target="_blank" rel="noopener noreferrer">Source 1</a> <a href="https://support.zendesk.com/hc/en-us/articles/4408886752410" target="_blank" rel="noopener noreferrer">Source 2</a> <a href="https://developer.zendesk.com/api-reference/introduction/security-and-auth/" target="_blank" rel="noopener noreferrer">Source 3</a></td>
+        </tr>
+        </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Methodology</h2>
+  <ol>
+    <li>Discover application-related search and documentation sources.</li>
+    <li>Search for developer documentation, API references and MCP information.</li>
+    <li>Prioritize official-domain URLs and collect available page content.</li>
+    <li>Extract authentication, developer access, API type, API breadth,
+        MCP availability and implementation blockers.</li>
+    <li>Apply quote-based checks: unsupported claims are not retained
+        as established facts.</li>
+    <li>Use a 20-app evaluation sample prepared through Claude-assisted
+        documentation review. This was not an independent human audit.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Verification limitations</h2>
+
+  <p class="warning">
+    Independent second-opinion model verification and automated browser
+    checks could not be completed because the required Anthropic API
+    credentials were unavailable. These stages must not be interpreted
+    as successfully completed.
+  </p>
+
+  <p>
+    The review queue contains records requiring further attention.
+    Some fields remain unknown because the collected pages did not
+    establish the relevant fact. This does not prove that the product
+    lacks that capability.
+  </p>
+
+  <p>
+    Search coverage is not exhaustive. API scopes, rate limits, pricing,
+    terms, approval requirements and production readiness may require
+    additional direct confirmation with each provider.
+  </p>
+</section>
+
+<footer>
+  Generated locally from data/final.json.
+  Rebuild using <code>python build_page.py</code>.
+</footer>
+
+</main>
+
+<script>
+const q = document.getElementById('q');
+const cat = document.getElementById('cat');
+
+function filterRows() {
+  const term = q.value.toLowerCase();
+  const category = cat.value;
+
+  document.querySelectorAll('#rows tr').forEach(row => {
+    row.style.display =
+      row.dataset.search.includes(term) &&
+      (!category || row.dataset.category === category)
+        ? ''
+        : 'none';
+  });
+}
+
+q.addEventListener('input', filterRows);
+cat.addEventListener('change', filterRows);
+</script>
+
+</body>
+</html>

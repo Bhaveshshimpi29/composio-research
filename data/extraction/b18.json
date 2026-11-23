@@ -1,0 +1,138 @@
+[
+ {
+  "app": "Harvest",
+  "category": "Finance",
+  "one_liner": "Time tracking and invoicing; pricing page only cached.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "free_trial",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "access",
+    "url": "https://www.getharvest.com/pricing",
+    "quote": "Get started on any plan with a free trial. No credit card required."
+   }
+  ],
+  "note": "Trial is for the product, not API access; API docs not cached."
+ },
+ {
+  "app": "Stripe",
+  "category": "Finance",
+  "one_liner": "Payments platform with a REST API and official MCP server.",
+  "auth_methods": [
+   "api_key",
+   "basic",
+   "bearer_token",
+   "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "official",
+  "existing_mcp_url": "https://docs.stripe.com/mcp",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.stripe.com/api/authentication",
+    "quote": "The Stripe API authenticates requests using"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.stripe.com/mcp",
+    "quote": "Use OAuth when a client accesses Stripe on behalf of your Stripe user account."
+   },
+   {
+    "field": "api_type",
+    "url": "https://docs.stripe.com/api/authentication",
+    "quote": "Make all API requests over"
+   },
+   {
+    "field": "existing_mcp",
+    "url": "https://docs.stripe.com/mcp",
+    "quote": "The Stripe Model Context Protocol (MCP) server provides tools that AI agents can use to interact with the Stripe API"
+   },
+   {
+    "field": "access",
+    "url": "https://docs.stripe.com/api/authentication",
+    "quote": "A sample test API key is included in all the examples here, so you can test any example right away."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://docs.stripe.com/api/authentication",
+    "quote": "Provide your API key as the basic auth username value. You don’t need to provide a password."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://docs.stripe.com/api/authentication",
+    "quote": "Provide your API key as the basic auth username value. You don’t need to provide a password."
+   }
+  ],
+  "note": "Test-mode keys come with any account; whether the account is free is not quoted. access may reset."
+ },
+ {
+  "app": "Plaid",
+  "category": "Finance",
+  "one_liner": "Financial data aggregation API.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "access": "admin_approval",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "partial",
+  "main_blocker": "admin_approval",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://plaid.com/docs/api/",
+    "quote": "Almost all Plaid API endpoints require a"
+   },
+   {
+    "field": "api_type",
+    "url": "https://plaid.com/docs/api/",
+    "quote": "Comprehensive reference for integrating with Plaid API endpoints"
+   },
+   {
+    "field": "access",
+    "url": "https://plaid.com/docs/api/",
+    "quote": "Plaid has two environments: Sandbox and Production."
+   },
+   {
+    "field": "access",
+    "url": "https://plaid.com/docs/api/",
+    "quote": "request Production API access"
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://plaid.com/docs/api/",
+    "quote": "request Production API access"
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://plaid.com/docs/api/",
+    "quote": "The Sandbox environment supports only test Items."
+   }
+  ],
+  "note": "Sandbox is self-serve; Production requires a request/approval."
+ }
+]

@@ -1,0 +1,232 @@
+[
+ {
+  "app": "Attio",
+  "category": "CRM",
+  "one_liner": "CRM with a public REST API and OAuth for apps.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.attio.com/rest-api/overview",
+    "quote": "Connect an app to Attio through OAuth"
+   },
+   {
+    "field": "api_type",
+    "url": "https://docs.attio.com/rest-api/overview",
+    "quote": "Attio provides a public REST API which exchanges JSON over HTTPS."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://docs.attio.com/rest-api/overview",
+    "quote": "Attio provides a public REST API which exchanges JSON over HTTPS."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://docs.attio.com/rest-api/overview",
+    "quote": "Attio provides a public REST API which exchanges JSON over HTTPS."
+   }
+  ],
+  "note": "Pricing/access not on cached page."
+ },
+ {
+  "app": "Twenty",
+  "category": "CRM",
+  "one_liner": "Open-source CRM you build and version like the rest of your stack.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "Cached page is the GitHub README; no API or auth detail."
+ },
+ {
+  "app": "Zoho CRM",
+  "category": "CRM",
+  "one_liner": "CRM with a V8 REST API and a free edition for 3 users.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+    "quote": "OAuth 2.0 for V8 APIs - An Overview"
+   },
+   {
+    "field": "access",
+    "url": "https://www.zoho.com/crm/pricing/",
+    "quote": "Zoho CRM Pricing and Editions - Free for 3 users"
+   },
+   {
+    "field": "api_type",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+    "quote": "Zoho CRM API | V8"
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+    "quote": "The consumer key generated from the connected application."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+    "quote": "The consumer key generated from the connected application."
+   }
+  ],
+  "note": "Free edition is for the product; API access on the free edition is not stated."
+ },
+ {
+  "app": "Plain",
+  "category": "Support",
+  "one_liner": "Support platform with a GraphQL API and OAuth apps.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "graphql"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://www.plain.com/docs/graphql/oauth",
+    "quote": "An OAuth app lets users in your workspace sign in to your app with their Plain account."
+   },
+   {
+    "field": "api_type",
+    "url": "https://www.plain.com/docs/graphql/oauth",
+    "quote": "Call the API as a user in your workspace after they sign in to your OAuth app."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://www.plain.com/docs/graphql/oauth",
+    "quote": "Creating an OAuth app gives you a client ID, which identifies your app to Plain and isn’t secret."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://www.plain.com/docs/graphql/oauth",
+    "quote": "Creating an OAuth app gives you a client ID, which identifies your app to Plain and isn’t secret."
+   }
+  ]
+ },
+ {
+  "app": "Vonage",
+  "category": "Communications",
+  "one_liner": "Communications APIs (SMS, voice, Messages, Verify).",
+  "auth_methods": [
+   "api_key",
+   "basic",
+   "bearer_token"
+  ],
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "Messages supports both JWT and Basic authentication"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "API Key and Secret (Header)"
+   },
+   {
+    "field": "access",
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "When you create a Vonage account, an API key and secret will be created for you."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "When you create a Vonage account, an API key and secret will be created for you."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "When you create a Vonage account, an API key and secret will be created for you."
+   }
+  ]
+ },
+ {
+  "app": "Meta Ads",
+  "category": "Marketing",
+  "one_liner": "Meta Marketing API for campaigns, ad sets and ads.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "access": "admin_approval",
+  "api_type": [
+   "graphql"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "partial",
+  "main_blocker": "admin_approval",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "access",
+    "url": "https://developers.facebook.com/docs/marketing-api/overview/authorization",
+    "quote": "Depending on your intended use case, you may need to submit your app for review to gain access to specific permissions related to ad management."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://developers.facebook.com/docs/marketing-api/overview/authorization",
+    "quote": "Depending on your intended use case, you may need to submit your app for review to gain access to specific permissions related to ad management."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://developers.facebook.com/docs/marketing-api/overview/authorization",
+    "quote": "The authorization process verifies the users and apps that will be accessing the Marketing API and grants them permissions."
+   }
+  ],
+  "note": "api_type graphql and oauth2 are not stated in cached text; they will be reset by the quote check."
+ }
+]

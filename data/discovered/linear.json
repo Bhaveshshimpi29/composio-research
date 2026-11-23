@@ -1,0 +1,19 @@
+{
+ "app": "Linear",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://linear.app/developers/graphql",
+   "kind": "seed"
+  },
+  {
+   "url": "https://linear.app/developers/oauth-2-0-authentication",
+   "kind": "seed"
+  },
+  {
+   "url": "https://linear.app/docs/mcp",
+   "kind": "seed"
+  }
+ ]
+}

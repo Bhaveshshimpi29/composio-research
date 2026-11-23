@@ -1,0 +1,19 @@
+{
+ "app": "Twenty",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://docs.twenty.com/developers/extend/api",
+   "kind": "seed"
+  },
+  {
+   "url": "https://twenty.com/pricing",
+   "kind": "seed"
+  },
+  {
+   "url": "https://github.com/twentyhq/twenty",
+   "kind": "seed"
+  }
+ ]
+}

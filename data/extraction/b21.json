@@ -1,0 +1,127 @@
+[
+ {
+  "app": "Reducto",
+  "category": "AI documents",
+  "one_liner": "Document processing platform with REST/SDKs and MCP tools.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "rest",
+   "sdk_only"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "official",
+  "existing_mcp_url": "https://docs.reducto.ai/",
+  "buildable_today": "partial",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "api_type",
+    "url": "https://docs.reducto.ai/",
+    "quote": "Available in Python, Node.js, Go, and REST, with Studio for visual pipeline building."
+   },
+   {
+    "field": "existing_mcp",
+    "url": "https://docs.reducto.ai/",
+    "quote": "Give agents Reducto tools directly in Claude Code, Codex, Cursor, and other MCP clients."
+   }
+  ],
+  "note": "Auth and signup not cached."
+ },
+ {
+  "app": "Devin",
+  "category": "AI coding",
+  "one_liner": "AI software engineer with a v3 REST API using service users.",
+  "auth_methods": [
+   "api_key",
+   "bearer_token"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "Both scopes use service user credentials ("
+   },
+   {
+    "field": "api_type",
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "Learn how to programmatically interact with Devin using our REST APIs"
+   },
+   {
+    "field": "api_breadth",
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "For managing resources within a single organization — sessions, knowledge, playbooks, secrets, and more."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "For teams and standard organizations. Create a service user and make your first API call in minutes."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "For teams and standard organizations. Create a service user and make your first API call in minutes."
+   }
+  ],
+  "note": "Enterprise scope is enterprise-only; org scope open to Teams plans. Plan price not stated."
+ },
+ {
+  "app": "Mermaid CLI",
+  "category": "Developer tools",
+  "one_liner": "Open-source command line tool for the Mermaid diagram library.",
+  "auth_methods": [
+   "none_found"
+  ],
+  "access": "self_serve_free",
+  "api_type": [
+   "none_public"
+  ],
+  "api_breadth": "small",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "partial",
+  "main_blocker": "no_public_api",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "main_blocker",
+    "url": "https://github.com/mermaid-js/mermaid-cli",
+    "quote": "GitHub - mermaid-js/mermaid-cli: Command line tool for the Mermaid library"
+   }
+  ],
+  "note": "It is a local CLI, not a hosted API; the quote only shows it is a CLI. auth none_found and access are unquoted."
+ },
+ {
+  "app": "Grain",
+  "category": "Meetings",
+  "one_liner": "Meeting recorder; pricing page only cached.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "Pricing only; API not cached."
+ }
+]

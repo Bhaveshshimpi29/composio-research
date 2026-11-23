@@ -1,0 +1,101 @@
+app,why,agent_access,agent_auth,agent_blocker,urls_to_check
+Salesforce,second opinion unavailable,self_serve_free,oauth2|bearer_token,none,https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html https://developer.salesforce.com/docs/platform/hosted-mcp-servers/references/reference/headless-360-mcp.html https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html
+HubSpot,second opinion unavailable,unknown,oauth2|bearer_token,unknown,https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server
+Pipedrive,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Podio,second opinion unavailable,self_serve_free,oauth2|api_key,none,https://developers.podio.com/authentication https://developers.podio.com/api-key https://developers.podio.com/api-key
+Close,second opinion unavailable,unknown,api_key|basic|oauth2,none,https://developer.close.com/api/overview/api-key-authentication/ https://help.close.com/docs/api-keys-oauth https://help.close.com/docs/api-keys-oauth
+Copper,second opinion unavailable,unknown,api_key|oauth2,none,https://developer.copper.com/introduction/authentication.html https://developer.copper.com/introduction/authentication.html https://developer.copper.com/introduction/authentication.html
+DealCloud,second opinion unavailable; low confidence,unknown,other,unknown,https://api.docs.dealcloud.com/docs https://api.docs.dealcloud.com/docs https://api.docs.dealcloud.com/docs
+Zendesk,second opinion unavailable,unknown,oauth2|api_key|basic,unknown,https://developer.zendesk.com/api-reference/introduction/security-and-auth/ https://developer.zendesk.com/api-reference/introduction/security-and-auth/ https://developer.zendesk.com/api-reference/introduction/security-and-auth/
+Intercom,second opinion unavailable,self_serve_free,bearer_token|oauth2,none,https://developers.intercom.com/docs/build-an-integration/learn-more/authentication https://developers.intercom.com/ https://developers.intercom.com/
+Freshdesk,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Front,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Pylon,second opinion unavailable,admin_approval,bearer_token,admin_approval,https://docs.usepylon.com/pylon-docs/developer/api/authentication https://docs.usepylon.com/pylon-docs/developer/api https://docs.usepylon.com/pylon-docs/developer/api/authentication
+LiveAgent,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Help Scout,second opinion unavailable; low confidence,unknown,api_key|basic,unknown,https://developer.helpscout.com/docs-api/ https://developer.helpscout.com/docs-api/
+Gorgias,second opinion unavailable,admin_approval,basic|api_key,admin_approval,https://docs.gorgias.com/en-US/rest-api-208286 https://docs.gorgias.com/en-US/rest-api-208286 https://docs.gorgias.com/en-US/rest-api-208286
+Slack,second opinion unavailable,unknown,oauth2|bearer_token,none,https://api.slack.com/authentication https://api.slack.com/authentication https://api.slack.com/authentication
+Twilio,second opinion unavailable; low confidence,unknown,unknown,none,https://www.twilio.com/docs https://www.twilio.com/docs https://www.twilio.com/docs
+Zoho Cliq,second opinion unavailable; low confidence,free_trial,oauth2,unknown,https://www.zoho.com/cliq/help/restapi/ https://www.zoho.com/cliq/ https://www.zoho.com/cliq/help/restapi/
+Lark (Larksuite),second opinion unavailable; low confidence,unknown,unknown,unknown,
+Pumble,second opinion unavailable; low confidence,unknown,unknown,unknown,https://pumble.com/help/integrations/
+Discord,second opinion unavailable; low confidence,unknown,oauth2|bearer_token,unknown,https://docs.discord.com/llms.txt https://docs.discord.com/llms.txt
+Aircall,second opinion unavailable; low confidence,partner_or_sales,oauth2,partner_gate,https://developer.aircall.io/docs/how-to-register https://developer.aircall.io/docs/how-to-register https://developer.aircall.io/docs/how-to-register
+Google Ads,second opinion unavailable,unknown,oauth2|api_key,unknown,https://developers.google.com/google-ads/api/docs/oauth/overview https://developers.google.com/google-ads/api/docs/oauth/overview
+Mailchimp,second opinion unavailable,unknown,api_key|oauth2|basic|bearer_token,none,https://mailchimp.com/developer/marketing/api-concepts/authentication https://mailchimp.com/developer/marketing/api-concepts/authentication https://mailchimp.com/developer/marketing/api-concepts/authentication
+Klaviyo,second opinion unavailable,unknown,api_key|oauth2,none,https://developers.klaviyo.com/en/docs/authenticate_ https://developers.klaviyo.com/en/docs/authenticate_ https://developers.klaviyo.com/en/docs/authenticate_
+Pinterest,second opinion unavailable; low confidence,unknown,oauth2|bearer_token,unknown,https://developers.pinterest.com/about-pinterest-mcp/ https://developers.pinterest.com/about-pinterest-mcp/ https://developers.pinterest.com/about-pinterest-mcp/
+Threads (Meta),second opinion unavailable,admin_approval,unknown,admin_approval,https://developers.facebook.com/docs/threads/create-posts/share-to-ig-stories/ https://developers.facebook.com/docs/threads/create-posts/share-to-ig-stories/ https://developers.facebook.com/docs/threads/create-posts/share-to-ig-stories/
+SendGrid,second opinion unavailable,unknown,api_key|bearer_token|basic,none,https://docs.sendgrid.com/for-developers/sending-email/authentication/ https://docs.sendgrid.com/for-developers/sending-email/authentication/ https://docs.sendgrid.com/for-developers/sending-email/authentication/
+Shopify,second opinion unavailable,unknown,oauth2,none,https://shopify.dev/docs/api/usage/authentication https://shopify.dev/docs/api/usage/authentication https://shopify.dev/changelog/posts/mcp-server-for-the-shopify-dev-assistant
+WooCommerce,second opinion unavailable,self_serve_free,api_key,none,https://woocommerce.com/document/woocommerce-rest-api/ https://woocommerce.com/document/woocommerce-rest-api/ https://woocommerce.com/document/woocommerce-rest-api/
+BigCommerce,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Salesforce Commerce Cloud,second opinion unavailable,unknown,oauth2|bearer_token,unknown,https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html
+Squarespace,second opinion unavailable,unknown,api_key|oauth2,none,https://developers.squarespace.com/commerce-apis/authentication-and-permissions https://developers.squarespace.com/mcp/overview https://developers.squarespace.com/commerce-apis/authentication-and-permissions
+Amazon Selling Partner,second opinion unavailable; low confidence,unknown,oauth2,unknown,https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api-applications https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api-applications
+DataForSEO,second opinion unavailable; low confidence,free_trial,unknown,unknown,https://docs.dataforseo.com/v3/ https://docs.dataforseo.com/v3/ https://docs.dataforseo.com/v3/
+SE Ranking,second opinion unavailable,free_trial,unknown,none,https://seranking.com/api.html https://seranking.com/api.html https://seranking.com/api.html
+MrScraper,second opinion unavailable,unknown,api_key|bearer_token,none,https://docs.mrscraper.com/docs/getting-started/quickstart https://docs.mrscraper.com/docs/getting-started/quickstart https://docs.mrscraper.com/docs/getting-started/quickstart
+Apify,second opinion unavailable,self_serve_free,api_key|bearer_token,none,https://docs.apify.com/integrations/api https://docs.apify.com/integrations/api https://docs.apify.com/integrations/api
+Firecrawl,second opinion unavailable; low confidence,unknown,unknown,unknown,https://docs.firecrawl.dev/llms.txt
+Bright Data,second opinion unavailable,unknown,unknown,none,https://docs.brightdata.com/llms.txt https://docs.brightdata.com/llms.txt https://docs.brightdata.com/llms.txt
+Sherlock,second opinion unavailable; low confidence,unknown,unknown,no_public_api,https://github.com/sherlock-project/sherlock/issues/854
+Clay,rule check: inconsistent_no_api; second opinion unavailable,unknown,api_key,none,https://developers.clay.com/llms.txt https://developers.clay.com/llms.txt https://developers.clay.com/llms.txt
+Vercel,second opinion unavailable,unknown,bearer_token,none,https://vercel.com/docs/rest-api https://vercel.com/docs/rest-api https://vercel.com/docs/rest-api
+Supabase,second opinion unavailable,unknown,bearer_token|oauth2,none,https://supabase.com/docs/reference/api/introduction https://supabase.com/docs/reference/api/introduction https://supabase.com/docs/reference/api/introduction
+Snowflake,second opinion unavailable,unknown,other|other,unknown,https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication
+MongoDB Atlas,second opinion unavailable,unknown,oauth2|other,none,https://www.mongodb.com/docs/atlas/api/api-authentication/ https://www.mongodb.com/docs/atlas/api/api-authentication/ https://www.mongodb.com/docs/atlas/api/api-authentication/
+Datadog,second opinion unavailable,unknown,api_key|oauth2,none,https://docs.datadoghq.com/api/latest/ https://docs.datadoghq.com/api/latest/ https://docs.datadoghq.com/api/latest/
+Sentry,second opinion unavailable,unknown,bearer_token|oauth2,none,https://docs.sentry.io/api/auth/ https://docs.sentry.io/api/auth/ https://docs.sentry.io/api/
+Attio,second opinion unavailable; low confidence,unknown,oauth2,none,https://docs.attio.com/rest-api/overview https://docs.attio.com/rest-api/overview https://docs.attio.com/rest-api/overview
+Twenty,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Zoho CRM,second opinion unavailable,self_serve_free,oauth2,none,https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html https://www.zoho.com/crm/pricing/ https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html
+Plain,second opinion unavailable,unknown,oauth2,none,https://www.plain.com/docs/graphql/oauth https://www.plain.com/docs/graphql/oauth https://www.plain.com/docs/graphql/oauth
+Vonage,second opinion unavailable,self_serve_free,api_key|basic|bearer_token,none,https://developer.vonage.com/en/getting-started/concepts/authentication https://developer.vonage.com/en/getting-started/concepts/authentication https://developer.vonage.com/en/getting-started/concepts/authentication
+Meta Ads,second opinion unavailable,admin_approval,unknown,admin_approval,https://developers.facebook.com/docs/marketing-api/overview/authorization https://developers.facebook.com/docs/marketing-api/overview/authorization https://developers.facebook.com/docs/marketing-api/overview/authorization
+LinkedIn Ads,second opinion unavailable,admin_approval,oauth2,admin_approval,https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access
+systeme.io,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Magento (Adobe Commerce),second opinion unavailable; low confidence,unknown,bearer_token|oauth2|other,unknown,https://developer.adobe.com/commerce/webapi/get-started/authentication/ https://developer.adobe.com/commerce/webapi/get-started/authentication/
+Ecwid,second opinion unavailable; low confidence,unknown,unknown,unknown,
+fanbasis,second opinion unavailable; low confidence,unknown,unknown,unknown,https://fanbasis.com/ https://fanbasis.com/
+Ahrefs,second opinion unavailable,paid_plan,api_key,paid_plan,https://ahrefs.com/api https://ahrefs.com/api https://ahrefs.com/api
+Waterfall.io,second opinion unavailable,unknown,api_key,none,https://docs.waterfall.io/ https://docs.waterfall.io/ https://docs.waterfall.io/
+GitHub,second opinion unavailable,unknown,bearer_token|oauth2|other,none,https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api
+Netlify,second opinion unavailable,self_serve_free,oauth2|bearer_token,none,https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/ https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/ https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/
+Cloudflare,second opinion unavailable; low confidence,unknown,unknown,unknown,https://github.com/cloudflare/mcp-server-cloudflare https://github.com/cloudflare/mcp-server-cloudflare
+Notion,second opinion unavailable,self_serve_free,bearer_token|oauth2|api_key,none,https://developers.notion.com/docs/authorization https://developers.notion.com/reference/authentication https://developers.notion.com/docs/mcp
+Airtable,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Linear,second opinion unavailable,unknown,api_key|oauth2|bearer_token,none,https://linear.app/developers/graphql https://linear.app/developers/graphql https://linear.app/developers/graphql
+Jira,second opinion unavailable,unknown,basic|oauth2|api_key,auth_complexity,https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/ https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/ https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/
+Asana,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Monday.com,second opinion unavailable; low confidence,unknown,unknown,unknown,https://monday.com/pricing
+ClickUp,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Coda,second opinion unavailable,unknown,unknown,none,https://coda.io/developers/apis/v1 https://coda.io/developers/apis/v1 https://coda.io/developers/apis/v1
+Smartsheet,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Harvest,second opinion unavailable; low confidence,free_trial,unknown,unknown,https://www.getharvest.com/pricing
+Stripe,second opinion unavailable,self_serve_free,api_key|basic|bearer_token|oauth2,none,https://docs.stripe.com/api/authentication https://docs.stripe.com/mcp https://docs.stripe.com/api/authentication
+Plaid,second opinion unavailable,admin_approval,api_key,admin_approval,https://plaid.com/docs/api/ https://plaid.com/docs/api/ https://plaid.com/docs/api/
+iPayX,second opinion unavailable; low confidence,unknown,unknown,unknown,
+QuickBooks,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Xero,second opinion unavailable; low confidence,unknown,unknown,admin_approval,https://developer.xero.com/pricing https://developer.xero.com/pricing https://developer.xero.com/pricing
+Brex,rule check: inconsistent_access_blocker; second opinion unavailable,admin_approval,bearer_token|api_key,none,https://developer.brex.com/docs/authentication/ https://developer.brex.com/docs/authentication/ https://developer.brex.com/
+NotebookLM,second opinion unavailable; low confidence,paid_plan,unknown,paid_plan,https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview
+Otter AI,second opinion unavailable; low confidence,unknown,unknown,unknown,https://otter.ai/pricing
+Fathom,second opinion unavailable,unknown,api_key|oauth2,none,https://developers.fathom.ai/ https://developers.fathom.ai/ https://developers.fathom.ai/
+Consensus,second opinion unavailable; low confidence,paid_plan,unknown,paid_plan,https://consensus.app/home/api/ https://consensus.app/home/api/ https://consensus.app/home/api/
+Reducto,second opinion unavailable; low confidence,unknown,unknown,unknown,https://docs.reducto.ai/ https://docs.reducto.ai/
+Devin,second opinion unavailable,unknown,api_key|bearer_token,none,https://docs.devin.ai/api-reference/overview https://docs.devin.ai/api-reference/overview https://docs.devin.ai/api-reference/overview
+Mermaid CLI,second opinion unavailable; low confidence,unknown,unknown,no_public_api,https://github.com/mermaid-js/mermaid-cli
+Grain,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Gladly,second opinion unavailable,admin_approval,unknown,admin_approval,https://developer.gladly.com/rest/ https://developer.gladly.com/rest/ https://developer.gladly.com/rest/
+Telegram,second opinion unavailable,self_serve_free,api_key,unknown,https://core.telegram.org/bots/api https://core.telegram.org/bots/api https://core.telegram.org/bots
+WhatsApp Business,second opinion unavailable; low confidence,unknown,unknown,unknown,https://developers.facebook.com/docs/whatsapp/cloud-api/get-started
+GoHighLevel,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Gumroad,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Neo4j,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Binance,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Paygent Connect,second opinion unavailable; low confidence,unknown,unknown,unknown,
+Ramp,second opinion unavailable; low confidence,unknown,unknown,unknown,
+PitchBook,second opinion unavailable; low confidence,unknown,unknown,unknown,
+higgsfield,second opinion unavailable; low confidence,unknown,unknown,unknown,
+YouTube Transcript,second opinion unavailable; low confidence,unknown,unknown,unknown,

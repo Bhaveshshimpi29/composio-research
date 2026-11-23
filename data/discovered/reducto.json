@@ -1,0 +1,15 @@
+{
+ "app": "Reducto",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://docs.reducto.ai/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://reducto.ai/pricing",
+   "kind": "seed"
+  }
+ ]
+}

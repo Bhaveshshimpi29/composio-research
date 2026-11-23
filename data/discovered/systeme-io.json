@@ -1,0 +1,15 @@
+{
+ "app": "systeme.io",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://developer.systeme.io/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://systeme.io/pricing",
+   "kind": "seed"
+  }
+ ]
+}

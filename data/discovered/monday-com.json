@@ -1,0 +1,19 @@
+{
+ "app": "Monday.com",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://developer.monday.com/api-reference/docs/authentication",
+   "kind": "seed"
+  },
+  {
+   "url": "https://developer.monday.com/api-reference/docs/basics",
+   "kind": "seed"
+  },
+  {
+   "url": "https://monday.com/pricing",
+   "kind": "seed"
+  }
+ ]
+}

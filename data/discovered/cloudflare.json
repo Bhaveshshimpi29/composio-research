@@ -1,0 +1,19 @@
+{
+ "app": "Cloudflare",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://developers.cloudflare.com/api/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+   "kind": "seed"
+  }
+ ]
+}

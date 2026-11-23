@@ -1,0 +1,19 @@
+{
+ "app": "Notion",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://developers.notion.com/reference/authentication",
+   "kind": "seed"
+  },
+  {
+   "url": "https://developers.notion.com/docs/authorization",
+   "kind": "seed"
+  },
+  {
+   "url": "https://developers.notion.com/docs/mcp",
+   "kind": "seed"
+  }
+ ]
+}

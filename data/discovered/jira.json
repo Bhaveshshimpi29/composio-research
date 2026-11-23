@@ -1,0 +1,23 @@
+{
+ "app": "Jira",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://www.atlassian.com/software/jira/pricing",
+   "kind": "seed"
+  },
+  {
+   "url": "https://www.atlassian.com/platform/remote-mcp-server",
+   "kind": "seed"
+  }
+ ]
+}

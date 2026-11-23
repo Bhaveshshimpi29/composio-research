@@ -1,0 +1,84 @@
+[
+ {
+  "app": "Netlify",
+  "category": "Developer tools",
+  "one_liner": "Web hosting/deploy platform with a REST API.",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+    "quote": "Netlify uses OAuth2 for authentication"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+    "quote": "Authorization: Bearer <YOUR_PERSONAL_ACCESS_TOKEN>"
+   },
+   {
+    "field": "api_type",
+    "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+    "quote": "Use the Netlify REST API to manage atomic deploys of your sites and apps"
+   },
+   {
+    "field": "access",
+    "url": "https://www.netlify.com/pricing/",
+    "quote": "Build and deploy free forever."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+    "quote": "To generate a personal access token"
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+    "quote": "To generate a personal access token"
+   }
+  ]
+ },
+ {
+  "app": "Cloudflare",
+  "category": "Developer tools",
+  "one_liner": "CDN/edge platform with REST APIs and official MCP servers.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "official",
+  "existing_mcp_url": "https://mcp.cloudflare.com/mcp",
+  "buildable_today": "partial",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "existing_mcp",
+    "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "quote": "Product specific Cloudflare MCP servers"
+   },
+   {
+    "field": "existing_mcp",
+    "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "quote": "https://mcp.cloudflare.com/mcp"
+   }
+  ],
+  "note": "Cached page is the MCP repo, no REST auth detail."
+ }
+]

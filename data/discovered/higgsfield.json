@@ -1,0 +1,15 @@
+{
+ "app": "higgsfield",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://higgsfield.ai/cli",
+   "kind": "seed"
+  },
+  {
+   "url": "https://higgsfield.ai/",
+   "kind": "seed"
+  }
+ ]
+}

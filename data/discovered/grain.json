@@ -1,0 +1,15 @@
+{
+ "app": "Grain",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://developers.grain.com/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://grain.com/pricing",
+   "kind": "seed"
+  }
+ ]
+}

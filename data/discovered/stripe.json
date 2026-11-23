@@ -1,0 +1,19 @@
+{
+ "app": "Stripe",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://docs.stripe.com/keys",
+   "kind": "seed"
+  },
+  {
+   "url": "https://docs.stripe.com/api/authentication",
+   "kind": "seed"
+  },
+  {
+   "url": "https://docs.stripe.com/mcp",
+   "kind": "seed"
+  }
+ ]
+}

@@ -1,0 +1,235 @@
+[
+ {
+  "app": "Bright Data",
+  "category": "Scraping",
+  "one_liner": "Web data platform: scraper APIs, proxies, browser API and MCP.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "rest",
+   "mcp"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "official",
+  "existing_mcp_url": "https://docs.brightdata.com/llms.txt",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "existing_mcp",
+    "url": "https://docs.brightdata.com/llms.txt",
+    "quote": "For web search and page fetching, prefer the Bright Data MCP."
+   },
+   {
+    "field": "api_type",
+    "url": "https://docs.brightdata.com/llms.txt",
+    "quote": "use Scraper API first: pre-built scrapers cover LinkedIn, Instagram, TikTok, Amazon"
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://docs.brightdata.com/llms.txt",
+    "quote": "one authenticated request in cURL, the Python SDK or the JavaScript SDK."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://docs.brightdata.com/llms.txt",
+    "quote": "one authenticated request in cURL, the Python SDK or the JavaScript SDK."
+   }
+  ]
+ },
+ {
+  "app": "Sherlock",
+  "category": "Scraping",
+  "one_liner": "Open-source CLI that hunts usernames across social networks.",
+  "auth_methods": [
+   "none"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "cli_only"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "partial",
+  "main_blocker": "no_api",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "main_blocker",
+    "url": "https://github.com/sherlock-project/sherlock/issues/854",
+    "quote": "Sherlock is open source, so there is no \"outside help\"."
+   }
+  ],
+  "note": "Only a GitHub issue was cached. 'cli_only / none / no_api' is inferred from Sherlock being a CLI tool, not stated in the cached text; verify against the README."
+ },
+ {
+  "app": "Clay",
+  "category": "Scraping",
+  "one_liner": "GTM data enrichment and workflow platform with a public API, CLI and MCP.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "rest",
+   "cli_only",
+   "mcp"
+  ],
+  "api_breadth": "medium",
+  "existing_mcp": "official",
+  "existing_mcp_url": "https://developers.clay.com/llms.txt",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.clay.com/llms.txt",
+    "quote": "Authentication: Authenticate requests with a Clay API key."
+   },
+   {
+    "field": "existing_mcp",
+    "url": "https://developers.clay.com/llms.txt",
+    "quote": "Custom functions: Run your own reusable Clay logic from agents, the CLI, MCP, or the API."
+   },
+   {
+    "field": "api_type",
+    "url": "https://developers.clay.com/llms.txt",
+    "quote": "Errors: Understand Clay Public API error responses."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://developers.clay.com/llms.txt",
+    "quote": "Tables (Enterprise): Query known Clay tables with structured filters, selected fields, ordering, and pagination."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://developers.clay.com/llms.txt",
+    "quote": "Tables (Enterprise): Query known Clay tables with structured filters, selected fields, ordering, and pagination."
+   }
+  ],
+  "note": "Some endpoints are Enterprise-only; plan requirement for the API itself not stated."
+ },
+ {
+  "app": "Vercel",
+  "category": "Developer tools",
+  "one_liner": "Frontend cloud platform with a REST API.",
+  "auth_methods": [
+   "bearer_token"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://vercel.com/docs/rest-api",
+    "quote": "Vercel Access Tokens are required to authenticate and use the Vercel API."
+   },
+   {
+    "field": "api_type",
+    "url": "https://vercel.com/docs/rest-api",
+    "quote": "All endpoints live under the URLhttps://api.vercel.com and follow the REST architecture."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://vercel.com/docs/rest-api",
+    "quote": "Create and manage Access Tokens in your account settings."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://vercel.com/docs/rest-api",
+    "quote": "Create and manage Access Tokens in your account settings."
+   }
+  ]
+ },
+ {
+  "app": "Supabase",
+  "category": "Developer tools",
+  "one_liner": "Open-source Postgres backend with a Management API.",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "medium",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://supabase.com/docs/reference/api/introduction",
+    "quote": "There are two ways to generate an access token:"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://supabase.com/docs/reference/api/introduction",
+    "quote": "OAuth2 allows your application to generate tokens on behalf of a Supabase user"
+   },
+   {
+    "field": "api_type",
+    "url": "https://supabase.com/docs/reference/api/introduction",
+    "quote": "Manage your Supabase organizations and projects programmatically."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://supabase.com/docs/reference/api/introduction",
+    "quote": "To generate or manage your personal access tokens, visit your account page."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://supabase.com/docs/reference/api/introduction",
+    "quote": "To generate or manage your personal access tokens, visit your account page."
+   }
+  ]
+ },
+ {
+  "app": "Snowflake",
+  "category": "Developer tools",
+  "one_liner": "Cloud data warehouse with REST APIs.",
+  "auth_methods": [
+   "jwt",
+   "other"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "partial",
+  "main_blocker": "unknown",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication",
+    "quote": "Using key pair authentication"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication",
+    "quote": "Using a programmatic access token (PAT)"
+   }
+  ],
+  "note": "Auth is account/user-level; no free tier or pricing stated on the cached page."
+ }
+]

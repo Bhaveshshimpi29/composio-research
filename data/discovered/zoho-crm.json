@@ -1,0 +1,19 @@
+{
+ "app": "Zoho CRM",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+   "kind": "seed"
+  },
+  {
+   "url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://www.zoho.com/crm/pricing/",
+   "kind": "seed"
+  }
+ ]
+}

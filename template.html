@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>100 apps: agent-toolkit buildability study</title>
+<style>
+:root{--bg:#fff;--fg:#14161a;--mu:#5b6270;--card:#f4f5f7;--line:#dfe2e7;--ac:#4f46e5}
+@media(prefers-color-scheme:dark){:root{--bg:#111316;--fg:#eceef1;--mu:#9aa1ad;--card:#1b1e23;--line:#2c3037;--ac:#8b85ff}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,sans-serif}
+main{max-width:1000px;margin:auto;padding:20px}h1{font-size:1.7rem}h2{margin-top:2rem;border-top:1px solid var(--line);padding-top:1rem}
+.s{color:var(--mu);font-size:.8rem}.card{background:var(--card);border-radius:12px;padding:14px 18px}
+.wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.85rem}th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.b{padding:1px 8px;border-radius:99px;background:var(--line);font-size:.75rem}.b.yes,.b.free,.b.trial,.b.verified{background:#1f9d5533}.b.no,.b.gated,.b.needs_human{background:#e5484d33}.b.partial,.b.paid,.b.corrected{background:#f5a52433}
+input{width:100%;padding:8px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--fg);margin:8px 0}
+.kpi{display:flex;gap:12px}.kpi div{background:var(--card);padding:12px 18px;border-radius:12px}.kpi b{display:block;font-size:1.8rem;color:var(--ac)}
+a{color:var(--ac)}code{background:var(--card);padding:1px 5px;border-radius:4px}ol li{margin:4px 0}
+</style></head><body><main>
+<h1>Which of 100 apps can become an agent toolkit today?</h1>
+<p class="s">Researched by an agent, re-checked by a second agent, sampled by a human. <b>__N__</b> apps analysed. Verification status: __ST__.</p>
+
+<h2>1. Patterns (the headline)</h2><div class="card"><ul>__HEAD__</ul></div>
+<p><b>Easy wins:</b> __EASY__</p><p><b>Needs outreach:</b> __OUT__</p>
+<div class="wrap"><table><tr><th>Category</th><th>free</th><th>trial</th><th>paid</th><th>gated</th><th>unknown</th></tr>__CATROWS__</table></div>
+
+<h2>2. Findings</h2><input id="q" placeholder="Filter apps, auth, blocker…">
+<div class="wrap"><table id="t"><tr><th>#</th><th>App</th><th>What it does</th><th>Auth</th><th>Access</th><th>API</th><th>Buildable?</th><th>Verified</th><th>Evidence</th></tr>__ROWS__</table></div>
+
+<h2>3. The agent</h2>
+<ol><li><b>Research agent</b> (<code>research.py</code>): LLM + web search per app, forced into a fixed JSON schema; "unknown" allowed, every claim needs an evidence URL.</li>
+<li><b>Grounding check:</b> cited URLs must actually appear in the retrieved search results, otherwise flagged.</li>
+<li><b>Verifier agent</b> (<code>verify.py</code>): a separate, skeptical prompt re-checks each field independently; disagreements are corrected, uncertain ones go to a human.</li>
+<li><b>Human check</b>: stratified 20-app sample compared to real docs.</li></ol>
+<p><b>Where a human was needed:</b> __HUMAN__</p>
+
+<h2>4. Proof</h2><p>Re-run everything: <code>pip install -r requirements.txt && python research.py && python verify.py && python build_page.py</code>. Source repo: <a href="REPO_URL_HERE">REPO_URL_HERE</a></p>
+
+<h2>5. Verification</h2>__ACC__
+</main>
+<script>q.oninput=()=>{const v=q.value.toLowerCase();document.querySelectorAll('#t tr').forEach((r,i)=>{if(i)r.style.display=r.textContent.toLowerCase().includes(v)?'':'none'})}</script>
+</body></html>

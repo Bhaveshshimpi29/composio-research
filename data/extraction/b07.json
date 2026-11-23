@@ -1,0 +1,51 @@
+[
+{"app":"Amazon Selling Partner","category":"E-commerce","one_liner":"Amazon's Selling Partner API for sellers and vendors.",
+ "auth_methods":["oauth2"],"access":"unknown","api_type":["rest"],"api_breadth":"large","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"partial","main_blocker":"app_review","confidence":"low",
+ "evidence":[
+  {"field":"auth_methods","url":"https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api-applications","quote":"Authorization method: OAuth 2.0 through Login with Amazon (LWA)."},
+  {"field":"buildable_today","url":"https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api-applications","quote":"Your authorization method choices depend on whether your application is public or private."}],
+ "note":"Developer registration/approval requirements not on cached page; blocker app_review is a low-confidence guess. Re-check."},
+{"app":"DataForSEO","category":"SEO","one_liner":"Pay-as-you-go SEO data REST APIs.",
+ "auth_methods":["basic"],"access":"free_trial","api_type":["rest"],"api_breadth":"large","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"yes","main_blocker":"none","confidence":"low",
+ "evidence":[
+  {"field":"api_type","url":"https://docs.dataforseo.com/v3/","quote":"DataForSEO API is using the REST technology for interchanging data between your application and our service."},
+  {"field":"access","url":"https://docs.dataforseo.com/v3/","quote":"Free Unlimited Trial Info"},
+  {"field":"buildable_today","url":"https://docs.dataforseo.com/v3/","quote":"Each of DataForSEO APIs has a certain rate limit"}],
+ "note":"Auth method (basic) is not stated on cached text, so left as unknown at pass 2."},
+{"app":"SE Ranking","category":"SEO","one_liner":"SEO platform with API and MCP access included in every plan.",
+ "auth_methods":["unknown"],"access":"free_trial","api_type":["rest","mcp"],"api_breadth":"large","existing_mcp":"official","existing_mcp_url":"https://seranking.com/api.html",
+ "buildable_today":"yes","main_blocker":"none","confidence":"medium",
+ "evidence":[
+  {"field":"access","url":"https://seranking.com/api.html","quote":"API access is included in every SE Ranking plan"},
+  {"field":"access","url":"https://seranking.com/api.html","quote":"Start free trial"},
+  {"field":"existing_mcp","url":"https://seranking.com/api.html","quote":"Connect via MCP and work with your SEO data inside Claude, Codex, Cursor, or any other AI tool."},
+  {"field":"api_type","url":"https://seranking.com/api.html","quote":"Retrieve instant, structured JSON responses with up to 10 requests per second."},
+  {"field":"buildable_today","url":"https://seranking.com/api.html","quote":"Buy a stand-alone API, start with pay-as-you-go, or combine with any SE Ranking subscription."},
+  {"field":"main_blocker","url":"https://seranking.com/api.html","quote":"Buy a stand-alone API, start with pay-as-you-go, or combine with any SE Ranking subscription."}]},
+{"app":"MrScraper","category":"Scraping","one_liner":"AI scraping platform with API, CLI and MCP server.",
+ "auth_methods":["api_key","bearer_token"],"access":"unknown","api_type":["rest","mcp"],"api_breadth":"medium","existing_mcp":"official","existing_mcp_url":"https://docs.mrscraper.com/docs/getting-started/overview",
+ "buildable_today":"yes","main_blocker":"none","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://docs.mrscraper.com/docs/getting-started/quickstart","quote":"Create a MrScraper account and obtain your API key from the Scraper API before following this guide."},
+  {"field":"existing_mcp","url":"https://docs.mrscraper.com/docs/getting-started/overview","quote":"Connect AI clients to MrScraper for page retrieval, web search, and usage."},
+  {"field":"api_type","url":"https://docs.mrscraper.com/docs/getting-started/quickstart","quote":"Make Your First API Request"},
+  {"field":"buildable_today","url":"https://docs.mrscraper.com/docs/getting-started/quickstart","quote":"Create a MrScraper account and obtain your API key from the Scraper API before following this guide."},
+  {"field":"main_blocker","url":"https://docs.mrscraper.com/docs/getting-started/quickstart","quote":"Create a MrScraper account and obtain your API key from the Scraper API before following this guide."}]},
+{"app":"Apify","category":"Scraping","one_liner":"Web scraping and automation platform with a REST API.",
+ "auth_methods":["api_key","bearer_token"],"access":"self_serve_free","api_type":["rest"],"api_breadth":"large","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"yes","main_blocker":"none","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://docs.apify.com/integrations/api","quote":"you need to authenticate using your secret API token"},
+  {"field":"api_type","url":"https://docs.apify.com/integrations/api","quote":"All aspects of the Apify platform can be controlled via a REST API"},
+  {"field":"access","url":"https://docs.apify.com/integrations/api","quote":"In the Personal API tokens section, select Create a new token."},
+  {"field":"buildable_today","url":"https://docs.apify.com/integrations/api","quote":"In the Personal API tokens section, select Create a new token."},
+  {"field":"main_blocker","url":"https://docs.apify.com/integrations/api","quote":"In the Personal API tokens section, select Create a new token."}]},
+{"app":"Firecrawl","category":"Scraping","one_liner":"Web scraping API for LLMs.",
+ "auth_methods":["unknown"],"access":"unknown","api_type":["rest"],"api_breadth":"large","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"unknown","main_blocker":"unknown","confidence":"low",
+ "evidence":[
+  {"field":"api_type","url":"https://docs.firecrawl.dev/llms.txt","quote":"v2 (253 pages): Documentation, SDKs, API Reference, Build with AI."}],
+ "note":"Only llms.txt cached; no auth or pricing detail."}
+]

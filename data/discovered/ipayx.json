@@ -1,0 +1,15 @@
+{
+ "app": "iPayX",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://ipayx.ai/docs",
+   "kind": "seed"
+  },
+  {
+   "url": "https://ipayx.ai/",
+   "kind": "seed"
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+[
+{"app":"MongoDB Atlas","category":"Developer tools","one_liner":"Managed MongoDB with an Atlas Administration API.",
+ "auth_methods":["oauth2","other"],"access":"unknown","api_type":["rest"],"api_breadth":"large","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"yes","main_blocker":"none","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://www.mongodb.com/docs/atlas/api/api-authentication/","quote":"Service account access tokens ( OAuth 2.0)"},
+  {"field":"auth_methods","url":"https://www.mongodb.com/docs/atlas/api/api-authentication/","quote":"API keys ( HTTP Digest Authentication)"},
+  {"field":"api_type","url":"https://www.mongodb.com/docs/atlas/api/api-authentication/","quote":"To use the Atlas Administration API to manage your Atlas clusters, you must authenticate your API requests."},
+  {"field":"buildable_today","url":"https://www.mongodb.com/docs/atlas/api/api-authentication/","quote":"We recommend you use service accounts instead of API keys to authenticate to the Atlas Administration API."},
+  {"field":"main_blocker","url":"https://www.mongodb.com/docs/atlas/api/api-authentication/","quote":"We recommend you use service accounts instead of API keys to authenticate to the Atlas Administration API."}],
+ "note":"The Admin API does not expose cluster data; reading/writing data needs database-user credentials."},
+{"app":"Datadog","category":"Developer tools","one_liner":"Monitoring and observability platform with an HTTP REST API.",
+ "auth_methods":["api_key","oauth2"],"access":"unknown","api_type":["rest"],"api_breadth":"large","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"yes","main_blocker":"none","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://docs.datadoghq.com/api/latest/","quote":"Authenticate to the API with an API key using the header DD-API-KEY."},
+  {"field":"auth_methods","url":"https://docs.datadoghq.com/api/latest/","quote":"Authorization Scopes for OAuth Clients"},
+  {"field":"api_type","url":"https://docs.datadoghq.com/api/latest/","quote":"The Datadog API is an HTTP REST API."},
+  {"field":"buildable_today","url":"https://docs.datadoghq.com/api/latest/","quote":"For some endpoints, you also need an Application key, which uses the header DD-APPLICATION-KEY."},
+  {"field":"main_blocker","url":"https://docs.datadoghq.com/api/latest/","quote":"For some endpoints, you also need an Application key, which uses the header DD-APPLICATION-KEY."}]},
+{"app":"Sentry","category":"Developer tools","one_liner":"Error and performance monitoring with a web API.",
+ "auth_methods":["bearer_token","oauth2"],"access":"unknown","api_type":["rest"],"api_breadth":"large","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"yes","main_blocker":"none","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://docs.sentry.io/api/auth/","quote":"Authentication tokens are passed using an auth header"},
+  {"field":"auth_methods","url":"https://docs.sentry.io/api/auth/","quote":"Sentry supports OAuth2 with the authorization code grant type."},
+  {"field":"api_type","url":"https://docs.sentry.io/api/","quote":"The Sentry web API is used to access the Sentry platform programmatically."},
+  {"field":"buildable_today","url":"https://docs.sentry.io/api/auth/","quote":"You can create authentication tokens within Sentry by creating an internal integration."},
+  {"field":"main_blocker","url":"https://docs.sentry.io/api/auth/","quote":"You can create authentication tokens within Sentry by creating an internal integration."}]}
+]

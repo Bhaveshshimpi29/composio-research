@@ -1,0 +1,19 @@
+{
+ "app": "Plain",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://www.plain.com/docs/graphql/authentication",
+   "kind": "seed"
+  },
+  {
+   "url": "https://www.plain.com/docs/graphql/oauth",
+   "kind": "seed"
+  },
+  {
+   "url": "https://www.plain.com/pricing",
+   "kind": "seed"
+  }
+ ]
+}

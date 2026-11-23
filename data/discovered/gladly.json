@@ -1,0 +1,15 @@
+{
+ "app": "Gladly",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://developer.gladly.com/rest/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://www.gladly.com/pricing/",
+   "kind": "seed"
+  }
+ ]
+}

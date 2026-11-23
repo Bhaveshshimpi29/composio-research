@@ -1,0 +1,19 @@
+{
+ "app": "Meta Ads",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://developers.facebook.com/docs/marketing-api/overview",
+   "kind": "seed"
+  },
+  {
+   "url": "https://developers.facebook.com/docs/marketing-api/get-started",
+   "kind": "seed"
+  },
+  {
+   "url": "https://developers.facebook.com/docs/marketing-api/overview/authorization",
+   "kind": "seed"
+  }
+ ]
+}

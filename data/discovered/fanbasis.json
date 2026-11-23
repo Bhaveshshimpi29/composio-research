@@ -1,0 +1,15 @@
+{
+ "app": "fanbasis",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://fanbasis.com/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://docs.fanbasis.com/",
+   "kind": "seed"
+  }
+ ]
+}

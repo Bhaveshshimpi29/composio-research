@@ -1,0 +1,10 @@
+app,field,why
+Salesforce,auth_methods,"pass 1 added bearer_token; the docs describe OAuth 2.0 only (tokens are sent as bearer, which is not a separate auth method)"
+DealCloud,auth_methods,pass 2 said other; docs describe OAuth2 client credentials with an apiKey
+Zendesk,auth_methods,pass 2 added basic; the page lists API tokens and OAuth only (basic with token is how API tokens are sent)
+Zendesk,buildable_today,agent was cautious; docs show tokens and OAuth with no approval gate
+WhatsApp Business,buildable_today,agent assumed app review was required; docs say direct developers on their own data need none
+Google Ads,auth_methods,agent listed api_key because a developer token is also required; the credential is OAuth 2.0
+GitHub,auth_methods,agent added other (GitHub App JWTs); gold counts bearer and OAuth only
+Snowflake,auth_methods,"agent wrote other twice, which should have merged; gold is oauth2 plus other (key pair, PAT)"
+Notion,auth_methods,agent added api_key for internal connection tokens; gold treats them as bearer tokens

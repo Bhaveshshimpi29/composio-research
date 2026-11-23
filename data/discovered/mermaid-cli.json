@@ -1,0 +1,15 @@
+{
+ "app": "Mermaid CLI",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://github.com/mermaid-js/mermaid-cli",
+   "kind": "seed"
+  },
+  {
+   "url": "https://mermaid.js.org/",
+   "kind": "seed"
+  }
+ ]
+}

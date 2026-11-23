@@ -1,0 +1,19 @@
+{
+ "app": "LinkedIn Ads",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://learn.microsoft.com/en-us/linkedin/marketing/getting-started",
+   "kind": "seed"
+  },
+  {
+   "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication",
+   "kind": "seed"
+  },
+  {
+   "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access",
+   "kind": "seed"
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "app": "Ahrefs",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://docs.ahrefs.com/docs/api/reference/introduction",
+   "kind": "seed"
+  },
+  {
+   "url": "https://ahrefs.com/api",
+   "kind": "seed"
+  },
+  {
+   "url": "https://ahrefs.com/pricing",
+   "kind": "seed"
+  }
+ ]
+}

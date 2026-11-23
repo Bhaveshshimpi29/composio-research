@@ -1,0 +1,15 @@
+{
+ "app": "Netlify",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://www.netlify.com/pricing/",
+   "kind": "seed"
+  }
+ ]
+}

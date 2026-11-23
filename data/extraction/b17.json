@@ -1,0 +1,88 @@
+[
+ {
+  "app": "ClickUp",
+  "category": "Project management",
+  "one_liner": "Work management platform; pricing page only cached.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "Only pricing cached; 'Enterprise API & Integrations' appears as a feature line, but the cached text doesn't say whether the public API needs an enterprise plan."
+ },
+ {
+  "app": "Coda",
+  "category": "Productivity",
+  "one_liner": "Superhuman Docs (formerly Coda) with a RESTful API and MCP server.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "medium",
+  "existing_mcp": "official",
+  "existing_mcp_url": "https://coda.io/developers/apis/v1",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "api_type",
+    "url": "https://coda.io/developers/apis/v1",
+    "quote": "The Superhuman Docs API is a RESTful API that lets you programmatically interact with data in Superhuman Docs (formerly Coda):"
+   },
+   {
+    "field": "existing_mcp",
+    "url": "https://coda.io/developers/apis/v1",
+    "quote": "Superhuman Docs MCP server"
+   },
+   {
+    "field": "api_breadth",
+    "url": "https://coda.io/developers/apis/v1",
+    "quote": "Read, insert, upsert, update, and delete rows"
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://coda.io/developers/apis/v1",
+    "quote": "The Superhuman Docs REST API is designed to be straightforward to use."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://coda.io/developers/apis/v1",
+    "quote": "The Superhuman Docs REST API is designed to be straightforward to use."
+   }
+  ],
+  "note": "Auth method not on cached text."
+ },
+ {
+  "app": "Smartsheet",
+  "category": "Project management",
+  "one_liner": "Work management platform; pricing page only cached.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "No API docs cached."
+ }
+]

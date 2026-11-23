@@ -1,0 +1,15 @@
+{
+ "app": "Vonage",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+   "kind": "seed"
+  },
+  {
+   "url": "https://www.vonage.com/communications-apis/pricing/",
+   "kind": "seed"
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "app": "YouTube Transcript",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://transcriptapi.com/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://transcriptapi.com/docs",
+   "kind": "seed"
+  },
+  {
+   "url": "https://transcriptapi.com/pricing",
+   "kind": "seed"
+  }
+ ]
+}

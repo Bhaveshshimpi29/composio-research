@@ -1,0 +1,15 @@
+{
+ "app": "Consensus",
+ "provider": "manual-seed (not evidence)",
+ "date": "2026-11-23",
+ "urls": [
+  {
+   "url": "https://consensus.app/home/api/",
+   "kind": "seed"
+  },
+  {
+   "url": "https://consensus.app/pricing/",
+   "kind": "seed"
+  }
+ ]
+}

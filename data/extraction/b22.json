@@ -1,0 +1,301 @@
+[
+ {
+  "app": "Gladly",
+  "category": "Support",
+  "one_liner": "Customer service platform with a REST API.",
+  "auth_methods": [
+   "bearer_token",
+   "basic"
+  ],
+  "access": "admin_approval",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "partial",
+  "main_blocker": "admin_approval",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "api_type",
+    "url": "https://developer.gladly.com/rest/",
+    "quote": "Resources follow REST semantics and utilize industry-standard HTTP verbs, response codes, and authentication schemes."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.gladly.com/rest/",
+    "quote": "Gladly Administrators can set API permissions on an agent-by-agent basis."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://developer.gladly.com/rest/",
+    "quote": "Gladly Administrators can set API permissions on an agent-by-agent basis."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://developer.gladly.com/rest/",
+    "quote": "You must create an API token to access Gladly API resources"
+   }
+  ],
+  "note": "Auth scheme type not quoted; auth_methods will reset."
+ },
+ {
+  "app": "Telegram",
+  "category": "Communications",
+  "one_liner": "Messaging app with a free Bot API.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "yes",
+  "main_blocker": "none",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://core.telegram.org/bots/api",
+    "quote": "Each bot is given a unique authentication token"
+   },
+   {
+    "field": "api_type",
+    "url": "https://core.telegram.org/bots/api",
+    "quote": "All queries to the Telegram Bot API must be served over HTTPS and need to be presented in this form:"
+   },
+   {
+    "field": "access",
+    "url": "https://core.telegram.org/bots",
+    "quote": "Telegram bots are special accounts that do not need a phone number to set up."
+   },
+   {
+    "field": "buildable_today",
+    "url": "https://core.telegram.org/bots",
+    "quote": "message on Telegram to register your bot and receive its authentication token."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://core.telegram.org/bots",
+    "quote": "message on Telegram to register your bot and receive its authentication token."
+   }
+  ]
+ },
+ {
+  "app": "WhatsApp Business",
+  "category": "Communications",
+  "one_liner": "WhatsApp Cloud API through Meta's developer platform.",
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "access": "admin_approval",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "large",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "partial",
+  "main_blocker": "admin_approval",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "buildable_today",
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+    "quote": "This guide helps developers quickly get started with the WhatsApp Cloud API."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+    "quote": "Click Generate access token to generate a temporary access token to send a test message."
+   }
+  ],
+  "note": "Cached text is a get-started guide; business verification and app review not quoted."
+ },
+ {
+  "app": "GoHighLevel",
+  "category": "unknown",
+  "one_liner": "Not extracted: no readable page.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "Fetch blocked by robots.txt (marketplace.gohighlevel.com, gohighlevel.com) and the stoplight page needed a browser."
+ },
+ {
+  "app": "Gumroad",
+  "category": "unknown",
+  "one_liner": "Not extracted: no readable page.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "Page needed a headless browser which wasn't installed; only 3 chars cached."
+ },
+ {
+  "app": "Neo4j",
+  "category": "unknown",
+  "one_liner": "Not extracted: no readable page.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "Fetch blocked by robots.txt on neo4j.com."
+ },
+ {
+  "app": "Binance",
+  "category": "unknown",
+  "one_liner": "Not extracted: no readable page.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "Pages need a headless browser which wasn't installed."
+ },
+ {
+  "app": "Paygent Connect",
+  "category": "unknown",
+  "one_liner": "Not extracted: no readable page.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "docs.nmi.com blocked by robots.txt; paygent.com needed a browser."
+ },
+ {
+  "app": "Ramp",
+  "category": "unknown",
+  "one_liner": "Not extracted: no readable page.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "Fetch blocked by robots.txt on docs.ramp.com."
+ },
+ {
+  "app": "PitchBook",
+  "category": "unknown",
+  "one_liner": "Not extracted: no readable page.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "Fetch blocked by robots.txt on pitchbook.com."
+ },
+ {
+  "app": "higgsfield",
+  "category": "unknown",
+  "one_liner": "Not extracted: no readable page.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "Fetch blocked by robots.txt on higgsfield.ai."
+ },
+ {
+  "app": "YouTube Transcript",
+  "category": "unknown",
+  "one_liner": "Not extracted: no readable page.",
+  "auth_methods": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_type": [
+   "unknown"
+  ],
+  "api_breadth": "unknown",
+  "existing_mcp": "unknown",
+  "existing_mcp_url": "",
+  "buildable_today": "unknown",
+  "main_blocker": "unknown",
+  "confidence": "low",
+  "evidence": [],
+  "note": "Fetch blocked by robots.txt on transcriptapi.com."
+ }
+]

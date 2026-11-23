@@ -1,0 +1,37 @@
+[
+{"app":"Salesforce","category":"CRM","one_liner":"Cloud CRM platform for sales, service and marketing, with REST APIs and an MCP server.",
+ "auth_methods":["oauth2","bearer_token"],"access":"self_serve_free","api_type":["rest"],"api_breadth":"large",
+ "existing_mcp":"official","existing_mcp_url":"https://api.salesforce.com/platform/mcp/v1/platform/headless-360",
+ "buildable_today":"yes","main_blocker":"none","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html","quote":"Use the access token (also known as a “bearer token”) that you get from Salesforce CLI to authenticate cURL requests."},
+  {"field":"auth_methods","url":"https://developer.salesforce.com/docs/platform/hosted-mcp-servers/references/reference/headless-360-mcp.html","quote":"MCP client installed and configured with OAuth authentication"},
+  {"field":"access","url":"https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html","quote":"Step One: Sign up for Salesforce Developer Edition"},
+  {"field":"api_type","url":"https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html","quote":"To successfully send requests, REST API requires an access token obtained by authentication."},
+  {"field":"api_breadth","url":"https://developer.salesforce.com/docs/platform/hosted-mcp-servers/references/reference/headless-360-mcp.html","quote":"The platform/headless-360 server brings the full breadth of Salesforce to any MCP-aware agent through a single connection."},
+  {"field":"existing_mcp","url":"https://developer.salesforce.com/docs/platform/hosted-mcp-servers/references/reference/headless-360-mcp.html","quote":"Beta: The Headless 360 MCP Server is a Beta Service."},
+  {"field":"buildable_today","url":"https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html","quote":"Complete these steps in your Developer Edition org or development sandbox."},
+  {"field":"main_blocker","url":"https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html","quote":"Complete these steps in your Developer Edition org or development sandbox."}]},
+{"app":"HubSpot","category":"CRM","one_liner":"CRM and marketing platform with a developer platform, REST APIs and a remote MCP server.",
+ "auth_methods":["oauth2","bearer_token"],"access":"unknown","api_type":["rest"],"api_breadth":"unknown",
+ "existing_mcp":"official","existing_mcp_url":"https://mcp.hubspot.com",
+ "buildable_today":"partial","main_blocker":"unknown","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview","quote":"OAuth is required for multiple accounts, while static auth access tokens are used for installing in a single account at a time."},
+  {"field":"api_type","url":"https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview","quote":"--header \"Authorization: Bearer 00000000-aaaa-xxx-yyyy-zzzzzzzzzzzz\""},
+  {"field":"existing_mcp","url":"https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server","quote":"Configuring your MCP client to connect to the HubSpot MCP server at https://mcp.hubspot.com using your connector’s OAuth credentials."},
+  {"field":"buildable_today","url":"https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview","quote":"There are two authentication types available based on how you plan to distribute your app"}]},
+{"app":"Pipedrive","category":"CRM","one_liner":"Sales CRM and pipeline management tool.",
+ "auth_methods":["unknown"],"access":"unknown","api_type":["unknown"],"api_breadth":"unknown","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"unknown","main_blocker":"unknown","confidence":"low","evidence":[],
+ "note":"Only a community forum thread was cached (a user's question, not official docs). Needs official docs."},
+{"app":"Podio","category":"Project / CRM workspace","one_liner":"Customizable work platform (apps, workspaces) with an API.",
+ "auth_methods":["oauth2","api_key"],"access":"self_serve_free","api_type":["unknown"],"api_breadth":"unknown","existing_mcp":"unknown","existing_mcp_url":"",
+ "buildable_today":"yes","main_blocker":"none","confidence":"medium",
+ "evidence":[
+  {"field":"auth_methods","url":"https://developers.podio.com/authentication","quote":"The Podio API uses the OAuth2 protocol for authentication."},
+  {"field":"auth_methods","url":"https://developers.podio.com/api-key","quote":"It's easy to get one or more API keys for accessing your Podio data."},
+  {"field":"access","url":"https://developers.podio.com/api-key","quote":"You just have to sign in or sign up with Podio, and go to the API key tab in your settings."},
+  {"field":"buildable_today","url":"https://developers.podio.com/api-key","quote":"It's easy to get one or more API keys for accessing your Podio data."},
+  {"field":"main_blocker","url":"https://developers.podio.com/api-key","quote":"It's easy to get one or more API keys for accessing your Podio data."}]}
+]
